@@ -1735,7 +1735,7 @@ To reciting2:
 					otherwise if xp of Onyx >= 30 and xp of Onyx <= 49:
 						move Onyx to Palomino;
 					otherwise:
-						move Onyx to Holding Pens;+
+						move Onyx to Holding Pens;
 					if xp of Onyx is 1:
 						now Equineguardpost is unresolved;
 					otherwise:
@@ -3528,7 +3528,7 @@ Carry out reciting:
 					otherwise if xp of Onyx >= 30 and xp of Onyx <= 49:
 						move Onyx to Palomino;
 					otherwise:
-						move Onyx to Holding Pens;+
+						move Onyx to Holding Pens;
 					if xp of Onyx is 1:
 						now Equineguardpost is unresolved;
 					otherwise:
