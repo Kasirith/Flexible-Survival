@@ -14,7 +14,7 @@ To savetrix:
 	 write "[trixsavetext1]" to the File of Trixsave;
 	 write "[trixsavetext2]" to the File of Trixsave2;
 	 write "[trixsavetext3]" to the File of Trixsave3;
-	 write "Soda|1" to the File of invsave;
+	 write "Soda|1}" to the File of invsave;
 	 repeat with x running from 1 to the number of rows in the table of game objects:
 		choose row x in the table of game objects;
 		if object entry is owned:
