@@ -60,6 +60,23 @@ to clear the screen and hyperlink list:
 	now hyperlink list is {}.
 [This must remain whole or errors from cleared hyperlinks can occur!]
 
+To say row of (N - number) spaces: (- spaces {N}; -).
+
+To decide what indexed text is (orig - text) formatted to (len - number) characters:
+	let T be an indexed text;
+	now T is orig;
+	let N be the number of characters in T;
+	if N < len:
+		repeat with Z running from 1 to len - N:
+			now T is "[T] ";
+[		let temp be number understood;
+		now number understood is len - N;
+		let sub be "[row of number understood spaces]";
+		replace the regular expression "$" in T with sub;
+		now number understood is temp;]
+	else if N > len:
+		replace the regular expression ".{[N - len]}$" in T with "";
+	decide on T.	
 
 To keypause:
 	(- KeyPause(); -)
@@ -669,9 +686,9 @@ Primary Lab is a room. "One of the few places in the city with working power, th
 Primary Lab is north of 2F Trevor Labs.
 There is an Infection Terminal in Primary Lab. "A glowing infection terminal quietly lists all the infections in the corner.".
 
-Park Entrance is a room. "Ah, the city park. Smell that fresh pine air, and the scent of, wait no, that grass has not been mowed for a while. Just how long were you in that bunker anyway? The grass is just starting to creep up onto the pavement that leads further into the park, Northwards. The wall remains largely intact, with a sign that welcomes you into the park, except during night hours, not that anyone is enforcing this rule at the moment.".
+Park Entrance is a room. "Ah, the city park. Smell that fresh pine air, and the scent of - wait no, that grass has not been mowed for quite a while. Just how long ago did all this trouble started anyway? Time seems fluid these days, making it hard for you to remember. No matter what, the grass has started to creep up onto the pavement that leads further into the park (north) and all the other plants seem pretty overgrown and untamed too. The park's boundary wall remains largely intact, with a sign that welcomes you into the park, except during night hours, not that anyone is enforcing this rule at the moment.".
 Park Entrance is fasttravel.
-Park Trail is a room. "Following this North/South trail, you can see dense woods to either side. You could easily become lost in them, though perhaps exploring might have its own rewards. You can hear soft clopping sounds just beyond sight, and the occasional buzz of insects. The air is fresh here under the [short time of day] sky.".
+Park Trail is a room. "Following this North/South trail, you can see the severely overgrown state of the park all around you. All this can't be purely natural - it'd take ages to have gotten this bad. Seems like some of the spreading nanites decided to create a section of untamed wilderness right in the middle of the city. There are dense woods in almost every direction, including to the North, where the paved trail ends at a tree that must have literally exploded out of the ground under it. In the Northwest, there is a small expanse of bamboo forest, with a Torii arch forming the start of a narrow gravel trail leading into it.[line break]The path northwest looks safe and strangely peaceful, but it'll be easy to become lost in the rest of the thick woods of the park - though perhaps exploring might have its own rewards. You can hear soft clopping sounds just beyond sight, and the occasional buzz of insects. The air is fresh here under the [short time of day] sky.".
 North of Park Entrance is Park Trail.
 Park Exit is a door. Park Exit is dangerous. The marea of Park Exit is "Outside". Park Exit is undescribed. Park Exit is south of Park Entrance. South of Park Exit is Outside Exploration.
 East of Park Trail is Faint Trail.
@@ -886,13 +903,13 @@ Before NanofabCreating: [checks that you have everything needed to build the nan
 		say "You are short a method of changing the nanites code.  Without a [bold type]Reprogramming Device[roman type] you'll never build a Nanofabricator.  ";
 		stop the action; [fails if item not in inventory]
 	if Infection Scanner is not owned: [replace with better materials if desired]
-		say "Without a way to tell what the nanites are currently configured for, you won't be able to tell how/if reprogramming has occured propperly.  You'll an [bold type]Infection Scanner[roman type] of some sort.  Sounds like the sort of thing a lab might have, maybe you should look around Trevor Labs.";
+		say "Without a way to tell what the nanites are currently configured for, you won't be able to tell how/if reprogramming has occurred properly.  You'll an [bold type]Infection Scanner[roman type] of some sort.  Sounds like the sort of thing a lab might have, maybe you should look around Trevor Labs.";
 		stop the action; [fails if item not in inventory]
 	if Nanite Collector is not owned: [replace with better materials if desired]
 		say "You need something to sort and control where the nanites move.  Perhaps some sort of [bold type]Nanite Collector[roman type] would work.  Maybe someone at Zephyr Inc could help you find one.";
 		stop the action; [fails if item not in inventory]
 	if carried of medkit is not greater than 2: [replace with better materials if desired]
-		say "You need something to hold the Nanofabricator together.  Perhaps the bandages from a [bold type]Medkit[roman type] would work.  Althought it might take more than one, you should get a few just to be safe.";
+		say "You need something to hold the Nanofabricator together.  Perhaps the bandages from a [bold type]Medkit[roman type] would work.  Although it might take more than one, you should get a few just to be safe.";
 		stop the action; [fails if item not in inventory]
 
 
@@ -901,7 +918,7 @@ Carry out NanofabCreating:
 	delete medkit;
 	say "You move some junk around and setup the Nanite Collector to hold your gathered nanites.  ";
 	delete Nanite Collector;
-	say "You mount the Infection Scanner on the side of the colelctor.  ";
+	say "You mount the Infection Scanner on the side of the collector.  ";
 	delete infection scanner;
 	say "Next, you position the Reprogramming Device, granting you the ability to safely reconfigure the nanites to suit your purposes.  ";
 	delete reprogramming device;
@@ -985,7 +1002,7 @@ Carry out Nanofeeding something(called x):
 		say "The computer screen displays the message: [line break][bold type][x] is an unknown item.  Scanning...[roman type][line break]";
 		Choose a blank row from Table of Fabbable Items;
 		now object entry is the noun;[important bit, adds new stuff to fabbable item list]
-		say "The computer screen displays the message: [line break][bold type]Scan successful.  Make up of [x] is now known.  More can be frabricated with sufficent material.[roman type][line break]";
+		say "The computer screen displays the message: [line break][bold type]Scan successful.  Make up of [x] is now known.  More can be fabricated with sufficient material.[roman type][line break]";
 		delete x;
 	otherwise: [learning failed, consume item]
 		say "The computer screen displays the message: [line break][bold type][x] is an unknown item.  Consuming input for raw material.[roman type][line break]";
@@ -1187,17 +1204,17 @@ Feral is a flag.
 when play begins:
 	add { "Awesome tree", "Cock Cannon" } to infections of humorous;
 	add { "Slut Rat", "Female Husky", "black equinoid", "Ashen Breeder", "lizard girl", "Skunk", "Shemale Smooth Collie", "Bovine", "Feline", "Herm Hyena", "Bear", "Pit bull", "Painted Wolf Herm", "sewer gator", "doe", "sea otter", "Ash Drakenoid", "red kangaroo", "German Shepherd", "Chinchilla" } to infections of furry;
-	add { "Skunk", "Shemale Smooth Collie", "Bovine", "Tentacle Horror", "Demon Brute", "Cock Cannon", "feral sea dragon", "German Shepherd", "Feline", "Felinoid" } to infections of guy;
-	add { "Ashen Breeder", "Ash Drakenoid", "Slut Rat", "Parasitic Plant", "Herm Hyena", "Painted Wolf Herm", "sewer gator", "doe", "black equinoid", "spidergirl", "Cute Chinchilla Woman", "Mothgirl" } to infections of hermaphrodite;
-	add { "Goo Girl", "Female Husky", "lizard girl", "Tentacle Horror", "Feline", "Bear", "Skunk", "spidergirl", "Mothgirl", "red kangaroo", "city sprite", "feral sea dragoness", "Bovine" } to infections of girl;
-	add { "Wyvern", "Yamato Dragon", "Yamato Dragoness", "feral sea dragon", "feral sea dragoness", "Snake","Sierrasaur", "Feral Wolf", "Latex Wolf", "Ash Whelp", "Ash Dragator", "Manticore", "Mismatched Chimera", "Quilled Trousky", "Hydra Beast", "Feral Shaft Beast", "Flaming Lynx", "Cerberus", "Sabretooth", "Friendship Pony", "Pegasus", "Grizzly Bear", "Feral Gryphon", "Shadow Beast", "Behemoth", "Feral Cheetah", "Peculiar Dragon" } to infections of feral;
+	add { "Skunk", "Shemale Smooth Collie", "Bovine", "Tentacle Horror", "Demon Brute", "Cock Cannon", "Feral Sea Dragon", "German Shepherd", "Feline", "Felinoid" } to infections of guy;
+	add { "Ashen Breeder", "Ash Drakenoid", "Slut Rat", "Parasitic Plant", "Herm Hyena", "Painted Wolf Herm", "sewer gator", "doe", "black equinoid", "spidergirl", "Mothgirl" } to infections of hermaphrodite;
+	add { "Goo Girl", "Female Husky", "lizard girl", "Tentacle Horror", "Feline", "Bear", "Skunk", "spidergirl", "Mothgirl", "red kangaroo", "city sprite", "Feral Sea Dragoness", "Bovine" } to infections of girl;
+	add { "Wyvern", "Yamato Dragon", "Yamato Dragoness", "Feral Sea Dragon", "Feral Sea Dragoness", "Snake","Sierrasaur", "Feral Wolf", "Latex Wolf", "Ash Whelp", "Ash Dragator", "Manticore", "Mismatched Chimera", "Quilled Trousky", "Hydra Beast", "Feral Shaft Beast", "Flaming Lynx", "Cerberus", "Sabretooth", "Friendship Pony", "Pegasus", "Grizzly Bear", "Feral Gryphon", "Shadow Beast", "Behemoth", "Feral Cheetah", "Peculiar Dragon" } to infections of feral;
 
 [corollary]
 marker is a kind of thing.
 A marker has a list of text called infections.
 Tailweapon is a marker.
 when play begins:
-	add { "Drone Wasp", "red kangaroo", "Skunk", "Wyvern", "Anthro Shaft Beast", "Feral Shaft Beast", "hermaphrodite dolphin", "Dragon", "Dragoness", "Yamato Dragon", "Yamato Dragoness", "sewer gator", "pirate shark", "Ash Dragator", "Ash Drakenoid", "Ash Whelp", "spidergirl", "feral sea dragon", "feral sea dragoness", "Naga", "lizard girl" } to infections of Tailweapon;
+	add { "Drone Wasp", "red kangaroo", "Skunk", "Wyvern", "Anthro Shaft Beast", "Feral Shaft Beast", "hermaphrodite dolphin", "Dragon", "Dragoness", "Yamato Dragon", "Yamato Dragoness", "sewer gator", "pirate shark", "Ash Dragator", "Ash Drakenoid", "Ash Whelp", "spidergirl", "Feral Sea Dragon", "Feral Sea Dragoness", "Naga", "lizard girl" } to infections of Tailweapon;
 
 Felinelist is a marker.	[list of feline infections]
 when play begins:
@@ -1217,7 +1234,7 @@ when play begins:
 
 Reptilelist is a marker.	[list of reptiles/snakes/dragons/dinosaurs/etc... infections]
 when play begins:
-	add { "Ash Dragator", "Ash Drakenoid", "Ash Whelp", "feral sea dragon", "feral sea dragoness", "lizard girl", "sewer gator", "Triceratops", "Wyvern", "Yamato Dragoness", "Yamato Dragoness", "Slutty Dragoness", "Horny Dragon", "Dragon", "Dragoness", "Naga", "Snake", "Reptaur", "Sierrasaur" } to infections of Reptilelist;
+	add { "Ash Dragator", "Ash Drakenoid", "Ash Whelp", "Feral Sea Dragon", "Feral Sea Dragoness", "lizard girl", "sewer gator", "Triceratops", "Wyvern", "Yamato Dragoness", "Yamato Dragoness", "Slutty Dragoness", "Horny Dragon", "Dragon", "Dragoness", "Naga", "Snake", "Reptaur", "Sierrasaur" } to infections of Reptilelist;
 
 Insectlist is a marker.	[list of insectile/arachnid/bug infections]
 when play begins:
@@ -1250,7 +1267,7 @@ when play begins:
 
 Internallist is a marker.	[list of infections w/internal male genitals]
 when play begins:
-	add { "Wyvern", "Yamato Dragon", "Yamato Dragoness", "feral sea dragon", "feral sea dragoness", "Snake", "Naga", "Sierrasaur" } to infections of Internallist;
+	add { "Wyvern", "Yamato Dragon", "Yamato Dragoness", "Feral Sea Dragon", "Feral Sea Dragoness", "Snake", "Naga", "Sierrasaur" } to infections of Internallist;
 
 BarbedCocklist is a marker. [List of creatures with a barbed cock]
 when play begins:
@@ -1260,11 +1277,14 @@ Firebreathlist is a marker. [List of fire breathing creatures]
 when play begins:
 	add { "Wyvern", "Dracovixentaur", "Dragontaur", "Feral Sea Dragoness", "Feral Sea Dragon", "Ash Whelp", "Ash Dragator", "Ash Drakenoid", "Fire Sprite", "Fire Elemental", "Flaming Lynx", "Yamato Dragoness", "Yamato Dragon" } to infections of Firebreathlist;
 
+Bluntlist is a marker.	[list of infections w/blunt cock]
+when play begins:
+	add { "black equinoid", "Centaur Mare", "Centaur Stallion", "Horseman", "Mareslut", "Mutant Centaur", "Nightmare", "Pegasus", "Stallionboi", "Unicorn", "Zebra", "Sierrasaur", "Wyvern", "Donkeyman", "Donkeywoman", "Giraffe", "Nightmare", "Palomino", "Friendship Pony", "Reindeer" } to infections of Bluntlist;
+
 Part 2 - Rules
 
 First for constructing the status line (this is the bypass status line map rule):
 	fill status bar with table of fancy status;
-
 
 d18 is a number that varies.
 descr is text that varies.
@@ -2304,10 +2324,11 @@ carry out Inventorying:
 	if the number of owned grab objects is greater than 0:
 		say "[bold type][bracket]U[close bracket][roman type]se, [bold type][bracket]L[close bracket][roman type]ook, [bold type][bracket]S[close bracket][roman type]mell, [bold type][bracket]D[close bracket][roman type]rop, [bold type][bracket]J[close bracket][roman type]unk, [bold type][bracket]X[close bracket][roman type]Junkall, [if the number of trader in the location of the player > 0 or ( Ronda is visible and hp of Ronda is 0 and dseed is 1 ) or ( Kristen is visible and hp of Kristen is 10 and jblouse is 1 )], [bold type][bracket]T[close bracket][roman type]rade[end if][if the number of smither in the location of the player > 0], [bold type][bracket]I[close bracket][roman type]mprove[end if].";
 		let weight be 0;
+		let newline be 0;
 		repeat with x running from 1 to the number of rows in the table of game objects:
 			choose row x in the table of game objects;
 			if object entry is owned:
-				say "[link][bracket][bold type]U[roman type][close bracket][as]use [name entry][end link]";
+				say "[variable letter spacing][link][bracket][bold type]U[roman type][close bracket][as]use [name entry][end link]";
 				say " [link][bracket][bold type]L[roman type][close bracket][as]look [name entry][end link]";
 				say " [link][bracket][bold type]S[roman type][close bracket][as]smell [name entry][end link]";
 				say " [link][bracket][bold type]D[roman type][close bracket][as]drop [name entry][end link]";
@@ -2328,7 +2349,7 @@ carry out Inventorying:
 					say " [link][bracket][bold type]T[roman type][close bracket][as]give [name entry] to [tradeguy][end link]";
 				if ( ( ( object entry is armament or ( object entry is equipment and AC of object entry > 0 and effectiveness of object entry > 0 ) ) and object entry is not improved ) or the name entry is "nanite collector" ) and the number of smither in the location of the player is greater than 0:
 					say " [link][bracket][bold type]I[roman type][close bracket][as]upgrade [name entry][end link]";
-				say " [name entry]";
+				say " [fixed letter spacing][name entry formatted to 15 characters]";
 				if object entry is wielded and object entry is armament:
 					say " (wielded)";
 				if object entry is equipment and object entry is equipped:
@@ -2337,9 +2358,17 @@ carry out Inventorying:
 					say " (improved)";
 				say " x ";
 				let number be carried of object entry;
-				say "[number]([weight entry times number] lbs)";
+				let weighttxt be text;
+				let weightnum be weight entry times number;
+				say "[number]([weightnum][if weightnum < 10] [end if] lbs)";
 				increase weight by weight entry times number;
-				say "[line break]";
+				if newline is 0:
+					say "  --  ";
+					increase newline by 1;
+				otherwise:
+					say "[line break]";
+					now newline is 0;
+		if newline is 1, say "[line break]";
 		if the player is overburdened, say "*OVERBURDENED* ";
 		say "Total Weight: [weight]/[capacity of player] lbs.";
 	if scenario is "Researcher" or nanitemeter > 0:
@@ -2410,26 +2439,32 @@ To Birth:
 	if "Maternal" is listed in feats of player:
 		increase morale of player by 3;
 	if snakehijack is false or "They Have Your Eyes" is listed in feats of player:
-		if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
-			now infection is skinname of child;
-		otherwise:
-			now infection is skinname of player;
-		now skinname of child is infection;
-		if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
-			now infection is bodyname of child;
-		otherwise:
-			now infection is bodyname of player;
-		now bodyname of child is infection;
-		if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
-			now infection is tailname of child;
-		otherwise:
-			now infection is tailname of player;
-		now tailname of child is infection;
-		if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
-			now infection is facename of child;
-		otherwise:
-			now infection is facename of player;
-		now facename of child is infection;
+		if "Cheerbreeder" is listed in feats of player:
+			now skinname of child is "Football Wolfman";
+			now bodyname of child is "Football Wolfman";
+			now tailname of child is "Football Wolfman";
+			now facename of child is "Football Wolfman";	
+		otherwise: 
+			if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
+				now infection is skinname of child;
+			otherwise:
+				now infection is skinname of player;
+			now skinname of child is infection;
+			if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
+				now infection is bodyname of child;
+			otherwise:
+				now infection is bodyname of player;
+			now bodyname of child is infection;
+			if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
+				now infection is tailname of child;
+			otherwise:
+				now infection is tailname of player;
+			now tailname of child is infection;
+			if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
+				now infection is facename of child;
+			otherwise:
+				now infection is facename of player;
+			now facename of child is infection;
 	otherwise:
 		let infection be "Snake";
 		now skinname of child is infection;
@@ -2446,9 +2481,9 @@ To Birth:
 		otherwise:
 			say "Your child pushes free of the shell enclosing it and you gather it into your arms.  It nuzzles at your chest and starts nursing, struggling for a while to draw milk from your flat chest, but your [bodytype of player] body strives to complete its task and begins to lactate temporarily to feed your offspring.  Having regressed partially during their time in your womb, they grow back to maturity while suckling[if wwvar is 1], giving you a dark sense of fulfillment[otherwise], further strengthening their bond to you[end if].  They have not been left unchanged by their incubation within you[if wwvar is 1].  They pop free and stand, a feral look of wanton desire on their [facename of child] face as they inspect their [bodyname of child] form, covered in [skinname of child] skin[otherwise].  They pop free and stand, smiling.  With a slow turn, they show off their [facename of child] face and [bodyname of child] body, covered in [skinname of child] skin[end if]";
 		if snakehijack is true and "They Have Your Eyes" is listed in feats of player:
-			say ".  It's clear that your influence has forcibly altered the once-snake to take on your appearance, a twisted fate for such a creature, who now assumes itself to be your legitmiate offspring.";
+			say ".  It's clear that your influence has forcibly altered the once-snake to take on your appearance, a twisted fate for such a creature, who now assumes itself to be your legitimate offspring.";
 		otherwise if snakehijack is true:
-			say ".  It's apparent that its prior act has caused the serpent to assume itself as one of your legimate offspring, a twisted fate for such a creature.";
+			say ".  It's apparent that its prior act has caused the serpent to assume itself as one of your legitimate offspring, a twisted fate for such a creature.";
 		otherwise:
 			say ".";
 		if wwvar is 1:
@@ -2461,7 +2496,7 @@ To Birth:
 			say "As your rebirthed offspring snuggles up beside you, you rest to recover from the ordeal of childbirth.  Despite what you've done to the creature, you feel a contentment welling up inside you, your instinctual need to transmit your infection temporarily sated.  Though you do become faintly aware of that emptiness inside your belly again.";
 	otherwise if "Wild Womb" is listed in feats of player:
 		if cunts of player > 0:
-			say "Your child [if ovipregnant is true]pushes free of the shell enclosing it and you gather it into your arms so it may suckle[otherwise]suckles[end if]at your [breast size desc of player] breast.  Strange sensations sweep over your [bodytype of player] body as it drinks down its new mother's milk.  A dark sense of fulfillment begins to creep though you as your newborn suckles at your teat, drawing not only nutrition but instinct and lust as they rapidly reach maturity.  They pop free and stand, a feral look of wanton desire on their [facename of child] face as they inspect their [bodyname of child] form, covered in [skinname of child] skin.";
+			say "Your child [if ovipregnant is true]pushes free of the shell enclosing it and you gather it into your arms so it may suckle[otherwise]suckles[end if] at your [breast size desc of player] breast.  Strange sensations sweep over your [bodytype of player] body as it drinks down its new mother's milk.  A dark sense of fulfillment begins to creep though you as your newborn suckles at your teat, drawing not only nutrition but instinct and lust as they rapidly reach maturity.  They pop free and stand, a feral look of wanton desire on their [facename of child] face as they inspect their [bodyname of child] form, covered in [skinname of child] skin.";
 		otherwise if breasts of player > 0:
 			say "Your child pushes free of the shell enclosing it and you gather into your arms, feeling a strong affection for your bizarrely born child.  It starts to suckle at your [breast size desc of player] breast, growing rapidly against you as strange sensations sweep over your [bodytype of player] body.  A dark sense of fulfillment begins to creep though you as your newborn suckles at your teat, drawing not only nutrition but instinct and lust as they rapidly reach maturity. They pop free and stand, a feral look of wanton desire in their [facename of child] face as they inspect their [bodyname of child] form, covered in [skinname of child] skin.";
 		otherwise:
@@ -2469,7 +2504,7 @@ To Birth:
 		say "As your feral offspring stalks off into the city, leaving you to recover from the ordeal of childbirth, a part of you worries about your contribution to the ever growing number of creatures in the city...and yet, a part of you is awash in contentment, an instinctual need to propagate and spread your infection temporarily sated.";
 	otherwise:
 		if cunts of player > 0:
-			say "Your child [if ovipregnant is true]pushes free of the shell enclosing it and you gather it into your arms so it may suckle[otherwise]suckles[end if]at your [breast size desc of player] breast.  Strange sensations sweep over your [bodytype of player] body as it drinks down its new mother's milk. Not only nutrition but personality and knowledge seep through the teat into the newborn, who is not newborn for long, soon a young adult. They pop free and stand, smiling. With a slow turn, they show off their [facename of child] face and [bodyname of child] body, covered in [skinname of child] skin.";
+			say "Your child [if ovipregnant is true]pushes free of the shell enclosing it and you gather it into your arms so it may suckle[otherwise]suckles[end if] at your [breast size desc of player] breast.  Strange sensations sweep over your [bodytype of player] body as it drinks down its new mother's milk. Not only nutrition but personality and knowledge seep through the teat into the newborn, who is not newborn for long, soon a young adult. They pop free and stand, smiling. With a slow turn, they show off their [facename of child] face and [bodyname of child] body, covered in [skinname of child] skin.";
 		otherwise if breasts of player > 0:
 			say "Your child pushes free of the shell enclosing it and you gather into your arms, feeling a strong affection for your bizarrely born child.  It starts to suckle at your [breast size desc of player] breast, growing rapidly against you as strange sensations sweep over your [bodytype of player] body.  Not only nutrition but personality and knowledge seep through the teat into the newborn, who is not newborn for long, soon a young adult. They pop free and stand, smiling. With a slow turn, they show off their [facename of child] face and [bodyname of child] body, covered in [skinname of child] skin.";
 		otherwise:
@@ -2497,35 +2532,49 @@ To impregnate with (x - text):
 		stop the action;
 	if cunts of player is 0 and "MPreg" is listed in feats of player and level of Velos is 1 and hp of Velos > 2:
 		stop the action;
-	if "Selective Mother" is listed in feats of player:
-		say "Do you wish to be impregnated with a/an [x] child?";
-		if the player consents:
-			let q be 1;
+	if "Cheerbreeder" is listed in feats of player:
+		if "Selective Mother" is listed in feats of player:
+			say "Do you wish to be impregnated with a Football Wolfman child?";
+			if the player consents:
+				let q be 1;
+			otherwise:
+				say "You choose not to accept the seed.";
+				stop the action;
+		now gestation of child is a random number from 24 to 48;
+		now skinname of child is "Football Wolfman";
+		now bodyname of child is "Football Wolfman";
+		now tailname of child is "Football Wolfman";
+		now facename of child is "Football Wolfman";
+	otherwise:
+		if "Selective Mother" is listed in feats of player:
+			say "Do you wish to be impregnated with a/an [x] child?";
+			if the player consents:
+				let q be 1;
+			otherwise:
+				say "You choose not to accept the seed.";
+				stop the action;
+		now gestation of child is a random number from 24 to 48;
+		let infection be "";
+		if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
+			now infection is x;
 		otherwise:
-			say "You choose not to accept the seed.";
-			stop the action;
-	now gestation of child is a random number from 24 to 48;
-	let infection be "";
-	if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
-		now infection is x;
-	otherwise:
-		now infection is skinname of player;
-	now skinname of child is infection;
-	if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
-		now infection is x;
-	otherwise:
-		now infection is bodyname of player;
-	now bodyname of child is infection;
-	if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
-		now infection is x;
-	otherwise:
-		now infection is tailname of player;
-	now tailname of child is infection;
-	if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
-		now infection is x;
-	otherwise:
-		now infection is facename of player;
-	now facename of child is infection;
+			now infection is skinname of player;
+		now skinname of child is infection;
+		if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
+			now infection is x;
+		otherwise:
+			now infection is bodyname of player;
+		now bodyname of child is infection;
+		if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
+			now infection is x;
+		otherwise:
+			now infection is tailname of player;
+		now tailname of child is infection;
+		if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
+			now infection is x;
+		otherwise:
+			now infection is facename of player;
+		now facename of child is infection;
 	if cunts of player > 0:
 		say "[line break]     You have an odd feeling, a palpable wave of contentment from within your lower belly.";
 	otherwise:
@@ -2919,7 +2968,7 @@ definition: Daytimer is night:
 	otherwise:
 		yes;
 
-to guestimate time at (x - a number):
+to guesstimate time at (x - a number):
 	if x < 0:
 		say "ERROR: Negative time period.";
 	otherwise if x is 0:
@@ -2978,7 +3027,7 @@ To process (X - a grab object):
 				say "You feel better having eaten.";
 	if x is chips:
 		if labhost > 0 and bodyname of player is "Chocolate Lab" and a random chance of labhost in 4 succeeds:
-			say "[line break]     As you begin unwrapping your snack a powerful rumbling begins in your stomach, you release a low groan as the churning inside your body increases, the [if labhost is 2]labs[otherwise]lab[end if] clearly excited about somthing.  There is a sudden pressure at your chest as your feel the curning begin to focus at a single point, before you have a chance to react, or even realize what's happening, a canine snout pushes out of your chocolaty chest, grabbing the [one of]chocolate bar[or]chocolate[or]M&Ms[at random] from your hand and swallowing it whole.  You stand there shocked for a moment as the lab spits up the chewed remains of your treat's wrapper before releasing a happy bark and receding into your body.  Dissapointed at the loss of your snack, you release a heavy sigh and continue on your way.";
+			say "[line break]     As you begin unwrapping your snack a powerful rumbling begins in your stomach, you release a low groan as the churning inside your body increases, the [if labhost is 2]labs[otherwise]lab[end if] clearly excited about something.  There is a sudden pressure at your chest as your feel the churning begin to focus at a single point, before you have a chance to react, or even realize what's happening, a canine snout pushes out of your chocolaty chest, grabbing the [one of]chocolate bar[or]chocolate[or]M&Ms[at random] from your hand and swallowing it whole.  You stand there shocked for a moment as the lab spits up the chewed remains of your treat's wrapper before releasing a happy bark and receding into your body.  Dissappointed at the loss of your snack, you release a heavy sigh and continue on your way.";
 		otherwise if "Junk Food Junky" is listed in feats of player:
 			if hunger of player is greater than 14:
 				increase score by 5;
@@ -3071,7 +3120,7 @@ To process (X - a grab object):
 					decrease score by ( thirst of player minus 30 ) divided by 3;
 			decrease thirst of player by 30;
 			if thirst of player is less than 0, now thirst of player is 0;
-			say "Awesome!  Soda!  You it down, a delicious can of [if player is sugarbodied][one of]cola[or]Dr Pibbston[or]Mountain Don't[or]Burkes['] root beer[at random][otherwise][one of]lemon lime[or]strawberry[or]Dr Pibbston[or]cola[or]orange[or]ginger ale[at random][end if].  YUM!";
+			say "Awesome!  Soda!  You down the delicious can of [if player is sugarbodied][one of]cola[or]Dr Pibbston[or]Mountain Don't[or]Burkes['] root beer[at random][otherwise][one of]lemon lime[or]strawberry[or]Dr Pibbston[or]cola[or]orange[or]ginger ale[at random][end if].  YUM!";
 			if morale of player is less than 0:
 				increase morale of player by 75;
 				if morale of player is greater than 0, now morale of player is 0;
@@ -3858,34 +3907,58 @@ This is the breast change rule:
 	if breasts of player is not breasts entry:
 		decrease breast size of player by 2;
 		follow the breast descr rule;
-		if ( breasts entry is greater than breasts of player and "One Pair" is not listed in feats of player ) or breasts of player is 0:
-			increase breasts of player by 2;
+		if ( breasts entry is greater than breasts of player and "One Pair" is not listed in feats of player ) or ( breasts of player is 0 and breasts entry > 0 ):
 			say " Your chest tingles intensely as two new sensitive points form up, announcing the arrival of two new [descr] breasts, pressing out of your [skin of player] hide.";
+			increase breasts of player by 2;
 		otherwise if breasts entry < breasts of player and "Bouncy Bouncy" is not listed in feats of player:
 			decrease breasts of player by 2;
 			say " You look down just in time to see two nipples, [descr] breasts included, be reabsorbed into your body, leaving nothing but [skin of player] flesh behind.";
 		increase breast size of player by 2;
-	if ( the sex entry is "Female" or the sex entry is "Both") and breast size of player is less than breast size entry and ( ( "Male Preferred" is not listed in feats of player and "Flat Chested" is not listed in feats of player ) or "Breasts" is listed in feats of player ):
-		follow the breast descr rule;
-		let oldbreast be descr;
-		say "You [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [skin of player] skin glistening as your [oldbreast] breasts[run paragraph on]";
-		increase breast size of player by 1;
-		increase breast size of player by ( breast size entry minus breast size of player ) divided by 3;
-		follow the breast descr rule;
-		say " become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]! [run paragraph on]";
-	if breast size of player is greater than breast size entry and "One Way" is not listed in feats of player:
-		follow the breast descr rule;
-		let oldbreast be descr;
-		say "You [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [skin of player] skin glistening as your [oldbreast] breasts[run paragraph on]";
-		decrease breast size of player by 1;
-		decrease breast size of player by ( breast size of player minus breast size entry ) divided by 3;
-		follow the breast descr rule;
-		say " become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]! [run paragraph on]";
-
+	if breasts of player is 0:
+		let n be 0;		[do nothing]
+	otherwise if the sex entry is "Female" or the sex entry is "Both":
+		if breast size of player < breast size entry and ( ( "Male Preferred" is not listed in feats of player and "Flat Chested" is not listed in feats of player ) or "Breasts" is listed in feats of player ):
+			follow the breast descr rule;
+			let oldbreast be descr;
+			say "You [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [skin of player] skin glistening as your [oldbreast] breasts[run paragraph on]";
+			increase breast size of player by 1;
+			increase breast size of player by ( breast size entry minus breast size of player ) divided by 3;
+			follow the breast descr rule;
+			say " become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]! [run paragraph on]";
+		otherwise if breast size of player > breast size entry and "One Way" is not listed in feats of player:
+			follow the breast descr rule;
+			let oldbreast be descr;
+			say "You [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [skin of player] skin glistening as your [oldbreast] breasts[run paragraph on]";
+			decrease breast size of player by 1;
+			decrease breast size of player by ( breast size of player minus breast size entry ) divided by 3;
+			follow the breast descr rule;
+			say " become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]! [run paragraph on]";
+	otherwise if the sex entry is "Male":
+		let breasttarget be male breast size entry;
+		if "Breasts" is listed in feats of player:
+			if male breast size entry is 0, now breasttarget is breast size entry;
+		otherwise if "Male Preferred" is listed in feats of player or "Flat Chested" is listed in feats of player:
+			now breasttarget is 0;
+		if breast size of player < breasttarget:
+			follow the breast descr rule;
+			let oldbreast be descr;
+			say "You [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [skin of player] skin glistening as your [oldbreast] breasts[run paragraph on]";
+			increase breast size of player by 1;
+			increase breast size of player by ( breasttarget minus breast size of player ) divided by 3;
+			follow the breast descr rule;
+			say " become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]! [run paragraph on]";
+		otherwise if breast size of player > breasttarget and "One Way" is not listed in feats of player:
+			follow the breast descr rule;
+			let oldbreast be descr;
+			say "You [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [skin of player] skin glistening as your [oldbreast] breasts[run paragraph on]";
+			decrease breast size of player by 1;
+			decrease breast size of player by ( breast size of player minus breasttarget ) divided by 3;
+			follow the breast descr rule;
+			say " become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]! [run paragraph on]";
 
 
 To grow breasts by (x - a number):
-	if "Flat Chested" is listed in feats of player:
+	if "Flat Chested" is listed in feats of player or breast size of player >= 26:
 		continue the action;
 	follow the breast descr rule;
 	let oldbreast be descr;
@@ -3994,6 +4067,7 @@ To Infect:
 			now body of player is body entry;
 		attributeinfect;			[sets the new attributes]
 		follow the sex change rule;
+		say "[line break]";
 	if x is 5:
 		follow the sex change rule;
 		if cockname of player is not name entry:
@@ -4072,12 +4146,13 @@ To Infect:
 				now body of player is body entry;
 			attributeinfect;			[sets the new attributes]
 			follow the sex change rule;
+			say "[line break]";
 		if x is 5:
 			follow the sex change rule;
 			if cockname of player is not name entry:
 				if cocks of player is greater than 0, say " Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [cock change entry].";
 				now cockname of player is name entry;
-				now cock of player is cock entry;				[** end of addition for 'Mutable']
+				now cock of player is cock entry;		[** end of addition for 'Mutable']
 	now x is a random number from 1 to 6;
 	if "Mighty Mutation" is not listed in feats of player:
 		now x is 0;
@@ -4715,7 +4790,11 @@ This is the explore rule:
 			if ( ( hardmode is true and a random chance of 1 in 8 succeeds ) or ( "Bad Luck" is listed in feats of player and a random chance of 1 in 8 succeeds ) ) and battleground is not "void":
 				say "As you are trying to recover from your last encounter, another roving creature finds you.";
 				Fight;
-	if something is 0, say "You decide to go exploring, but after three long hours of wandering the ruined, monster infested city you return to the relative safety of the [location of the player].";
+	if something is 0:
+		if battleground is "Outside":
+			say "You decide to go exploring, but after three long hours of wandering the ruined, monster infested city you return to the relative safety of the [location of the player].";
+		otherwise:
+			say "You decide to go exploring, but after three long hours of wandering around the [location of player] you return to the last relatively safe place you were at.";
 	follow the turnpass rule;
 [	wait for any key;
 	now the menu depth is 0;]
@@ -5250,11 +5329,11 @@ To say ball size:
 to say cum load size of ( x - a person ):
 	if cock width of x > 0:
 		if cock width of x is less than 3:
-			say "[one of]piddling[or]tiny[or]miniscule[or]feeble[or]small[or]meager[at random]";
+			say "[one of]piddling[or]tiny[or]minuscule[or]feeble[or]small[or]meager[at random]";
 		otherwise if cock width of x is less than 6:
 			say "[one of]average[or]normal-sized[or]fair-sized[or]moderate[or]adequate[or]regular-sized[at random]";
 		otherwise if cock width of x is less than 12:
-			say "[one of]triple-dose[or]half-cup[or]cupload[or]ample[or]above-average[or]generous[or]sizable[at random]";
+			say "[one of]triple-dose[or]half-cup[or]cupfull[or]ample[or]above-average[or]generous[or]sizable[at random]";
 		otherwise if cock width of x is less than 16:
 			say "[one of]half-litre[or]considerable[or]impressive[or]pint-full[or]copious[or]substantial[or]large[or]abundant[or]plentiful[at random]";
 		otherwise if cock width of x is less than 20:
@@ -5407,13 +5486,15 @@ This is the self examine rule:
 			say "You have [breasts of player] nipples on your [bodydesc of player] chest.";
 		otherwise:
 			if breasts of player is greater than 2:
-				say "You have [breasts of player] breasts on your [bodydesc of player] chest. The first pair looks [descr] and curves out [breast size of player] inch[if breast size of player is not 1]es[end if] from your chest. The second pair curves out [(breast size of player times three) divided by five] inch[if breast size of player times three divided by 5 is not 1]es[end if] from your chest. ";
+				say "You have [breasts of player] breasts on your [bodydesc of player] chest. The first pair looks [descr] and curves out [breast size of player] inch[if breast size of player is not 1]es[end if] from your chest. The second pair curves out [(breast size of player times three) divided by five] inch[if ( breast size of player times three ) divided by 5 is not 1]es[end if] from your chest. ";
 				if breasts of player is greater than 4, say "The rest jostle for space [breast size of player divided by three] inch[if breast size of player divided by 3 is not 1]es[end if] from your belly.";
 			otherwise:
 				say "You have two [descr] breasts on your [bodydesc of player] chest, curving out [breast size of player] inch[if breast size of player is not 1]es[end if] from your chest.";
 	if child is not born and gestation of child is greater than 0:
 		if gestation of child is less than 10:
+			now looknow is 0;
 			say "Your [skin of player] swollen belly looks ready to spill forth life at any moment.";
+			now looknow is 1;
 		otherwise if gestation of child is less than 20:
 			say "You have a noticeable bulge, a soft roundness to your belly that speaks of too many nights with a tub of ice cream, or an incoming child.";
 		otherwise if gestation of child is less than 30:
@@ -6029,7 +6110,7 @@ to ratetheplayer:
 	otherwise if the score is less than 500:
 		say "Salacious Scavenger!";
 	otherwise if the score is less than 1000:
-		say "Wanton Wastewander!";
+		say "Wanton Wastewanderer!";
 	otherwise if the score is less than 1500:
 		say "Serpent Blisskin!";
 	otherwise if the score is less than 2000:
@@ -6131,7 +6212,7 @@ Carry out milking:
 				add "gryphon milk" to the invent of the player;
 		now lastmilking is turns;
 	otherwise if the bodyname of the player is "Shemale Smooth Collie":
-		say "Moving your hands to touch and caress your [if breasts of player is 2]two[otherwise][breasts of player][end if] [breast size desc of player] furred breasts, you wake deep maternal urges in your canine body. Images of a whole litter of your own puppies nuzzling your breasts fill your mind while you touch yourself, panting in arousal and need. It doesn't take long till small beads of milk form at the nipples as your breasts get ready to feed your imaginary brood. You're lost in the pleasureable dream for a moment before you remember what you wanted to do and quickly grab an empty bottle from your pack to fill it, gently milking yourself into it.";
+		say "Moving your hands to touch and caress your [if breasts of player is 2]two[otherwise][breasts of player][end if] [breast size desc of player] furred breasts, you wake deep maternal urges in your canine body. Images of a whole litter of your own puppies nuzzling your breasts fill your mind while you touch yourself, panting in arousal and need. It doesn't take long till small beads of milk form at the nipples as your breasts get ready to feed your imaginary brood. You're lost in the pleasurable dream for a moment before you remember what you wanted to do and quickly grab an empty bottle from your pack to fill it, gently milking yourself into it.";
 		repeat with T running from one to the breasts of the player:
 			add "dog milk" to the invent of the player;
 		if breast size of player > 8:
@@ -6140,7 +6221,7 @@ Carry out milking:
 		now lastmilking is turns;
 	otherwise if the bodyname of the player is "Panther Taur":
 		if breasts of player > 2:
-			say "Running a hand-paw over your upper body's [breast size desc of player] black-furred breasts, you revel in the pleasant sensations that gives you, then lie on your side and reach down to give your lower breasts a caress too. Touching yourself like this wakes deep maternal urges in your panther body, calling to mind a whole litter of cute panther kits suckling at your breasts. It doesn't take long till small beads of milk form at the nipples as your body gets ready to feed your imaginary brood. You're lost in the pleasureable dream for a moment before you remember what you wanted to do and quickly grab an empty bottle from your pack to fill it, gently milking yourself into it.";
+			say "Running a hand-paw over your upper body's [breast size desc of player] black-furred breasts, you revel in the pleasant sensations that gives you, then lie on your side and reach down to give your lower breasts a caress too. Touching yourself like this wakes deep maternal urges in your panther body, calling to mind a whole litter of cute panther kits suckling at your breasts. It doesn't take long till small beads of milk form at the nipples as your body gets ready to feed your imaginary brood. You're lost in the pleasurable dream for a moment before you remember what you wanted to do and quickly grab an empty bottle from your pack to fill it, gently milking yourself into it.";
 		otherwise:
 			say "Running your hand-paws over your two [breast size desc of player] black-furred breasts, you revel in the pleasant sensations that gives you. Caressing their nipples with your fingers, it doesn't take long till small beads of milk form at their tips. Gently milking yourself, you gather the rich panther milk in an empty plastic bottle, all the while imagining how amazing it would be to have your own little panther kits to suckle on your breasts.";		
 		repeat with T running from one to ( ( the breasts of the player ) / 2 ):
@@ -6150,14 +6231,14 @@ Carry out milking:
 				add "panther milk" to the invent of the player;
 		now lastmilking is turns;
 	otherwise if the bodyname of the player is "cheetah woman":
-		say "Using both hands, you cup your [if breasts of player is 2]two[otherwise][breasts of player][end if] [breast size desc of player] feline breasts, caressing their sensitive curves. Touching yourself like this wakes deep maternal urges in your cheetah body, calling to mind a whole litter of cute little kits suckling at your breasts. This leads to small beads of milk forming at their nipples within moments, your transformed body almost instantly getting ready to provide sustenance for your imaginary offspring. Quickly grabbing an empty plastic bottle, you gently milk yourself into it, panting at the pleasureable feelings this gives you.";
+		say "Using both hands, you cup your [if breasts of player is 2]two[otherwise][breasts of player][end if] [breast size desc of player] feline breasts, caressing their sensitive curves. Touching yourself like this wakes deep maternal urges in your cheetah body, calling to mind a whole litter of cute little kits suckling at your breasts. This leads to small beads of milk forming at their nipples within moments, your transformed body almost instantly getting ready to provide sustenance for your imaginary offspring. Quickly grabbing an empty plastic bottle, you gently milk yourself into it, panting at the pleasurable feelings this gives you.";
 		repeat with T running from one to ( ( the breasts of the player ) / 2 ):
 			add "cheetah milk" to the invent of the player;
 		if breast size of player > 8:
 			add "cheetah milk" to the invent of the player;
 		now lastmilking is turns;
 	otherwise if the bodyname of the player is "Chocolate Lab":
-		say "Moving your hands to caress the soft curves of your [if breasts of player is 2]two[otherwise][breasts of player][end if] [breast size desc of player] breasts, you revel in the sensations that wakes in you. Soon they start leaking white cocolate syrup, revealing to anyone watching that your chocolate body has a creamy filling. It takes little effort to draw some white chocolate flavoured milk from your breasts, carefully squirting it into an empty water bottle before packing the now milk-filled container away.";
+		say "Moving your hands to caress the soft curves of your [if breasts of player is 2]two[otherwise][breasts of player][end if] [breast size desc of player] breasts, you revel in the sensations that wakes in you. Soon they start leaking white chocolate syrup, revealing to anyone watching that your chocolate body has a creamy filling. It takes little effort to draw some white chocolate flavoured milk from your breasts, carefully squirting it into an empty water bottle before packing the now milk-filled container away.";
 		repeat with T running from one to the breasts of the player:
 			add "chocolate milk" to the invent of the player;
 		if breast size of player > 8:
@@ -6165,7 +6246,7 @@ Carry out milking:
 				add "chocolate milk" to the invent of the player;
 		now lastmilking is turns;
 	otherwise if the bodyname of the player is "Vixen Nurse":
-		say "Using both hands, you cup your [if breasts of player is 2]two[otherwise][breasts of player][end if] [breast size desc of player] silvery furred breasts, caressing their sensitive curves. Touching yourself like this wakes deep maternal urges in your vulpine body, calling to mind a whole litter of cute little kits suckling at your breasts. This leads to small beads of milk forming at their nipples within moments, your transformed body almost instantly getting ready to provide sustenance for your imaginary offspring. Quickly grabbing an empty plastic bottle, you gently milk yourself into it and gather a small amount of milk, panting at the pleasureable feelings this gives you.";
+		say "Using both hands, you cup your [if breasts of player is 2]two[otherwise][breasts of player][end if] [breast size desc of player] silvery furred breasts, caressing their sensitive curves. Touching yourself like this wakes deep maternal urges in your vulpine body, calling to mind a whole litter of cute little kits suckling at your breasts. This leads to small beads of milk forming at their nipples within moments, your transformed body almost instantly getting ready to provide sustenance for your imaginary offspring. Quickly grabbing an empty plastic bottle, you gently milk yourself into it and gather a small amount of milk, panting at the pleasurable feelings this gives you.";
 		add "vixen milk" to the invent of the player;
 		if breast size of player > 8:
 			add "vixen milk" to the invent of the player;
@@ -6199,7 +6280,7 @@ Carry out milking:
 				add "cow milk" to invent of the player;
 		now lastmilking is turns;
 	otherwise if the bodyname of the player is "Margay":
-		say "You start lactating shortly after you begin playing with your breasts. Besides the pleasureable senstations that wakes inside yourself, you're also rewarded with a slow but steady flow of milk as you pinch your nipples. You gather your milk into bottles and store it away in you pack.";
+		say "You start lactating shortly after you begin playing with your breasts. Besides the pleasurable sensations that wakes inside yourself, you're also rewarded with a slow but steady flow of milk as you pinch your nipples. You gather your milk into bottles and store it away in you pack.";
 		let Z be square root of ( breasts of player * breast size of player );
 		repeat with T running from one to Z:
 			increase carried of margay milk by 1;
@@ -6277,6 +6358,7 @@ Include Dog House by Kaleem mcintyre.
 Include Tyr's Club by Kaleem mcintyre.
 Include Farm by Wahn.
 Include Camp Bravo by Wahn.
+Include Apocalypse Store by DrGryphon.
 
 [Quests & Events]
 Include Researcher Studio by Kaleem Mcintyre.
@@ -6359,6 +6441,7 @@ Include Satyr Frat by Wahn.
 
 
 [Monsters/Infections]
+Include Saber Kitty by Blaydrex.
 Include Naga by Nuku Valente.
 Include Goo Girl by Nuku Valente.
 Include Latex Fox by Nuku Valente.
@@ -6677,6 +6760,7 @@ Include David by Wahn.
 Include Amy by Wahn.
 Include Carl by Wahn.
 Include HornyHorsey by femtoAmpere. 
+Include Rane by Wahn.
 
 [Pets]
 Include Gryphon Companion by Sarokcat.
@@ -7304,7 +7388,7 @@ to say gsopt_start:
 		say "Terrified, you've waited in the dark, subsisting as long as you've can on your supplies for as long as you've been able.  While the noise of chaos died away for a long time, they picked up again with the addition of explosions and gunfire.  Fearing to exit, you remained in the safety of the bunker until it was peaceful again.  You wish you could continue to remain hidden, but you're finished off the very last of your supplies and you'll have to risk venturing out with only your [bold type]backpack[roman type], and your [bold type]watch[roman type].";
 		say "Still... how bad could it be?";
 	otherwise if scenario is "Researcher":
-		say "You remember how it went down. Satellite, gone, Internet, offline. The power was the last thing to go.  Thankfully, you weren't in one of the outbreak zones when it happened, but your life's been thrown upside down like everyone else's by the ensuing chaos.  Seeing an opportunity to help, or at least make some money off the situation, you agreed to enter one of the hotspots through a military contractor.  The city's been cordonned off by the military while they gather intel and plan, giving you some time to gather samples and investigate what's happening.";
+		say "You remember how it went down. Satellite, gone, Internet, offline. The power was the last thing to go.  Thankfully, you weren't in one of the outbreak zones when it happened, but your life's been thrown upside down like everyone else's by the ensuing chaos.  Seeing an opportunity to help, or at least make some money off the situation, you agreed to enter one of the hotspots through a military contractor.  The city's been cordoned off by the military while they gather intel and plan, giving you some time to gather samples and investigate what's happening.";
 		say "The helicopter brought you into the devastated city. Ruin and strange creatures milled about beneath you as you flew over at high speed. This place has been written off as a loss, but there was rumor they[']d take it back. You only have so much time to investigate, and you plan to make the most of it.";
 		say "You're let down beside an old bunker. It would serve as your base of operations, and would be where they[']d pick you up when it was over. You should be scared, but you just can[']t seem to muster that sensation. They gave you booster shots against the nanites as well as a few supplies and a promise of others joining you soon. You know what you are doing. They will be so proud of what you find. Maybe you can figure out a way to stop this from happening again in other cities.";
 	say "No one else ever arrived, so you're on your own out here. Ah well, you're an American of the 21st century. What's a little Apocalypse to keep you down? Steeling your nerves and readying what you have, you break the seal and prepare to set out.";

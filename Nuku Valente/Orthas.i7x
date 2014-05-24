@@ -4,7 +4,7 @@ Version 3 of Orthas by Nuku Valente begins here.
 Section 0 - Orthas
 
 Orthas is a person. "A dragon person, clearly female, is watching the area. If her name badge is accurate, her name is 'Orthas'.".
-The description of Orthas is "[orthasdesc]".
+The description of Orthas is "[orthasNPCdesc]".
 The conversation of Orthas is { "Eggses!" }.
 Orthas is in Trevor Labs Lobby.
 
@@ -12,7 +12,7 @@ the scent of orthas is "Orthas smells like a strong, powerful dragoness[if hp of
 
 the fuckscene of orthas is "[orthasfuck]".
 
-to say orthadesc:
+to say orthasNPCdesc:
 	say "     Orthas is a black scaled dragon woman.  She stands about six and a half feet tall, with wings that are about three feet long each folded to her back.  She watches the area intently, her arms crossed half the time.  Behind her, a slender reptilian tail sways slowly.  Her overall shape is human, especially those huge, F cup knockers that heave distractingly with every breath she takes.  Her overall build is quite strong, enough so that the clothes she's wearing have trouble fitting, making for an impressive guard.";
 
 
@@ -374,7 +374,7 @@ to say orthasdesc:
 	now monsterhp is 150 + ( debit * 6 );
 	now wdam entry is 10;
 	if hardmode is true, now wdam entry is 12 + ( ( 2 * debit ) / 5 );
-	say "[line break]     Orthas, the black dragon, steps forward to battle you.  She stands about six and a half feet tall and has a very athletic body.  Her bat-like wings are each about three feet long and folded onto her back at the moment.  She was large, F cup breasts, but they don't seem to affect her balance or ability to fight at all.  Her eyes blaze with anger and thick smoke curls up from her nostrils as she moves to deal with you for your betrayal.";
+	say "[line break]     Orthas, the black dragon, steps forward to battle you.  She stands about six and a half feet tall and has a very athletic body.  Her bat-like wings are each about three feet long and folded onto her back at the moment.  And while she may have large, F-cup breasts, they don't seem to affect her balance or ability to fight at all.  Her eyes blaze with anger and thick smoke curls up from her nostrils as she moves to deal with you for your betrayal.";
 	if Susan is in Primary Lab:
 		say "     The dragoness is still rather woozy after the blow given to her by the doe.  While it doesn't look like she'll be able to help you further with the fight, she has made the dragoness a little easier to deal with.";
 		decrease monsterhp by 25 + debit;
