@@ -1,15 +1,15 @@
 Version 1 of Tanuki by Nuku Valente begins here.
-[Version 1.2 - Some size change fixes - Stripes]
+[Version 1.3 - Shrine description update]
 
 "Adds Tanuki to Flexible Survival"
 
 Section 1 - The Situation
 
-Shrine is a room. "How odd for an American city. A Japanese style shrine lays nestled in the forest, tucked just off a faint trail and looking reasonably well kept. There is a small box for donations, and a small mallet beside a bell. Perhaps it could be [bold type]rung[roman type]? The air smells of cherry blossoms and spring. You feel safe here.".
+Shrine is a room. "How odd for an American city. A shinto shrine lays nestled in a small bamboo forest in this part of the park, tucked just off a narrow gravel trail and looking reasonably well kept. It is made of stone and features a number of carved pillars holding up a typically Japanese gently roof, gently curved and crowned by forked roof finials. In the midst of the structure, a large bronze mirror disc rests on an elaborate half-circular stand. There is a small box for donations, and a miniature iron mallet beside a bell. Perhaps it could be [bold type]rung[roman type]? The air smells of cherry blossoms and spring. You feel safe here.".
 Northwest of Park Trail is Shrine.
 
 instead of sniffing Shrine:
-	say "The shrine smells faintly of cherry blossoms and spring.  The scent puts you at ease.";
+	say "The shrine smells faintly of cherry blossoms and spring. The scent puts you at ease.";
 
 SatisfiedTanuki is a number that varies. SatisfiedTanuki is usually 5.
 Shrine has a Grab Object called Demand.
@@ -21,9 +21,9 @@ understand "rung" and "ring" and "ring bell" and "ring bell with hammer" and "ri
 
 There is a donation box and hammer and ornate bell in shrine.
 
-The description of ornate bell is "A small ornate bell.";
-The description of donation box is "A small, empty, box, awaiting donations to the spirits, or whomever maintains this place.";
-The description of hammer is "A tiny black mallet on a string.";
+The description of ornate bell is "A small ornate bell.".
+The description of donation box is "A small, empty, box, awaiting donations to the spirits, or whomever maintains this place.".
+The description of hammer is "A tiny black mallet on a string.".
 
 Instead of taking the ornate bell:
 	say "The bell is securely attached to the shrine.";
@@ -208,7 +208,7 @@ When Play begins:
 	now desc entry is "";[ Description of the creature when you encounter it.]
 	now face entry is "sleek muzzled with a raccoon's mask and large expressive ears over your";[ Face description, format as the text "Your face is (your text)"]
 	now body entry is "somewhat pudgy and oddly animal like, like a cartoon rendition of some kind of raccoon perhaps.";[ Body Description, format as the text "Your Body is (your text)"]
-	now skin entry is "[one of]tanuki colored[or]stripe furred[at random]";[ skin Description, format as the text "You have (your text) skin"]
+	now skin entry is "[one of]tanuki coloured[or]stripe furred[at random]";[ skin Description, format as the text "You have (your text) skin"]
 	now tail entry is "A thick and rounded tail sways behind you with black stripes along its length, covered in [skin of player] texture.";[ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]sheathed[or]size changing[or]knotted[at random]";[- Cock Description, format as you have a "size" (your text) cock-]
 	now face change entry is "it draws into a narrow snout and a raccoon mask of black appears on your face."; [ face change text. format as "Your face feels funny as (your text)" ]

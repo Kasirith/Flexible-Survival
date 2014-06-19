@@ -6,7 +6,7 @@ Version 4 of Joanna by Stripes begins here.
 Section 1 - Event
 
 Overrun Garden is a situation.  The level of Overrun Garden is 10.
-The sarea of Overrun Garden is "High";
+The sarea of Overrun Garden is "High".
 joannafight is a number that varies.
 when play begins:
 	add Overrun Garden to badspots of hermaphrodite;
@@ -109,11 +109,11 @@ to say losejoannafight:
 Section 2 - Flower Garden
 
 Flower Garden is a room. It is fasttravel. It is private.  It is sleepsafe.
-The description of Flower Garden is "     Joanna's garden is lush and beautiful, thriving with large and fragrant flowers under her care.  Having cleared away the remains of the monstrous plant, she's taken its place at the center of the garden.  She uproots herself from time to time to walk around and tend to her flowers.  There is a stone path to walk that weaves through the various beds and bushes.";
-lastflowersmell is a number that varies.  lastflowersmell is normally 555;
+The description of Flower Garden is "     Joanna's garden is lush and beautiful, thriving with large and fragrant flowers under her care.  Having cleared away the remains of the monstrous plant, she's taken its place at the center of the garden.  She uproots herself from time to time to walk around and tend to her flowers.  There is a stone path to walk that weaves through the various beds and bushes.".
+lastflowersmell is a number that varies.  lastflowersmell is normally 555.
 Skyscrapers2 is a door.  "Leaving here to the east heads back into the High Rise District.".
 Skyscrapers2 is west of Financial Sector and east of Flower Garden.  It is dangerous.
-the marea of Skyscrapers2 is "High";
+the marea of Skyscrapers2 is "High".
 
 the scent of Flower Garden is "[flowergardenscent]".
 
@@ -132,7 +132,7 @@ to say flowergardenscent:
 Section 3 - Joanna the Kinkajou-Plant
 
 Joanna is a woman.  Joanna is in Flower Garden.
-The description of Joanna is "[joannadesc]";
+The description of Joanna is "[joannadesc]".
 The conversation of Joanna is { "Sunshine!" }.
 lastjoannajuice is a number that varies.  lastjoannajuice is normally 555.
 joannatalk is a number that varies.
@@ -228,7 +228,7 @@ to say plantexam:
 	if hp of Joanna < 5, now hp of Joanna is 5;
 
 to say joannaoffer:
-	say "     As you come up to talk to Joanna, she puts her arms around you and runs her paws over you.  'Mmm... I was hoping you'd stop by, sweetie.  I've been really enjoying our time together, but I'm starting to want more.  I crave more,' she says, sliding her long tongue across your cheek, making you shiver in delight? fear? anticipation?  Her fingers continue over your body, teasing you lightly.  'Will you help me, my lovely hero?[no line break][if plantdefeat > 0]  I may even be able to help you out a little while I'm at it,[end if]' she purrs, sliding her tongue across your ear before nibbing on it.  'It's nothing much.  Just a little seed,' she whispers.  Shall you accept her offer?";
+	say "     As you come up to talk to Joanna, she puts her arms around you and runs her paws over you.  'Mmm... I was hoping you'd stop by, sweetie.  I've been really enjoying our time together, but I'm starting to want more.  I crave more,' she says, sliding her long tongue across your cheek, making you shiver in delight? fear? anticipation?  Her fingers continue over your body, teasing you lightly.  'Will you help me, my lovely hero?[no line break][if plantdefeat > 0]  I may even be able to help you out a little while I'm at it,[end if]' she purrs, sliding her tongue across your ear before nibbling on it.  'It's nothing much.  Just a little seed,' she whispers.  Shall you accept her offer?";
 	if the player consents:
 		say "[joannaseeded]";
 	otherwise:
@@ -451,7 +451,7 @@ to say joannasex3:
 
 
 to say joannasex4:
-	say "     Reaching down between her legs, you run your fingers over her feminine petals, making her shiver.  You pull away from the deep throating kiss and ask your verdant lover if you may fill her lovely flower[if hp of joanna is 2].  Blushing a little, she nods and moans.  'I've been needing this.  This body wants it soooo much[otherwise].  Grinning, she moans and licks your ear.  'Oh, my body wants it so much[end if].'  You stretch yourself out on the ground so she can move atop you, basking in the sun as you fuck her[if hp of joanna is 2] for the first time[end if].";
+	say "     Reaching down between her legs, you run your fingers over her feminine petals, making her shiver.  You pull away from the deep throating kiss and ask your verdant lover if you may fill her lovely flower[if hp of joanna is 2].  Blushing a little, she nods and moans.  'I've been needing this.  This body wants it soooo[otherwise].  Grinning, she moans and licks your ear.  'Oh, my body wants it so[end if] much.'  You stretch yourself out on the ground so she can move atop you, basking in the sun as you fuck her[if hp of joanna is 2] for the first time[end if].";
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 	if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 	say "     Running your hands along her hips, you caress her as she lowers herself down onto your [if cocks of player > 1]cocks, taking them into her wet pussies[otherwise]cock, taking them into her wet pussy[end if].  She chirrs in delight at the sensation of having you inside her needy body and rides you slowly at first, savouring the pleasure[if player is plantcocked and lust of joanna > 0 and cocks of player > 1] of having your green tendrils inside her[otherwise] of having your green tendril inside her[end if].  From the way she's nibbling her lip and the twitches of her flowery folds and writhing cocks, its clear it's taking some effort to hold back her urges.  Deciding to help her along, you take a pair of her slick tendrils in each hand and stroke them.  She tilts her head back and moans loudly, spreading her arms wide into the sun and rides you faster.";
@@ -540,7 +540,7 @@ joannadogsaved is a truth state that varies.  joannadogsaved is normally false.
 joannaharoldtalk is a number that varies.
 
 Dog Chase is a situation.  The level of Dog Chase is 2.
-The sarea of Dog Chase is "Outside";
+The sarea of Dog Chase is "Outside".
 when play begins:
 	add Dog Chase to badspots of furry;
 	add Dog Chase to badspots of guy;

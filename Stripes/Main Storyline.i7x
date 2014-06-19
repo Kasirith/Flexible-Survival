@@ -5,8 +5,8 @@ Version 2 of Main Storyline by Stripes begins here.
 
 Section 0 - Dr Matt Salacious
 
-Doctor Matt is a person. "A figure in a full hazmat suit is busily working at the various terminals, wandering from one to the other when he isn't sitting in that comfy chair. His name badge declares him to be [']Doctor Matt['].";
-The description of Doctor Matt is "[if hp of doctor matt is 100]There is a small tape recorder with a sticky note on it, labeled as [']Doctor Matt['] on one of the lab tables[otherwise]Doctor Matt is working away at the various terminals, wandering from one to another when not working at his lab table or seated in his comfy chair.  He has a full environment suit on, covering his whole body, with only a glass visor to show his human face[end if].";
+Doctor Matt is a person. "A figure in a full hazmat suit is busily working at the various terminals, wandering from one to the other when he isn't sitting in that comfy chair. His name badge declares him to be [']Doctor Matt['].".
+The description of Doctor Matt is "[if hp of doctor matt is 100]There is a small tape recorder with a sticky note on it, labeled as [']Doctor Matt['] on one of the lab tables[otherwise]Doctor Matt is working away at the various terminals, wandering from one to another when not working at his lab table or seated in his comfy chair.  He has a full environment suit on, covering his whole body, with only a glass visor to show his human face[end if].".
 Doctor Matt is in Primary Lab.
 understand "Matt" as doctor matt.
 understand "Left Behind Recording of Doctor Matt " as doctor matt.
@@ -33,13 +33,13 @@ Instead of conversing the doctor matt:
 		if scenario is "Researcher":
 			say "He looks you over a moment, 'You don[']t look nearly as lost and confused as most.' He turns back to his computer a moment, tapping quickly, 'Are you another researcher? Excellent. I[']m looking into a cure for this plague, but I haven[']t made much progress. But I did find something else...";
 		otherwise:
-			say "He laughs a little, nervous and forced. 'Anyway, before you ask, no, we did not have anything to do with the nanite infestation. You didn[apostrophe]t know it was nanites? Now you do. I have been studying them for some time since the grid went dark. I[apostrophe]m not much closer to a cure... but I did find something you're probably interested in,' he says, pausing for effect.";
+			say "He laughs a little, nervous and forced. 'Anyway, before you ask, no, we did not have anything to do with the nanite infestation. You didn[']t know it was nanites? Now you do. I have been studying them for some time since the grid went dark. I[']m not much closer to a cure... but I did find something you're probably interested in,' he says, pausing for effect.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
-		say "'I can manipulate existing strains, just a little, for those already infected, like you. Don[apostrophe]t look at me like that. Anyone not in a fully sealed environment is infected by now.[if humanity of player is less than 80] In fact I'd say you[apostrophe]ve already been pretty badly infected, interesting...[end if] But now for the good news. As you develop resistances to the nanite infection and your system becomes stronger, I can redirect that growth to amazing, and planned, almost superhuman abilities,' he declares, sounding quite proud of himself, 'Only one catch...'";
+		say "'I can manipulate existing strains, just a little, for those already infected, like you. Don[']t look at me like that. Anyone not in a fully sealed environment is infected by now.[if humanity of player is less than 80] In fact I'd say you[']ve already been pretty badly infected, interesting...[end if] But now for the good news. As you develop resistances to the nanite infection and your system becomes stronger, I can redirect that growth to amazing, and planned, almost superhuman abilities,' he declares, sounding quite proud of himself, 'Only one catch...'";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
-		say "'I haven[apostrophe]t had any test subjects. Until you. So you come in here, [bold type]volunteer[roman type], and we[apostrophe]ll make you better than when you started. In return, you can help us save the city. A fair deal, right?' he says, but he[apostrophe]s already turning back to his monitors, not actually listening for your reply.";
+		say "'I haven[']t had any test subjects. Until you. So you come in here, [bold type]volunteer[roman type], and we[']ll make you better than when you started. In return, you can help us save the city. A fair deal, right?' he says, but he[']s already turning back to his monitors, not actually listening for your reply.";
 		now hp of doctor matt is 1;
 		say "[bold type]((Every 3 levels, starting at level 3, you may gain one feat by coming here and typing volunteer))[roman type]";
 		extend game by 16;
@@ -47,11 +47,11 @@ Instead of conversing the doctor matt:
 		say "'Alright, we have a limited amount of time. I have been doing my best to delay the military, but without something concrete to report, they will be here soon, and they will pave this thing as hard as they can, leaving all mysteries unsolved. Now that you are here, we can get to work and keep them off our backs,' explains the hazmat suited man as he pushes his chair towards another terminal and starts typing.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
-		say "'The first problem is a lack of test subjects. I can[apostrophe]t send Orthas out to collect samples, that would leave me unprotected. You, on the other hand, are not so limited. Go to the mall and get some samples from the amorphous transformatives there, and some nutritive secretions from one of those raptor slash panthera leo transformatives. I would prefer two of each, enough to be able to experiment without risking the whole of the subject matter,' he explains, turning to face you.";
+		say "'The first problem is a lack of test subjects. I can[']t send Orthas out to collect samples, that would leave me unprotected. You, on the other hand, are not so limited. Go to the mall and get some samples from the amorphous transformatives there, and some nutritive secretions from one of those raptor slash panthera leo transformatives. I would prefer two of each, enough to be able to experiment without risking the whole of the subject matter,' he explains, turning to face you.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 		say "'Once you have them, just come back here and we will be that much closer to solving this.'";
-		say "You get the idea you[apostrophe]ve been dismissed, as he goes quiet, and eventually turns back to his work. Not much of a socialite.";
+		say "You get the idea you[']ve been dismissed, as he goes quiet, and eventually turns back to his work. Not much of a socialite.";
 		now hp of doctor matt is 2;
 		now level of doctor matt is 0;
 		now hobo-grmilkhelp is turns;
@@ -84,7 +84,7 @@ Instead of conversing the doctor matt:
 			stop the action;
 		extend game by 24;
 		increase score by 5;
-		say "'Simply amazing. There is no other word for it,' says Doctor matt, looking excited through his hazmat faceplate, 'The adaptability of the nanites is simply... I would have said it was impossible if I hadn't laid my own eyes on it. I sent out my results and the military have grudgingly agreed to a three day extension on their plans.'";
+		say "'Simply amazing. There is no other word for it,' says Doctor Matt, looking excited through his hazmat faceplate, 'The adaptability of the nanites is simply... I would have said it was impossible if I hadn't laid my own eyes on it. I sent out my results and the military have grudgingly agreed to a three day extension on their plans.'";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 		say "'The nanites seem to come in a few varieties that cooperate. The most important ones, the ones that allow the miracle work, are the... brain... nanites, for lack of better word. They link with neighboring brain nanites like nerve endings and seem capable of forming neural patterns of astonishing complexity! The nanites stopped receiving directives a long time ago, but they can adjust and make up their own choices independently. It is little wonder this is causing so much trouble,' he gushes with bubbling enthusiasm, like a young boy having caught a creepy looking insect.";
@@ -104,8 +104,8 @@ Instead of conversing the doctor matt:
 	otherwise if hp of doctor matt is 6:
 		say "'Ah ha, yes, she is an interesting creature, is she not?' he says, looking at the deer through his face plate. 'She says her name is Susan, just so you know.";
 		if deerconsent is 1:
-			say "'And she[apostrophe]s taken a fancy to you. This is good.";
-		say "'I was hoping you could test her for infectiousness, in a controlled situation. You don't have to if you don[apostrophe]t want to, just talk to her and decide for yourself. Don[apostrophe]t look at me that way. I can[apostrophe]t very well do it from inside this suit, now can I?' he adds.";
+			say "'And she[']s taken a fancy to you. This is good.";
+		say "'I was hoping you could test her for infectiousness, in a controlled situation. You don't have to if you don[']t want to, just talk to her and decide for yourself. Don[']t look at me that way. I can[']t very well do it from inside this suit, now can I?' he adds.";
 		now hp of doctor matt is 7;
 		increase score by 20;
 		extend game by 24;
@@ -427,7 +427,7 @@ Chapter 2 - The Situations
 Book 1 - Beach
 
 Beach Detector Site is a situation.  It is resolved.
-The sarea of Beach Detector Site is "Beach";
+The sarea of Beach Detector Site is "Beach".
 
 Instead of resolving a Beach Detector Site:
 	say "     Keeping an eye out for an appropriate spot to place the device for Zephyr, you notice a tall outcropping of rock out in the water that you might be able to scale.  It is certainly closer closer than most of the other rocks as well, so you should be able to swim out to it";
@@ -453,7 +453,7 @@ Instead of resolving a Beach Detector Site:
 			otherwise:
 				say "You manage to make it partway to the top on your first attempt, but slip as a large wave crashes against the spire and sends chilling water slamming against you.  You are bashed against the stone pillar and sent tumbling back down into the water.  You are scratched and bruised when you finally make it to the top on your second attempt.";
 				decrease hp of player by 20;
-			say "     Tearing open the bags, you pull out the device and place it on a smooth surface at the top of the spire.  Activating it, there is a whirring accompanied by a grinding sound as the screw bolts dig into the rock, locking it into place.  Given the height and the fresh sea breeze, you're quite confident the detector will get unobstructed readings of... whatever for Zephyr.  Your descent is thankfully easier, choosing to make an exhilerating dive from the fifty foot spire into the water and swimming back to shore.";
+			say "     Tearing open the bags, you pull out the device and place it on a smooth surface at the top of the spire.  Activating it, there is a whirring accompanied by a grinding sound as the screw bolts dig into the rock, locking it into place.  Given the height and the fresh sea breeze, you're quite confident the detector will get unobstructed readings of... whatever for Zephyr.  Your descent is thankfully easier, choosing to make an exhilarating dive from the fifty foot spire into the water and swimming back to shore.";
 			remove "Beach" from ndmlist;
 			now Beach Detector Site is resolved;
 			say "[onelessndm]";
@@ -462,7 +462,7 @@ Instead of resolving a Beach Detector Site:
 Book 2 - Red Light District
 
 Red Light Detector Site is a situation.  It is resolved.
-The sarea of Red Light Detector Site is "Red";
+The sarea of Red Light Detector Site is "Red".
 
 Instead of resolving a Red Light Detector Site:
 	say "     While scouting around in the fancier parts of this neighbourhood, you spot a large nightclub and sex show with a huge neon sign.  Somehow the neon outline of a 25 foot tall, big breasted woman is still lit, flashing along with the name of the club.  It certainly seems to the be the tallest spot around, the sign rising high above the three storey building, dwarfing all around it";
@@ -489,7 +489,7 @@ Instead of resolving a Red Light Detector Site:
 Book 3 - High Rise District
 
 High Rise Detector Site is a situation.  It is resolved.
-The sarea of High Rise Detector Site is "High";
+The sarea of High Rise Detector Site is "High".
 ndmhigh is a number that varies.
 
 Instead of resolving a High Rise Detector Site:
@@ -533,7 +533,7 @@ Instead of resolving a High Rise Detector Site:
 Book 4 - Park
 
 Park Detector Site is a situation.  It is resolved.
-The sarea of Park Detector Site is "Park";
+The sarea of Park Detector Site is "Park".
 
 Instead of resolving a Park Detector Site:
 	say "     Unsure where in the park you could place the device which would be suitable for Zephyr's requirements.  You somehow doubt sticking it in a tree will quite be enough to satisfy them.  As you travel the park, trying to find a worthwhile place, you spot the old, disused observatory on the hill at one end of the park.  Pretty much forgotten by the city as the light pollution made it largely unusable, it is still the highest point in the area";

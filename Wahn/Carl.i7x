@@ -50,8 +50,8 @@ Section 1 - Description
 
 Carl is a man. The hp of Carl is usually 0.
 The icon of Carl is Figure of CarlClothed_icon.
-The description of Carl is "[CarlDesc]";
-The conversation of Carl is { "Woof." };
+The description of Carl is "[CarlDesc]".
+The conversation of Carl is { "Woof." }.
 CarlLibraryEntry is a number that varies. [when he was brought in]
 lastfuck of Carl is usually 555.
 
@@ -66,7 +66,7 @@ to say CarlDesc:
 		say "     Carl Banning is a well-built young male soldier, now transformed into an anthropomorphic husky. He wears a dark undershirt and the camo pattern pants of a normal military uniform, though he had to give up on boots since his digitigrade paws wouldn't fit in them. By now, he's become a lot more dog-like in his mannerisms, often acting and reacting in canine ways more than human ones. As he sees you looking at him, he lowers his head a bit and only looks at you from the corner of his eye, showing his submissiveness to you.";				
 	say "     Having carried up a mattress from the bunker and set it up as his bed near one of the front-side windows of the library, he spends much of his time on lookout over the approaches to the building, ready to give warning should any dangerous creatures approach.";
 		
-The scent of Carl is "     Carl smells like a husky - and clearly a male one at that.";
+The scent of Carl is "     Carl smells like a husky - and clearly a male one at that.".
 
 Section 2 - Talking
 
@@ -759,7 +759,7 @@ instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: CARL & DAVID - SEX WALK-IN - HP OF CARL: [hp of Carl], THIRST OF CARL: [thirst of Carl][line break]";		
-	say "     Coming into the library, you see Carl and David at the back of the main room, quietly talking to each other. You can't help but notice how close Carl is leaning to the human soldier as he whispers something, awakening your curiosity about what's going on, so you inconspicuously wander a bit closer. Then, before you've taken more than a few steps, it becomes obvious - as Carl sets his paw-hand on David's crotch and starts to rub it through his pants. The anthro husky leans in and brings his muzzle against his friend's skin just a moment later, then gives David's neck a long and sensuous lick. Quietly observing and getting closer and closer, you're in position to hear their next exchange:";
+	say "     Coming into the library, you see Carl and David at the back of the main room, quietly talking to each other. You can't help but notice how close Carl is leaning to the human soldier as he whispers something, awakening your curiosity about what's going on, so you inconspicuously wander a bit closer. Then, before you've taken more than a few steps, it becomes obvious - as Carl sets his paw-hand on David's crotch and starts to rub it through his pants. The anthro husky leans in and brings his muzzle against his friend's skin just a moment later, then gives David's neck a long and sensuous lick. Quietly observing and getting closer and closer, you're in position to hear their next exchange:[line break]";
 	say "     Carl pants, 'I really wanna fuck you again, soldier. How about we have some fun behind the bookshelves?' David's answer is a bit hard to understand, being more moaned than said, but you think it was 'Yes sir. Can't wait to feel your knot inside me.' One thing is for sure, they're pretty into each other and distracted with all the touching, licking and kissing - so much so that they don't even notice you as first David, then Carl stroll over and walk behind the bookshelves in the back row. Carl's gaze is almost glued to the human soldier's shapely ass, and judging from the big bulge in his uniform pants, he's fully erect and ready to go.";
 	say "     [line break]";
 	say "     Do you want to follow them and observe what will happen next?";

@@ -34,9 +34,9 @@ to say larissaview:
 
 Larissa has a list of text called vials.
 
-The description of Larissa is "[larissadesc]";
+The description of Larissa is "[larissadesc]".
 
-the scent of Larissa is "Larissa arches her brow as you sniff the air around her, reaching for something in a nearby drawer.  You do catch a faint hint of lilacs, probably a perfume.";
+the scent of Larissa is "Larissa arches her brow as you sniff the air around her, reaching for something in a nearby drawer.  You do catch a faint hint of lilacs, probably a perfume.".
 
 the linkaction of Larissa is "Possible Actions: [link]talk[as]talk Larissa[end link], [link]smell[as]smell Larissa[end link], [link]fuck[as]fuck Larissa[end link][if hp of Larissa >= 2], [link]TF[as]transform Larissa[end link][end if][line break]";
 
@@ -88,25 +88,25 @@ instead of conversing Larissa:
 		if hp of doctor matt is not 17:
 			if zephyrtask is 0:
 				if furry is not banned and hermaphrodite is not banned:
-					say "     She flips through a few papers on her desk, trying to find something.  'We've also been experiencing a bit of a pest problem.  Some of those panther taur creatures have been harrassing us.'  She holds a photo of a black feline creature with a furred human upper body and a panther's body instead of legs.  It's fondling its breasts and smiling lewdly at the camera.  'The guards are able drive them off easily enough, but it does upset the other customers.  We're in the business of helping you, but we'll need some help to do that.  If you could go beat up some of them around here, it might discourage them from coming around again.  We'd appreciate your assistance and will reward you for the completion of the task.'";
+					say "     She flips through a few papers on her desk, trying to find something.  'We've also been experiencing a bit of a pest problem.  Some of those panther taur creatures have been harassing us.'  She holds a photo of a black feline creature with a furred human upper body and a panther's body instead of legs.  It's fondling its breasts and smiling lewdly at the camera.  'The guards are able drive them off easily enough, but it does upset the other customers.  We're in the business of helping you, but we'll need some help to do that.  If you could go beat up some of them around here, it might discourage them from coming around again.  We'd appreciate your assistance and will reward you for the completion of the task.'";
 					now zephyrtask is 1;
 					now zephyrpests is 0;
 				otherwise if furry is not banned and guy is not banned:
-					say "     She flips through a few papers on her desk, trying to find something.  'We've also been experiencing a bit of a pest problem.  Some of those German Shepherd creatures have been harrassing us.'  She holds a photo of a German Shepherd person with black and tan fur.  It's growling and making a rude gesture at the camera.  'The guards are able drive them off easily enough, but it does upset the other customers.  We're in the business of helping you, but we'll need some help to do that.  If you could go beat up some of them around here, it might discourage them from coming around again.  We'd appreciate your assistance and will reward you for the completion of the task.'";
+					say "     She flips through a few papers on her desk, trying to find something.  'We've also been experiencing a bit of a pest problem.  Some of those German Shepherd creatures have been harassing us.'  She holds a photo of a German Shepherd person with black and tan fur.  It's growling and making a rude gesture at the camera.  'The guards are able drive them off easily enough, but it does upset the other customers.  We're in the business of helping you, but we'll need some help to do that.  If you could go beat up some of them around here, it might discourage them from coming around again.  We'd appreciate your assistance and will reward you for the completion of the task.'";
 					now zephyrtask is 2;
 					now zephyrpests is 0;
 				otherwise if girl is not banned:
-					say "     She flips through a few papers on her desk, trying to find something.  'We've also been experiencing a bit of a pest problem.  Some of those city sprite creatures have been harrassing us.'  She holds a photo of a cluster of fairy-winged girls hovering in the air.  Several of them are sticking out their tongues or otherwise making faces at the camera.  'The guards are able drive them back to that [bold type]urban forest[roman type] they live in, but they keep coming back.  They harass the customers and are destructive little pests.  We're in the business of helping you, but we'll need some help to do that.  If you could track them down and beat a few of them up, it might discourage them from coming around again.  We'd appreciate your assistance and will reward you for the completion of the task.'";
+					say "     She flips through a few papers on her desk, trying to find something.  'We've also been experiencing a bit of a pest problem.  Some of those city sprite creatures have been harassing us.'  She holds a photo of a cluster of fairy-winged girls hovering in the air.  Several of them are sticking out their tongues or otherwise making faces at the camera.  'The guards are able drive them back to that [bold type]urban forest[roman type] they live in, but they keep coming back.  They harass the customers and are destructive little pests.  We're in the business of helping you, but we'll need some help to do that.  If you could track them down and beat a few of them up, it might discourage them from coming around again.  We'd appreciate your assistance and will reward you for the completion of the task.'";
 					now zephyrtask is 3;
 					now zephyrpests is 0;
 			otherwise if ( zephyrtask is 1 or zephyrtask is 2 or zephyrtask is 3 ) and zephyrpests >= 4:
-				say "     She sets down chips she's munching on.  'Thanks for your assistance with our pest problem.  Our records show that you've confronted and defeated several of them and they've stopped coming around here.  For your assistance, we'll be depositing [special-style-1]100[roman type] credits into your account on top of the standard reward you've been recieving.  Nice work, cute stuff.  What're you doing later?' she adds with a smile and a wink.  Cha-ching!";
+				say "     She sets down chips she's munching on.  'Thanks for your assistance with our pest problem.  Our records show that you've confronted and defeated several of them and they've stopped coming around here.  For your assistance, we'll be depositing [special-style-1]100[roman type] credits into your account on top of the standard reward you've been receiving.  Nice work, cute stuff.  What're you doing later?' she adds with a smile and a wink.  Cha-ching!";
 				now zephyrtask is 4;
 				now hp of Larissa is 1;
 				increase freecred by 100;
 				increase score by 20;
 			otherwise if a random chance of 1 in 3 succeeds and ( zephyrtask is 1 or zephyrtask is 2 or zephyrtask is 3 ):
-				say "    She taps away at her computer briefly.  'We're still having a problem with those pesky [if zephyrtask is 1]panther taurs[otherwise if zephyrtask is 2]German Shepherds[otherwise]city sprites[end if].  Please be on the lookout for them.  They're not that tough, but it's annoying to have them keep bothering us.  Beating them up a few times should make them less bold about attacking us.";
+				say "     She taps away at her computer briefly.  'We're still having a problem with those pesky [if zephyrtask is 1]panther taurs[otherwise if zephyrtask is 2]German Shepherds[otherwise]city sprites[end if].  Please be on the lookout for them.  They're not that tough, but it's annoying to have them keep bothering us.  Beating them up a few times should make them less bold about attacking us.";
 	otherwise if hp of Larissa is 1:
 		try Larissatfing;
 	otherwise if hp of Larissa is 2:
@@ -273,7 +273,7 @@ to say Larissasex_MM:
 
 
 to say Larissasex_FF:
-	say "     The female [form of Larissa] pushes you down onto the cot and snuggles up beside you on it, running her [handform of Larissa] over your [bodydesc of player] body as she does.  You pull her into a kiss and slide a hand between her legs, sliding your fingers over her [cunt size desc of larissa] [bodytype of larissa] pussy.  This draws a moan from her and she gives your ass a firm squeeze, kissing you even harder before moving her [handform of Larissa] to your dripping folds.  Soon you're fingering one another frantically, rubbing over those wet lips, sensitive clits and clenching inner walls[if breast size of larissa > 0].  You move your mouth to her [breast size desc of Larissa] breasts, kissing at them and sucking on her hard nipples.  She gives delightful cries and her pussy quivers when you nibble on them.  You continue to lavish attention upon one another until finally you both have cum several times, ending with a final powerful orgasm that leaves you both panting on the bed in each others['] arms.  When you've had a chance to recover and clean up, you both head back out and the [form of Larissa] returns to her desk with a contented smile on her face.".;
+	say "     The female [form of Larissa] pushes you down onto the cot and snuggles up beside you on it, running her [handform of Larissa] over your [bodydesc of player] body as she does.  You pull her into a kiss and slide a hand between her legs, sliding your fingers over her [cunt size desc of larissa] [bodytype of larissa] pussy.  This draws a moan from her and she gives your ass a firm squeeze, kissing you even harder before moving her [handform of Larissa] to your dripping folds.  Soon you're fingering one another frantically, rubbing over those wet lips, sensitive clits and clenching inner walls[if breast size of larissa > 0].  You move your mouth to her [breast size desc of Larissa] breasts, kissing at them and sucking on her hard nipples.  She gives delightful cries and her pussy quivers when you nibble on them.  You continue to lavish attention upon one another until finally you both have cum several times, ending with a final powerful orgasm that leaves you both panting on the bed in each others['] arms.  When you've had a chance to recover and clean up, you both head back out and the [form of Larissa] returns to her desk with a contented smile on her face.".
 
 
 to say Larissasex_taurfun:
@@ -341,20 +341,20 @@ Section 5 - Transformation Mechanics
 
 Part 0 - Variables
 
-Larissa has a text called body. Body of Larissa is usually "charmingly human";
-Larissa has a text called skin. Skin of Larissa is usually "evenly tanned skin";
-Larissa has a text called Cock. Cock of Larissa is usually "[one of]normal[or]human[or]pink[at random]";
-Larissa has a text called face. Face of Larissa is usually "pretty and human";
-Larissa has a text called tail. tail of Larissa is usually "";
+Larissa has a text called body. Body of Larissa is usually "charmingly human".
+Larissa has a text called skin. Skin of Larissa is usually "evenly tanned skin".
+Larissa has a text called Cock. Cock of Larissa is usually "[one of]normal[or]human[or]pink[at random]".
+Larissa has a text called face. Face of Larissa is usually "pretty and human".
+Larissa has a text called tail. tail of Larissa is usually "".
 Larissa has a truth state called tailed.  tailed is usually false.
 Larissa has a truth state called winged.  winged is usually false.
-Larissa has a text called infname. infname is usually "human";
-Larissa has a text called form. form is usually "human";
-Larissa has a text called handform. handform is usually "hand";
-Larissa has a text called footform. footform is usually "foot";
-Larissa has a text called mouth. Mouth is usually "mouth";
-Larissa has a text called tftext. tftext is usually "";
-Larissa has a text called generallook. generallook is usually "cute";
+Larissa has a text called infname. infname is usually "human".
+Larissa has a text called form. form is usually "human".
+Larissa has a text called handform. handform is usually "hand".
+Larissa has a text called footform. footform is usually "foot".
+Larissa has a text called mouth. Mouth is usually "mouth".
+Larissa has a text called tftext. tftext is usually "".
+Larissa has a text called generallook. generallook is usually "cute".
 Larissa has text called Cock Size Desc.
 Larissa has text called Cunt Size Desc.
 Larissa has text called Breast Size Desc.
@@ -367,13 +367,13 @@ Larissa has a number called Cock Width.
 Larissa has a number called Cunt length.  Cunt length of Larissa is usually 6.
 Larissa has a number called Cunt width.  Cunt width of Larissa is usually 3.
 Larissa has a number called scalevalue.  The scalevalue is usually 3.
-Larissa has a text called bodydesc.  The bodydesc is usually "[one of]average[or]normal[or]unchanged[at random]";
-Larissa has a text called bodytype.  The bodytype is usually "human";
-Larissa has a text called subjpro_cap.  The subjpro_cap is usually "She";
-Larissa has a text called subjpro.  The subjpro is usually "she";
-Larissa has a text called possadj_cap.  The possadj_cap is usually "Her";
-Larissa has a text called possadj.  The possadj is usually "her";
-Larissa has a text called objpro.  The objpro is usually "her";
+Larissa has a text called bodydesc.  The bodydesc is usually "[one of]average[or]normal[or]unchanged[at random]".
+Larissa has a text called bodytype.  The bodytype is usually "human".
+Larissa has a text called subjpro_cap.  The subjpro_cap is usually "She".
+Larissa has a text called subjpro.  The subjpro is usually "she".
+Larissa has a text called possadj_cap.  The possadj_cap is usually "Her".
+Larissa has a text called possadj.  The possadj is usually "her".
+Larissa has a text called objpro.  The objpro is usually "her".
 Larissa has a number called daycycle.
 Larissa has a number called bodycat.
 Larissa has a number called lasttf.  Lasttf is normally 255.
@@ -1155,7 +1155,7 @@ to say Larissaisnow-googirl:
 			now infname of Larissa is "Goo Girl";
 			now handform of Larissa is "flexible hand";
 			now footform of Larissa is "column of goo";
-			now skin of Larissa is "transluscent [one of]green[or]red[or]blue[or]purple[sticky random] gel";
+			now skin of Larissa is "translucent [one of]green[or]red[or]blue[or]purple[sticky random] gel";
 			now tail of Larissa is "";
 			now tailed of Larissa is false;
 			now winged of Larissa is false;

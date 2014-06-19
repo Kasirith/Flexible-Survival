@@ -12,16 +12,17 @@ Use MAX_PROP_TABLE_SIZE of 51000000.
 use MAX_STATIC_DATA of 12500000.
 Use MAX_OBJ_PROP_COUNT of 1280.
 use MAX_SYMBOLS of 13000000. ["Compiler finished with code 10"]
-use MAX_NUM_STATIC_STRINGS of 100000. [ Code 10 ]
+use MAX_NUM_STATIC_STRINGS of 150000. [ Code 10 ]
 use SYMBOLS_CHUNK_SIZE of 25000. [ Code 10 ]
 use ALLOC_CHUNK_SIZE of 1450000.
 use MAX_DICT_ENTRIES of 15000.
 use MAX_OBJECTS of 1250.
 use MAX_ACTIONS of 320.
 use MAX_VERBS of 330.
-use MAX_ARRAYS of 1600.
+use MAX_ARRAYS of 100000.
 Use MAX_ZCODE_SIZE of 1000000.
-Use maximum indexed text length of at least 2000.
+Use maximum text length of at least 2000.
+Use Scoring.
 [ End compiler settings. ]
 
 Include Basic Help Menu by Emily Short.
@@ -29,12 +30,11 @@ Include Version 4 of Menus by Emily Short.
 Include Basic Screen Effects by Emily Short.
 include FS Graphics by Nuku Valente.
 
-[Absolute value]
-To decide which number is the absolute value of (N - a number):
+[To decide which number is the absolute value of (N - a number):
 	if N is less than 0:
 		let N be 0 minus N;
-	decide on N.
-
+	decide on N.] [enable this to compile on older versions of inform]
+	
 To say a/an (T - text):
 	let Txt be indexed text;
 	let Txt be T;
@@ -43,6 +43,10 @@ To say a/an (T - text):
 	otherwise:
 		say "a ";
 	say T.
+	
+To end the game saying (T - text):
+	end the story saying T;
+	
 
 Instead of sniffing something (called x):
 	if the scent of x is "":
@@ -54,6 +58,11 @@ To wait for any key:
 	if hypernull is 0:
 		say "[link]more[as] [end link][run paragraph on]";
 	keypause;
+	
+
+
+To change the current menu to (X - table name):
+	now the current menu is x;
 
 to clear the screen and hyperlink list:
 	clear the screen;
@@ -117,7 +126,7 @@ To adjustdefaulthelp: [changes table from Basic Help Menu by Emily Short to bett
 Include (-
 
 [ YesOrNo i j;
-	PrintText((+ yes or no message +));
+	TEXT_TY_Say((+ yes or no message +));
 	for (::) {
 	#Ifdef TARGET_ZCODE;
 	      if (location == nothing || parent(player) == nothing) read buffer parse;
@@ -131,9 +140,13 @@ Include (-
 			i = parse-->1;
 			if (i == YES1__WD or YES2__WD or YES3__WD or '1//') rtrue;
 			if (i == NO1__WD or NO2__WD or NO3__WD or '2//') rfalse;
-	      }	      PrintText((+ yes or no message +));
+	      }
+		TEXT_TY_Say((+ yes or no message +));
+		YES_OR_NO_QUESTION_INTERNAL_RM('A'); print "> ";
 	}
 ];
+
+[ YES_OR_NO_QUESTION_INTERNAL_R; ];
 -) instead of "Yes/No Questions" in "Parser.i6t".
 
 The yes or no message is a text that varies. The yes or no message is "[link]yes[end link] or [link]no[end link]> [run paragraph on]".
@@ -200,34 +213,34 @@ The player has a number called capacity.
 A person has a number called libido.
 A person has a text called linkaction.
 
-The player has a text called skin. Skin is usually "smooth";
-The player has a text called Cock. Cock is usually "[one of]normal[or]flesh-toned[or]uninfected[or]human[at random]";
-The player has a text called face. Face is usually "charmingly human";
-The player has a text called tail. tail is usually "";
-The player has a text called body. Body is usually "charmingly human";
-The player has a text called bodyname. Bodyname is usually "human";
-The player has a text called facename. Facename is usually "human";
-The player has a text called skinname. Skinname is usually "human";
-The player has a text called cockname. cockname is usually "human";
-The player has a text called tailname. Tailname is usually "human";
-The child has a text called bodyname. Bodyname is usually "human";
-The child has a text called facename. Facename is usually "human";
-The child has a text called skinname. Skinname is usually "human";
-The child has a text called cockname. cockname is usually "human";
-The child has a text called tailname. Tailname is usually "human";
+The player has a text called skin. Skin is usually "smooth".
+The player has a text called Cock. Cock is usually "[one of]normal[or]flesh-toned[or]uninfected[or]human[at random]".
+The player has a text called face. Face is usually "charmingly human".
+The player has a text called tail. tail is usually "".
+The player has a text called body. Body is usually "charmingly human".
+The player has a text called bodyname. Bodyname is usually "human".
+The player has a text called facename. Facename is usually "human".
+The player has a text called skinname. Skinname is usually "human".
+The player has a text called cockname. cockname is usually "human".
+The player has a text called tailname. Tailname is usually "human".
+The child has a text called bodyname. Bodyname is usually "human".
+The child has a text called facename. Facename is usually "human".
+The child has a text called skinname. Skinname is usually "human".
+The child has a text called cockname. cockname is usually "human".
+The child has a text called tailname. Tailname is usually "human".
 The player has text called Cock Size Desc.
 The player has text called Cunt Size Desc.
 The player has text called Breast Size Desc.
 The player has text called Short Breast Size Desc.
-The player has a text called weapon. Weapon is usually "[one of]your quick wit[or]your fists[or]a quick kick[or]your body[or]some impromptu wrestling[or]an unarmed strike[at random]";
-The player has a text called weapon type. Weapon type is usually "Melee";
+The player has a text called weapon. Weapon is usually "[one of]your quick wit[or]your fists[or]a quick kick[or]your body[or]some impromptu wrestling[or]an unarmed strike[at random]".
+The player has a text called weapon type. Weapon type is usually "Melee".
 A person has a number called Weapon damage. Weapon damage is usually 4.
 A person has a list of text called conversation.
 
 [See the BFandI extension for an explanation on these new variables.]
 The player has a number called scalevalue.  The scalevalue is usually 3.						[value for body size]
-The player has a text called bodydesc.  The bodydesc is usually "[one of]average[or]normal[or]unchanged[at random]";	[adjective for body type/appearance]
-The player has a text called bodytype.  The bodytype is usually "human";						[broad adjective for species]
+The player has a text called bodydesc.  The bodydesc is usually "[one of]average[or]normal[or]unchanged[at random]".	[adjective for body type/appearance]
+The player has a text called bodytype.  The bodytype is usually "human".						[broad adjective for species]
 The player has a number called daycycle.												[day/night bias]
 
 freecred is a number that varies.
@@ -243,7 +256,7 @@ Grab Object is a kind of thing.
 a grab object has a number called objsize. The objsize of grab object is usually 3.	[Used only for armaments and journal.]
 things have a text called scent.
 rooms have a text called scent.
-The player has a grab object called weapon object. A weapon object is usually journal;
+The player has a grab object called weapon object. A weapon object is usually journal.
 A armament is a kind of grab object.
 A armament has a text called weapon.
 A armament has a text called weapon type.
@@ -252,9 +265,9 @@ A armament has a number called hitbonus.	[Rare, usually magic]
 An armament can be ranged or melee. An armament is usually melee.
 Equipment is a kind of grab object.
 Equipment can be equipped or not equipped. Equipment is usually not equipped.
-Equipment has a text called descmod. The descmod of equipment is usually "";
-Equipment has a text called placement. The placement of equipment is usually "end";
-Equipment has a text called slot. The slot of equipment is usually "";
+Equipment has a text called descmod. The descmod of equipment is usually "".
+Equipment has a text called placement. The placement of equipment is usually "end".
+Equipment has a text called slot. The slot of equipment is usually "".
 Equipment has a number called AC. The AC of equipment is usually 0.
 Equipment has a number called effectiveness.  The effectiveness of equipment is usually 0.
 Equipment has a number called dodgebonus.  The dodgebonus of equipment is usually 0.	[Rare, usually magic]
@@ -271,9 +284,9 @@ A grab object has a text called usedesc.
 A grab object has a number called carried.
 A grab object has a number called stashed.
 Turns is a number that varies. Turns is 240.
-Hardmode is a truth state that varies. Hardmode is usually false;
-Levelwindow is a number that varies. Levelwindow is 3;
-Lastjournaluse is a number that varies. Lastjournaluse is 248;
+Hardmode is a truth state that varies. Hardmode is usually false.
+Levelwindow is a number that varies. Levelwindow is 3.
+Lastjournaluse is a number that varies. Lastjournaluse is 248.
 Targetturns is a number that varies.
 Started is a number that varies.
 Freefeats is a number that varies.
@@ -575,7 +588,7 @@ A room can be fasttravel. A room is usually not fasttravel.
 A room can be private. A room is usually not private.
 A room can be sleepsafe.  A room is usually not sleepsafe.
 The player is wearing a watch.
-The player is wearing a backpack. The description of the backpack is "A backpack, full of stuff. To look inside, type [bold type]item[roman type] To look at an item, type [bold type]look (item name)[roman type] To use an item, type [bold type]use (item name)[roman type]. Do you see something in the room you want to take with you? Type [bold type]grab (item name)[roman type] to snatch it up.";
+The player is wearing a backpack. The description of the backpack is "A backpack, full of stuff. To look inside, type [bold type]item[roman type] To look at an item, type [bold type]look (item name)[roman type] To use an item, type [bold type]use (item name)[roman type]. Do you see something in the room you want to take with you? Type [bold type]grab (item name)[roman type] to snatch it up.".
 
 instead of examining a grab object(called x):
 	say "[the desc corresponding to a object of x in the table of game objects]";
@@ -601,7 +614,7 @@ gsms is a number that varies.			[main stat]
 gspg is a number that varies.			[player gender]
 gsgt is a number that varies.			[game type]
 gshm is a truth state that varies.		[hard mode on/off]
-gsexit is a number that varies. gsexit is usually 0;
+gsexit is a number that varies. gsexit is usually 0.
 freefeatgeneral is a text that varies.
 freefeatfun is a text that varies.
 hypernull is a number that varies. 
@@ -617,14 +630,14 @@ Book 2 - Places
 
 Grey Abbey Library is a room.  Grey Abbey Library is fasttravel.  Grey Abbey Library is sleepsafe.
 The description of Grey Abbey Library is "[abbey desc]".
-Bunker is a room.  The description of Bunker is "[bunker desc]";
+Bunker is a room.  The description of Bunker is "[bunker desc]".
 The invent of Bunker is { "face mask","medkit","medkit","water bottle","water bottle","water bottle","food","food","pocketknife","cot" }.
 Library door is a door. "Solid oak doors lend a stately appearance to the library.". Library door is dangerous.
 East of 7th Street & Main is the Library Door. "Solid oak doors lend a stately appearance to the library.".
 East of library door is Grey Abbey Library.
 Inside of Grey Abbey Library is Bunker.
 The player is in Bunker.
-The marea of library door is "Outside";
+The marea of library door is "Outside".
 
 to say bunker desc:
 	say "     Sparsely appointed, the bunker was built back during the Cold War, then abandoned to become a forgotten curiosity at best.  Its walls are solid concrete and the shelves are at least in good repair.  There are several cots bolted to the floor and walls for those taking shelter here to [bold type]rest[roman type] upon";
@@ -653,8 +666,8 @@ to say abbey desc:
 		say "     Alexandra is on guard here, watching by the door for trouble.  The Doberwoman paces around, running her paw along her nightstick as if hoping for an opportunity to use it.";
 
 Grey Abbey Library is below Grey Abbey 2F.
-Grey Abbey 2F is a room.  The description of Grey Abbey 2F is "[abbey 2F desc]";
-the scent of Grey Abbey 2F is "The smell of books permeates the air in the library, the musty odour is slightly more noticeable up here on the second floor thanks to the older, less frequently used tomes.";
+Grey Abbey 2F is a room.  The description of Grey Abbey 2F is "[abbey 2F desc]".
+the scent of Grey Abbey 2F is "The smell of books permeates the air in the library, the musty odour is slightly more noticeable up here on the second floor thanks to the older, less frequently used tomes.".
 
 to say abbey 2F desc:
 	say "     The spacious second story of the library opens up to a balcony overlooking the lobby below, there a few cushioned chairs and a small sofa near the railing.  Opposite the seating area are a few more shelves of books, along with a few secluded desks to serve as quiet study places.";
@@ -671,7 +684,7 @@ North of Mall Foodcourt is Mall Atrium.
 Sewer Grating is a door. Sewer Grating is dangerous. 
 Down of Mall Foodcourt is Sewer Grating.
 Down of sewer grating is Sewers A7.
-The marea of Sewer Grating is "Mall". The sewer grating is open. The description of sewer grating is "A sewer grate, broken open with bits of somewhat rusted iron strewn everywhere, some slime splattered about. Looks dangerous down there, but nothing ventured, nothing gained, right?"; understand "grate" and "grating" as the sewer grating.
+The marea of Sewer Grating is "Mall". The sewer grating is open. The description of sewer grating is "A sewer grate, broken open with bits of somewhat rusted iron strewn everywhere, some slime splattered about. Looks dangerous down there, but nothing ventured, nothing gained, right?". understand "grate" and "grating" as the sewer grating.
 ]
 
 Outside Trevor Labs is a room. "You[apostrophe]ve heard of Trevor Labs. They are, or is that were? a biopharm setup. Kind of new on the block, made a big stink over the local news with their willingness to skirt as close to the edge of most laws in the name of science. Well here[apostrophe]s the headquarters, rising as a sleek and tall glass building to your west. You[apostrophe]re not certain but you think you can see some light in one of the windows, visible in the [time of day] light. Curious.".
@@ -680,9 +693,9 @@ Outside Trevor Labs is fasttravel.
 Away from Labs is a door. "East of here lays the rest of the city." It is dangerous. The marea of Away from Labs is "Outside". Away from labs is east of Outside Trevor Labs and west of Wandering the City.
 Trevor Labs Lobby is a room. "The ground floor of Trevor Labs. New age furniture has been ripped to shreds and thrown around and unknown liquid is splattered all over the place. The smell is somewhere between burnt plastic and sweaty humanity in an unappealing mixture. Fortunately, the scent is fading with time. It's somewhat dark, but not too dark as to see the emergency stairs are still accessible going up and down.".
 West of Outside Trevor Labs is Trevor Labs Lobby.
-2F Trevor Labs is a room. "The second floor of the labs. The lighting is dim, except for brilliant light shining from beneath a closed door at the end of the hallway. It casts a cone of brightness into the gloom. The area is silent, and smells of disuse and long old disinfectant. There does not seem to be much here to look at besides a broken water cooler and a motivational poster with a kitten, encouraging you to hang in there.";
+2F Trevor Labs is a room. "The second floor of the labs. The lighting is dim, except for brilliant light shining from beneath a closed door at the end of the hallway. It casts a cone of brightness into the gloom. The area is silent, and smells of disuse and long old disinfectant. There does not seem to be much here to look at besides a broken water cooler and a motivational poster with a kitten, encouraging you to hang in there.".
 Trevor Labs Lobby is below 2F Trevor Labs.
-Primary Lab is a room. "One of the few places in the city with working power, this lab is brilliantly lit, showing off banks of busy computer terminals displaying dizzying amounts of information, largely obscure and technical. Overhead, soft humming of air conditioning is the likely reason that the room feels just a bit chilly. There is an especially comfy chair resting before the largest computer. There is only one window here, and it is mostly blocked by filing cabinets. Perhaps it is the light you saw outside.";
+Primary Lab is a room. "One of the few places in the city with working power, this lab is brilliantly lit, showing off banks of busy computer terminals displaying dizzying amounts of information, largely obscure and technical. Overhead, soft humming of air conditioning is the likely reason that the room feels just a bit chilly. There is an especially comfy chair resting before the largest computer. There is only one window here, and it is mostly blocked by filing cabinets. Perhaps it is the light you saw outside.".
 Primary Lab is north of 2F Trevor Labs.
 There is an Infection Terminal in Primary Lab. "A glowing infection terminal quietly lists all the infections in the corner.".
 
@@ -1062,8 +1075,8 @@ name	desc	weight	object	sortname (indexed text)
 ]
 
 face mask is equipment. It is a part of the player. It is not temporary.
-The descmod of face mask is "A filtered mask covers nose and mouth in a vain attempt to help. ";
-The placement of face mask is "face";
+The descmod of face mask is "A filtered mask covers nose and mouth in a vain attempt to help. ".
+The placement of face mask is "face".
 journal is a grab object. It is a part of the player. It is not temporary. The carried of journal is 1.
 journal has a number called hitbonus.  hitbonus of journal is usually 0.
 cot is a grab object. It is a part of the player. It is not temporary.
@@ -1085,11 +1098,11 @@ pocketknife is a armament. It is a part of the player. It has a weapon "[one of]
 understand "knife" as pocketknife.
 chair is a armament. It is a part of the player. It has a weapon "[one of]a folding chair[or]your improvised weapon[or]that move you saw on WWE[or]a metal chair to the eyes[at random]". The weapon damage of chair is 5. The weapon type of chair is "Melee". It is not temporary.  the objsize of chair is 4.
 understand "seat" as chair.
-gryphon milk is a grab object. It is a part of the player. Understand "milk" as gryphon milk. Gryphon milk is infectious. The strain of gryphon milk is "Hermaphrodite Gryphon"; The trade of Gryphon Milk is "distilled milk".  gryphon milk is milky.
+gryphon milk is a grab object. It is a part of the player. Understand "milk" as gryphon milk. Gryphon milk is infectious. The strain of gryphon milk is "Hermaphrodite Gryphon". The trade of Gryphon Milk is "distilled milk".  gryphon milk is milky.
 distilled milk is a grab object. It is a part of the player.  it is not milky.
 
 
-The invent of the player is { "journal" };
+The invent of the player is { "journal" }.
 
 Table of Start Game
 title	subtable	description	toggle
@@ -1159,7 +1172,7 @@ title	subtable	description	toggle
 "Exit"	--	"Previous Menu"	menu exit rule
 		
 Table of random critters
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp (a number)	lev (a number)	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot (text)	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 "Dragoness"	""	""	""	""	"reptilian snout and great teeth. Two horns spiral backwards over your"	"large and reptilian, covered in [skin of player] flesh. You are forced to all fours except for brief, awkward, moments. It reminds you of a dragon, if you had to guess."	"[one of]dull red[or]dull orange[or]lustrous blue[sticky random] scaled"	"You have a wide, tapered, dragon's tail with a spade at the tip."	"[one of]draconic[or]normally internal[or]reptilian[at random]"	"your face draws forward into a reptilian snout, covered in [skin of player] flesh."	"Your body grows to larger than human norm, becoming quadrupedal, with great spikes along your back. You look very much like a dragon."	"Your skin breaks out in large armored scales that rapidly spread over your body"	"Your spine tingles before it explosively expands backwards into a great, thick, tail with spikes along the top."	"Your cock tingles as it becomes draconic in shape, a vent forming to hold it within you."	20	10	12	12	12	12	"Female"	--	--	20	"Nowhere"	0	0	0	2	10	0	1	15	10	40	--	0	4	"[one of]monstrous[or]large[or]powerful[at random]"	"draconic"	false	false	false	--	"default"
 
 understand the command "feed" as something new.
@@ -1281,15 +1294,17 @@ Bluntlist is a marker.	[list of infections w/blunt cock]
 when play begins:
 	add { "black equinoid", "Centaur Mare", "Centaur Stallion", "Horseman", "Mareslut", "Mutant Centaur", "Nightmare", "Pegasus", "Stallionboi", "Unicorn", "Zebra", "Sierrasaur", "Wyvern", "Donkeyman", "Donkeywoman", "Giraffe", "Nightmare", "Palomino", "Friendship Pony", "Reindeer" } to infections of Bluntlist;
 
+
 Part 2 - Rules
 
 First for constructing the status line (this is the bypass status line map rule):
 	fill status bar with table of fancy status;
 
+
 d18 is a number that varies.
 descr is text that varies.
 sh-descr is text that varies.
-cupsize is an indexed text that varies. Cupsize is "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+cupsize is an indexed text that varies. Cupsize is "ABCDEFGHIJKLMNOPQRSTUVWXYZ".
 battleground is a text that varies.
 Lusting is a text that varies.
 
@@ -1885,7 +1900,7 @@ to ban menu:
 		now title entry is "Begin Game";
 		now description entry is "Begin Game";
 		now toggle entry is flag ban rule;
-		change the current menu to table of Combat Items;
+		now the current menu is table of Combat Items;
 		carry out the displaying activity;
 
 This is the flag ban rule:
@@ -2150,6 +2165,8 @@ carry out destinationcheck:
 			say "| [link][bracket]Hyena Hideout[close bracket][as]nav Hyena Hideout[end link] ";
 		if Mike's Home is known:
 			say "| [link][bracket]Mike's Home[close bracket][as]nav Mike's Home[end link] ";
+		if Spider's Web is known:
+			say "| [link][bracket]Spider's Web[close bracket][as]nav Spider's Web[end link] ";
 		if Wolfman Lair is known:
 			say "| [link][bracket]Wolfman Lair[close bracket][as]nav Wolfman Lair[end link] ";
 		say "[line break]";
@@ -2167,13 +2184,13 @@ carry out destinationcheck:
 	
 navigating is an action applying to one thing.
 
-understand "navigate [any known fasttravel room]" as navigating;
-understand "navigate to [any known fasttravel room]" as navigating;
-understand "nav [any known fasttravel room]" as navigating;
-understand "travel to [any known fasttravel room]" as navigating;
-understand "travel [any known fasttravel room]" as navigating;
-understand "go to [any known fasttravel room]" as navigating;
-understand "return to [any known fasttravel room]" as navigating;
+understand "navigate [any known fasttravel room]" as navigating.
+understand "navigate to [any known fasttravel room]" as navigating.
+understand "nav [any known fasttravel room]" as navigating.
+understand "travel to [any known fasttravel room]" as navigating.
+understand "travel [any known fasttravel room]" as navigating.
+understand "go to [any known fasttravel room]" as navigating.
+understand "return to [any known fasttravel room]" as navigating.
 
 
 carry out navigating:
@@ -2210,7 +2227,7 @@ carry out vialing:
 	let z be 1;
 	let q be a topic;
 	repeat with x running through vials of player:
-		now q is x;
+		[now q is x;]
 		if t in lower case is x in lower case:
 			now target is x;
 			now found is 1;
@@ -2266,7 +2283,7 @@ Carry out vialdropping:
 	let z be 1;
 	let q be a topic;
 	repeat with x running through vials of player:
-		now q is x;
+		[now q is x;]
 		if t in lower case is x in lower case:
 			now target is x;
 			now found is 1;
@@ -2286,16 +2303,30 @@ Carry out vialalldropping:
 	let t be the topic understood;
 	let target be text;
 	let found be 0;
-	repeat with x running from 1 to the number of entries in vials of player:
+	repeat with x running from the number of entries in vials of player to 1:
 		if t in lower case is entry x in vials of player in lower case:
 			now target is entry x in vials of player;
 			remove entry x from vials of player;
-			decrease x by 1;
 			now found is 1;
 	if found is 0:
 		say "You don't seem to have any such vial.";
 	otherwise:
 		say "You chuck all your [target] vials away.";
+
+
+[understand the command "set inventory columns" and "inventory columns" and "set inventory" and "set columns" as something new.]
+
+settinginvcolumns is an action applying to nothing.
+
+understand "set inventory columns" as settinginvcolumns.
+understand "inventory columns" as settinginvcolumns.
+understand "set inventory" as settinginvcolumns.
+understand "set columns" as settinginvcolumns.
+
+invcolumns is a number that varies.  [invcolumns is usually 2. - set as part of Default Settings]
+
+carry out settinginvcolumns:
+	say "[set_invcolumns]";
 
 
 understand the command "i" and "inv" and "inventory" as something new.
@@ -2307,9 +2338,12 @@ understand "i" as Inventorying.
 understand "inv" as Inventorying.
 understand "inventory" as Inventorying.
 
+invcolumns is a number that varies.  invcolumns is usually 2.
+
 does the player mean doing something with the medkit: it is very likely.
 
 carry out Inventorying:
+	if invcolumns < 1 or invcolumns > 4, now invcolumns is 2;
 	sort invent of player;
 	let dseed be 0;
 [	let tempname be indexed text;
@@ -2318,11 +2352,12 @@ carry out Inventorying:
 		now tempname is name entry in lower case;
 		now sortname entry is tempname;
 	sort the table of game objects in sortname order;	]
-	if demon seed is owned, let dseed be 1;
-	if Janice's blouse is owned, let jblouse be 1;
+	let jblouse be 0;
+	if demon seed is owned, now dseed is 1;
+	if Janice's blouse is owned, now jblouse is 1;
 	say "Peeking into your backpack, you see: [if the number of owned grab objects is 0]Nothing[otherwise][line break][end if]";
 	if the number of owned grab objects is greater than 0:
-		say "[bold type][bracket]U[close bracket][roman type]se, [bold type][bracket]L[close bracket][roman type]ook, [bold type][bracket]S[close bracket][roman type]mell, [bold type][bracket]D[close bracket][roman type]rop, [bold type][bracket]J[close bracket][roman type]unk, [bold type][bracket]X[close bracket][roman type]Junkall, [if the number of trader in the location of the player > 0 or ( Ronda is visible and hp of Ronda is 0 and dseed is 1 ) or ( Kristen is visible and hp of Kristen is 10 and jblouse is 1 )], [bold type][bracket]T[close bracket][roman type]rade[end if][if the number of smither in the location of the player > 0], [bold type][bracket]I[close bracket][roman type]mprove[end if].";
+		say "[bold type][bracket]U[close bracket][roman type]se, [bold type][bracket]L[close bracket][roman type]ook, [bold type][bracket]S[close bracket][roman type]mell, [bold type][bracket]D[close bracket][roman type]rop, [bold type][bracket]J[close bracket][roman type]unk, [bold type][bracket]X[close bracket][roman type]Junkall, [if the number of trader in the location of the player > 0 or ( Ronda is visible and hp of Ronda is 0 and dseed is 1 ) or ( Kristen is visible and hp of Kristen is 10 and jblouse is 1 )], [bold type][bracket]T[close bracket][roman type]rade[end if][if the number of smither in the location of the player > 0], [bold type][bracket]I[close bracket][roman type]mprove[end if], [bold type](*)[roman type] equipped/wielded, [bold type](+)[roman type] improved.";
 		let weight be 0;
 		let newline be 0;
 		repeat with x running from 1 to the number of rows in the table of game objects:
@@ -2349,30 +2384,37 @@ carry out Inventorying:
 					say " [link][bracket][bold type]T[roman type][close bracket][as]give [name entry] to [tradeguy][end link]";
 				if ( ( ( object entry is armament or ( object entry is equipment and AC of object entry > 0 and effectiveness of object entry > 0 ) ) and object entry is not improved ) or the name entry is "nanite collector" ) and the number of smither in the location of the player is greater than 0:
 					say " [link][bracket][bold type]I[roman type][close bracket][as]upgrade [name entry][end link]";
-				say " [fixed letter spacing][name entry formatted to 15 characters]";
+				if invcolumns > 1:
+					say " [fixed letter spacing][name entry formatted to 15 characters]";
+				otherwise:
+					say " [fixed letter spacing][name entry formatted to 24 characters]";
 				if object entry is wielded and object entry is armament:
-					say " (wielded)";
+					say " (*)";
 				if object entry is equipment and object entry is equipped:
-					say " (equipped)";
+					say " (*)";
 				if object entry is improved and ( object entry is armament or object entry is equipment ):
-					say " (improved)";
+					say " (+)";
 				say " x ";
 				let number be carried of object entry;
 				let weighttxt be text;
 				let weightnum be weight entry times number;
 				say "[number]([weightnum][if weightnum < 10] [end if] lbs)";
 				increase weight by weight entry times number;
-				if newline is 0:
+				if newline < (invcolumns - 1):
 					say "  --  ";
 					increase newline by 1;
 				otherwise:
 					say "[line break]";
 					now newline is 0;
-		if newline is 1, say "[line break]";
-		if the player is overburdened, say "*OVERBURDENED* ";
-		say "Total Weight: [weight]/[capacity of player] lbs.";
+		if newline > 0, say "[line break]";
+		say "[variable letter spacing]Total Weight: [weight]/[capacity of player] lbs";
+		if the player is overburdened:
+			say ". *OVERBURDENED*[line break]";
+		otherwise:
+			say ".";
 	if scenario is "Researcher" or nanitemeter > 0:
 		say "(You may see your collection of vials using [link][bold type]vial inventory[roman type][end link] or [link][bold type]vinv[roman type][end link] for short.)";
+
 
 Definition: A grab object (called D) is fiveowned:
 	let count be 0;
@@ -2380,7 +2422,7 @@ Definition: A grab object (called D) is fiveowned:
 		if the carried of D is greater than 4, yes;
 	no;
 
-understand the command "vint" and "vial inventory" and "vial inv" and "vinv" as something new.
+[understand the command "vint" and "vial inventory" and "vial inv" and "vinv" as something new.]
 
 VialInventorying is an action applying to nothing.
 
@@ -4311,7 +4353,7 @@ To get a number:
 	numberfy playerinput;
 
 to numberfy (x - a snippet):
-	change the text of the player's command to x;
+	change  the text of the player's command to x;
 	if the player's command matches "[number]":
 		now calcnumber is the number understood;
 	otherwise:
@@ -4644,7 +4686,7 @@ carry out early birding:
 		stop the action;
 	decrease the score by 100;
 	now quitter is 1;
-	end the game saying "You waited for rescue.";
+	end the story saying "You waited for rescue.";
 
 Punying is an action applying to nothing.
 understand "Puny" as punying.
@@ -4656,7 +4698,7 @@ carry out punying:
 	say "You feel puny, but perceptive.";
 
 Resting is an action applying to nothing.
-understand "Rest" as resting;
+understand "Rest" as resting.
 roughing is a truth state that varies.  roughing is usually false.
 
 check resting:
@@ -4790,11 +4832,7 @@ This is the explore rule:
 			if ( ( hardmode is true and a random chance of 1 in 8 succeeds ) or ( "Bad Luck" is listed in feats of player and a random chance of 1 in 8 succeeds ) ) and battleground is not "void":
 				say "As you are trying to recover from your last encounter, another roving creature finds you.";
 				Fight;
-	if something is 0:
-		if battleground is "Outside":
-			say "You decide to go exploring, but after three long hours of wandering the ruined, monster infested city you return to the relative safety of the [location of the player].";
-		otherwise:
-			say "You decide to go exploring, but after three long hours of wandering around the [location of player] you return to the last relatively safe place you were at.";
+	if something is 0, say "You decide to go exploring, but after three long hours of wandering the ruined, monster infested city you return to the relative safety of the [location of the player].";
 	follow the turnpass rule;
 [	wait for any key;
 	now the menu depth is 0;]
@@ -5006,7 +5044,7 @@ This is the turnpass rule:
 			decrease the morale of the player by ( hunger of the player minus 30 ) divided by 5;
 		if hunger of player is greater than 99:
 			now hp of player is -9999;
-			end the game saying "You have died of hunger.";
+			end the story saying "You have died of hunger.";
 		if thirst of player is greater than 90:
 			say "You will die if you don't drink something soon.";
 		otherwise if thirst of player is greater than 50:
@@ -5019,7 +5057,7 @@ This is the turnpass rule:
 			decrease the morale of the player by ( thirst of the player minus 30 ) divided by 5;
 		if thirst of player is greater than 99:
 			now hp of player is -9999;
-			end the game saying "You have died of thirst.";
+			end the story saying "You have died of thirst.";
 		if hunger of player is greater than 50 or thirst of player is greater than 50:
 			say "Maybe you should [bold type]scavenge[roman type] for food! Go to a quick travel location and find something quick.";
 		let maxmorale be ( the charisma of the player plus the perception of the player );
@@ -5179,11 +5217,11 @@ This is the turnpass rule:
 		otherwise:
 			if gestation of child is less than 0, now gestation of child is 1;
 	if the humanity of the player is less than 1 and Scenario is not "Researcher" and skipturnblocker is 0:
-		end the game saying "Your mind is lost to the infection.";
+		end the story saying "Your mind is lost to the infection.";
 	if the humanity of the player < 1 and scenario is "Researcher", now humanity of player is 1;
 	decrease turns by 1;
 	if ( turns minus targetturns ) <= 0 and playon is 0 and skipturnblocker is 0:
-		end the game saying "You survived until the rescue came.";
+		end the story saying "You survived until the rescue came.";
 	otherwise if ( turns minus targetturns ) is less than 20 and a random chance of 1 in 3 succeeds and skipturnblocker is 0 and playon is 0:
 		say "[one of]You see an airplane soar overhead at jet speeds.[or]A peek from a roof shows what looks like some kind of vehicle approaching the city.[or]You have an unending sense of anticipation.[or]It's all coming to a close soon, just hang in there![at random]";
 	follow the everyturn rules;
@@ -5625,7 +5663,7 @@ This is the male choice rule:
 	now the cock width of the player is 4;
 	now the breasts of the player is 2;
 	now the breast size of the player is 0;
-	change the current menu to table of Basic Actions;
+	now  the current menu is table of Basic Actions;
 	say "You are a man.";
 	wait for any key;
 	follow the final stats rule;
@@ -5637,7 +5675,7 @@ This is the female choice rule:
 	now the cunt width of the player is 4;
 	now the breasts of the player is 2;
 	now the breast size of the player is 2;
-	change the current menu to table of Basic Actions;
+	now the current menu is table of Basic Actions;
 	say "You are a woman.";
 	wait for any key;
 	follow the final stats rule;
@@ -6440,54 +6478,105 @@ Include Sugar Feud by AGentlemanCalledB.
 Include Satyr Frat by Wahn.
 
 
+
 [Monsters/Infections]
+Include Wyvern For Fs by Damaged.
+Include Candy Striper by Stripes.
+Include Equine for FS by Nuku Valente.
+Include Demon Brute For Fs by Leo X.
+Include Awesome Tree For Fs by Damaged.
+Include Centaur by Hellerhound.
+Include Skunk For Fs by Damaged.
+Include Skunkbeast Lord by Stripes.
+Include Mental Mouse For Fs by Stripes.
+Include Sierrasaur by Blue Bishop.
+Include Lusty Skunk by Nuku Valente.
+Include Tigress Hooker for FS by Stripes.
+Include Parasitic Plant For Fs by Xeylef.
+Include Alpha Husky by Sarokcat.
+Include Ash Dragator for FS by Sweraptor.
+Include Hyena Matriarch by Sarokcat.
+Include Bald Eagle For Fs by Stripes.
+Include Jaguar Orderly For Fs by Stripes.
+Include Wolverine Guard for FS by Stripes.
+Include Kangaroo by batroo.
+Include Ewe by Sarokcat.
+Include Ram by Sarokcat.
+Include Naughty Nurse by Stripes.
+Include Sabretooth by Sarokcat.
+Include Anime Babe for FS by Stripes.
+Include Small Feline And Lion For Fs by Damaged.
+Include Spidergirl For Fs by Tentacle Specialist.
+Include Bottlenose Toy For Fs by Stripes.
+Include otter by Nuku Valente.
+Include Sugar Glider by AGentlemanCalledB.
+Include Slutrat by Nuku Valente.
+Include Mall Rat For Fs by Stripes.
+Include Random Tentacle Horror For Fs by Kazard.
+Include Mismatched Chimera For Fs by Stripes.
+Include Rubber Tigress by Sarokcat.
+Include Ash Drakenoid by Sweraptor.
+Include Vulpogryph For Fs by Stripes.
+Include Cerberus For Fs by Stripes.
+Include Cheetah by Sarokcat.
+Include Rhino For Fs by Stripes.
+Include Gels by Darthan.
+Include Pirate Shark by Sarokcat.
+Include Bear For Fs by Nuku Valente.
+Include Hulking Cheerleader by Wahn.
+Include Friendship Pony for FS by Stripes.
+Include Satyr by Sarokcat.
+Include Centaur Stallion For Fs by Stripes.
+Include Orc Infections by Wahn.
+Include Tiger Cop for FS by stripes.
+Include Spidertaur Male by Wahn.
+Include Butterfly for FS by mirumu.
+Include Viking by Wahn.
+Include Wolfman by Wahn.
+Include Gator by Nuku Valente.
+Include Margay For Fs by Stripes.
+Include Xeno for FS by Stripes.
+Include Alien Felinoid For FS by Damaged.
+Include Jaguar Warrior by AGentlemanCalledB.
+Include Catgirl by Wahn.
+Include Male Peacock for FS By Lago Moro.
+Include Cute Chinchilla Girl For FS by Trav.
+Include Fire Sprite by AGentlemanCalledB.
+Include sprite by Nuku Valente.
+Include Reindeer by Stripes.
+Include Snake For Fs by Stripes.
+Include Feral Wolf for FS by Shadowwolf94.
+Include Panther Taur by Nuku Valente.
+Include Chocolate Lab by Stripes.
+Include Leopardman by Sarokcat.
+Include jackalman by Sarokcat.
+Include Twisted Pimp by Sarokcat.
+Include Amazonian for FS by Stripes.
+Include Pewter Consort By Blue Bishop.
+Include Queen Bee for FS by Stripes.
 Include Saber Kitty by Blaydrex.
 Include Naga by Nuku Valente.
 Include Goo Girl by Nuku Valente.
 Include Latex Fox by Nuku Valente.
 Include Hermaphrodite Gryphon by Nuku Valente.
 Include Drone Wasp by Nuku Valente.
-Include Panther Taur by Nuku Valente.
 Include Blob by Kaleem Mcintyre.
 Include Great Dane Rouge by Kaleem Mcintyre.
-Include Wolfman by Wahn.
-Include Chocolate Lab by Stripes.
-Include Skunkbeast Lord by Stripes.
 Include Hyperskunk for FS by Stripes.
 Include Female Husky by Nuku Valente.
 Include Yamato Dragon For FS by Kohryu.
 Include Yamato Dragoness For FS by Kohryu.
-Include Equine for FS by Nuku Valente.
 Include Ashen Breeder For Fs by Stripes.
 Include Lizard Girl For Fs by Damaged.
-Include Skunk For Fs by Damaged.
 Include Random Shemale Smooth Collie For Fs by Voldine.
-Include Alien Felinoid For FS by Damaged.
 Include Bovine For Fs by Damaged.
-Include Small Feline And Lion For Fs by Damaged.
-Include Random Tentacle Horror For Fs by Kazard.
-Include Demon Brute For Fs by Leo X.
-Include Parasitic Plant For Fs by Xeylef.
-Include Awesome Tree For Fs by Damaged.
 Include Herm Hyena for FS by Anony Mouse.
-Include Wyvern For Fs by Damaged.
 Include Cannon by Hiccup.
-Include Spidergirl For Fs by Tentacle Specialist.
-Include Bear For Fs by Nuku Valente.
 Include Pit Bull For FS by Ilovecock.
 Include Painted Wolf Herm by Kyvi Stormbreaker.
-Include Lusty Skunk by Nuku Valente.
-Include Gator by Nuku Valente.
 Include MothGirl for Fs by Soren.
-Include otter by Nuku Valente.
-Include Ash Drakenoid by Sweraptor.
-Include Kangaroo by batroo.
 Include Feral Sea Dragon by Tunalord Sefont.
 Include Feral Sea Dragoness by Tunalord Sefont.
-Include Tigress Hooker for FS by Stripes.
-Include Tiger Cop for FS by stripes.
-Include Wolverine Guard for FS by Stripes.
-Include Feral Wolf for FS by Shadowwolf94.
 Include Anthro Shaft Beast for FS by Dragonflayer.
 Include Feral Shaft Beast for FS by Dragonflayer.
 Include Wrestling Wolf For Fs by Volcblaze.
@@ -6496,64 +6585,40 @@ Include Mareslut by Sarokcat.
 Include Stallionboi by Sarokcat n Verath.
 Include Donkeyman by Sarokcat n Verath.
 Include Horseman by Sarokcat n Verath.
-Include sprite by Nuku Valente.
 Include Harpy by Nuku Valente.
-Include Slutrat by Nuku Valente.
-Include Cute Chinchilla Girl For FS by Trav.
 Include Feline Gymnast by SomeFur.
-Include Ewe by Sarokcat.
-Include Ram by Sarokcat.
 Include Teddy Bear by Sarokcat.
-Include Hyena Matriarch by Sarokcat.
 Include Alpha Wolf by Sarokcat.
 Include Plush Lion by Sarokcat.
-Include Rubber Tigress by Sarokcat.
-Include Satyr by Sarokcat.
 Include Greek Nymph by Sarokcat.
 Include Panda by Sarokcat.
 Include Gazelle by Sarokcat.
 Include Zebra by Sarokcat.
-Include Cheetah by Sarokcat.
 Include Tiger by Sarokcat.
 Include Tigertaur by Sarokcat.
 Include Sphinx by Sarokcat.
-Include Pirate Shark by Sarokcat.
-Include Sabretooth by Sarokcat.
 Include Jackalboy by Sarokcat.
 Include Wolftaur by Sarokcat.
-Include jackalman by Sarokcat.
 Include Panther Herm by Sarokcat.
 Include Succubus by Sarokcat.
-Include Twisted Pimp by Sarokcat.
-Include Alpha Husky by Sarokcat.
-Include Leopardman by Sarokcat.
 Include Hawkman by sarokcat.
 Include Unicorn by Sarokcat.
 Include Arctic Fox by Sarokcat.
 Include Nightmare by Sarokcat.
 Include Mannequin by Wahn.
-Include Spidertaur Male by Wahn.
-Include Catgirl by Wahn.
 Include Sand Man by Wahn.
 Include Naiad by Wahn.
 Include Furling by Wahn.
 Include Spartan by Wahn.
 Include Helot by Wahn.
-Include Ash Dragator for FS by Sweraptor.
 Include Ash Whelp For FS by Sweraptor.
-Include Male Peacock for FS By Lago Moro.
 Include Gryphons Plot for FS by Hellerhound.
 Include Dolphin for FS by Hellerhound.
-Include Centaur by Hellerhound.
 Include Dryad for FS by Hellerhound.
 Include Latex Wolf for FS by Hellerhound.
 Include Hermaphrodite Latex Vixen for FS by Tentabear.
-Include Butterfly for FS by mirumu.
 Include Rabbit Pack for FS by Lago Moro.
 Include Fennec For Fs by Stripes.
-Include Jaguar Orderly For Fs by Stripes.
-Include Mismatched Chimera For Fs by Stripes.
-Include Naughty Nurse by Stripes.
 Include Triceratops For Fs by Stripes.
 Include Siamese Cats by Stripes.
 Include Albino Mouse by Stripes.
@@ -6562,7 +6627,6 @@ Include Flaming Lynx for FS by Stripes.
 Include Komodo Dragon for FS by Stripes.
 Include Beaver for FS by Stripes.
 Include Giant for FS by Stripes.
-Include Reindeer by Stripes.
 Include Snow Leopard for FS by Stripes.
 Include Grey Squirrel for FS by Stripes.
 Include Dragontaur for FS by Stripes.
@@ -6570,7 +6634,6 @@ Include Vixentaur for FS by Stripes.
 Include Dracovixentaur for FS by Stripes.
 Include Flesh Blob for FS by Stripes.
 Include Corrupted Spawner for FS by Stripes.
-Include Queen Bee for FS by Stripes.
 Include Salamander by Stripes.
 Include Inflatable Vulpine for FS by Stripes.
 [Include Strange Slut by Zero.]
@@ -6580,62 +6643,48 @@ Include Messy Pig for Fs by anonymous.
 Include Piggy by Stripes.
 Include Elf by Nuku Valente.
 Include Cougar by Stripes.
-Include Margay For Fs by Stripes.
 Include Megakitty For Fs by Stripes.
 Include Clockwork Fox For Fs by Stripes.
 Include Killer Whale For Fs by Stripes.
-Include Cerberus For Fs by Stripes.
 Include Rodeo Clown For Fs by Stripes.
 Include Fluffy Owl For Fs by Stripes.
-Include Rhino For Fs by Stripes.
 Include Siren For Fs by Stripes.
 Include Werewolf Costume For Fs by Stripes.
 Include Hippo Strongman For Fs by Stripes.
 Include Squid For Fs by Stripes.
 Include Centaur Mare For Fs by Stripes.
-Include Centaur Stallion For Fs by Stripes.
 Include Prairie Dog For Fs by Stripes.
-Include Snake For Fs by Stripes.
-Include Bald Eagle For Fs by Stripes.
 Include Wildcat For Fs by Stripes.
 Include Goblin For FS by Blue Bishop.
 Include Junkman For FS by Stripes.
 Include Trash Coon For FS by Stripes.
 Include Snow Bat For Fs by Stripes.
-Include Bottlenose Toy For Fs by Stripes.
-Include Mental Mouse For Fs by Stripes.
-Include Vulpogryph For Fs by Stripes.
 Include Psycho Weasel For Fs by Stripes.
 Include Incubus For Fs by Stripes.
 Include Bunny Jock For Fs by Stripes.
 Include Mammoth For Fs by Stripes.
 Include Black Wolf For Fs by Stripes.
-Include Mall Rat For Fs by Stripes.
 Include Latex Mistress For Fs by Stripes.
 Include Math Teacher For Fs by Stripes.
 Include Dark Elf for FS by Stripes.
 Include Automaton for FS by Stripes.
-Include Anime Babe for FS by Stripes.
 Include Hentai Fan for FS by Stripes.
-Include Amazonian for FS by Stripes.
 Include Quilled Tousky for FS by Stripes.
 Include Giraffe for FS by Stripes.
 Include Bird of Paradise for FS by Stripes.
-Include Xeno for FS by Stripes.
 Include Fire Elemental for FS by Stripes.
 Include Corota for FS by Stripes.
 Include Ocelot for FS by Stripes.
 Include Blue Chaffinch for FS by Stripes.
-Include Friendship Pony for FS by Stripes.
 Include Latex Ermine for FS by Stripes.
 Include Hydra Beast for FS by Stripes.
 Include Red Oni for FS by Stripes.
 Include Elk for FS by Stripes.
 Include Voodoo Gecko for FS by Stripes.
+Include Magic Drake by Stripes.
 Include Horny Doctor for FS by Stripes.
 Include Fruit Bat for FS by Stripes.
 Include Elven Hunter For Fs by Wahn.
-Include Hulking Cheerleader by Wahn.
 Include Human Infections by Wahn.
 Include Reptaur by Kaleem mcintyre.
 Include Pegasus by Kaleem mcintyre.
@@ -6645,37 +6694,29 @@ Include Minotaur by Kaleem mcintyre.
 Include Dalmatian by Kaleem mcintyre.
 Include Behemoth by Kaleem mcintyre.
 Include Goat Janitor by McRabid.
-Include Gels by Darthan.
 Include Coyote by Darthan.
 Include Mushroom Men by AGentlemanCalledB.
-Include Fire Sprite by AGentlemanCalledB.
 Include Retriever by AGentlemanCalledB.
-Include Sugar Glider by AGentlemanCalledB.
 Include Cum Girl by AGentlemanCalledB.
 Include Francois Infections by AGentlemanCalledB.
-Include Jaguar Warrior by AGentlemanCalledB.
 Include Pink Poodle by AGentlemanCalledB.
 Include Doberman for FS by Stripes.
 Include Sugar Ferret for FS by Stripes.
-Include Candy Striper by Stripes.
 Include Badger by StripeGuy.
 Include Opossum Sailor by StripeGuy.
 Include Tenrec by StripeGuy.
 Include Yuppie Mink by StripeGuy.
 Include Caveman by TheRecipe.
-Include Viking by Wahn.
 Include Seraphim by Wahn.
 Include Cowboy Cuntboy by Wahn.
 Include Thought Eater by Wahn.
 Include Batcubus for FS by Blaydrex.
-Include Sierrasaur by Blue Bishop.
-Include Pewter Consort By Blue Bishop.
-Include Orc by Wahn.
 Include Horse-Hung Nerd by Wahn.
 Include Grizzly Bear by UrsaOmega.
 Include Impala by UrsaOmega.
 Include Feral Gryphon by UrsaOmega.
 Include Shadow Beast by UrsaOmega.
+
 
 
 [NPCs]
@@ -6725,6 +6766,7 @@ Include Paula by Stripes.
 Include Icarus by Stripes.
 Include Hayato by Stripes.
 Include Zigor by Stripes.
+Include Yolanda by Stripes.
 [Include Max by Zero.]
 Include Fang by Stripes.
 Include Blanche by Stripes.
@@ -6761,6 +6803,9 @@ Include Amy by Wahn.
 Include Carl by Wahn.
 Include HornyHorsey by femtoAmpere. 
 Include Rane by Wahn.
+Include Orc Lair by Wahn.
+Include Val by Wahn.
+Include Chris by Wahn.
 
 [Pets]
 Include Gryphon Companion by Sarokcat.
@@ -6799,7 +6844,7 @@ instead of going through a dangerous door(called X):
 	[try looking.]
 
 
-gsgl is a number that varies. gsgl is usually 1;
+gsgl is a number that varies. gsgl is usually 1.
 
 to genderlockmenu:
 	now calcnumber is -1;
@@ -7072,6 +7117,7 @@ To startcreatureban: [bans creatures, as requested]
 Section Story Start Text
 
 To regularstart: [normal start method]
+	if invcolumns < 1 or invcolumns > 4, now invcolumns is 2;
 	follow the random stats rule;
 	now calcnumber is -1;
 	let trixieexit be 0;
@@ -7086,23 +7132,26 @@ To regularstart: [normal start method]
 		say "(6) [link]Fun Feat[as]6[end link] - [bold type][freefeatfun][roman type][line break]";
 		say "(7) [link]Gender Lock[as]7[end link] - [bold type][if gsgl is 1]None[otherwise if gsgl is 2]Random[otherwise if gsgl is 3]Male[otherwise if gsgl is 4]Female[otherwise if gsgl is 5]Shemale[otherwise if gsgl is 6]Cuntboy[otherwise if gsgl is 7]Male Herm[otherwise if gsgl is 8]Herm[otherwise if gsgl is 9]Always Cocky[otherwise if gsgl is 10]Always a Pussy[otherwise if gsgl is 11]Single Sexed[otherwise]ERROR[end if][roman type][line break]";			
 		say "[line break]";
-		say "[bold type]Options:[roman type][line break]";
+		say "[bold type]Gameplay Options:[roman type][line break]";
 		say "(8) [link]Banned/Warded Types[as]8[end link] - [menuwardlist] & [menubanlist] [line break]";
 		say "(9) [link]Anal Content[as]9[end link] - [bold type][if anallevel is 1]Less[otherwise if anallevel is 2]Normal[otherwise if anallevel is 3]More[end if][roman type][line break]";
 		say "(10) [link]WS Content[as]10[end link] - [bold type][if wslevel is 1]None[otherwise if wslevel is 2]Normal[otherwise if wslevel is 3]Full[end if][roman type][line break]";
 		say "(11) [link]Vore/UB Content[as]11[end link] - [bold type][if vorelevel is 1]None[otherwise if vorelevel is 2]Normal[otherwise if vorelevel is 3]Full[end if] Vore[roman type] & [bold type][if ublevel is 1]None[otherwise if ublevel is 2]Normal[otherwise if ublevel is 3]Full[end if] Unbirth[roman type][line break]";
 		say "(12) [link]Ovi Pregnancy[as]12[end link] - [bold type][if ovipreglevel is 1]Never[otherwise]Normal[end if][roman type][line break]";
+		say "[line break]";
+		say "[bold type]Display Options:[roman type][line break]";
 		say "(13) [link]Hyperlinks[as]13[end link] - [bold type][if hypernull is 0]On[otherwise if hypernull is 1]Off[end if][roman type][line break]";
 		say "(14) [link]Waiting for Input[as]14[end link] - [bold type][if waiterhater is 0]On[otherwise if waiterhater is 1]Off[end if][roman type][line break]";
 		say "(15) [link]Screen Clearing[as]15[end link] - [bold type][if clearnomore is 0]On[otherwise if clearnomore is 1]Off[end if][roman type][line break]";
 		say "(16) [link]Graphics[as]16[end link] - [bold type][if graphics is true]On[otherwise]Off[end if][roman type][line break]";
+		say "(17) [link]Inventory Columns[as]17[end link] - [bold type][invcolumns][roman type][line break]";
 		say "[line break]";
 		say "(99) [link]Restore a save[as]99[end link][line break]";
 		say "(0) [link]Start Game[as]0[end link][line break]";
 		while 1 is 1:
-			say "(0-16)>[run paragraph on]";
+			say "(0-17)>[run paragraph on]";
 			get a number;
-			if ( calcnumber >= 0 and calcnumber <= 16 ) or calcnumber is 99:
+			if ( calcnumber >= 0 and calcnumber <= 17 ) or calcnumber is 99:
 				break;
 			otherwise:
 				say "Invalid Entry";
@@ -7151,6 +7200,8 @@ To regularstart: [normal start method]
 				now graphics is false;
 			otherwise:
 				now graphics is true;
+		otherwise if calcnumber is 17:
+			say "[set_invcolumns]";
 		otherwise if calcnumber is 99:
 			now trixieexit is 1;
 			try restoring the game;
@@ -7400,10 +7451,27 @@ to say gsopt_start:
 	zephyrad rule in 1 turn from now;
 
 
+to say set_invcolumns:
+	now calcnumber is -1;
+	let gsexit be 0;
+	say "     How many columns would you like the inventory to display (1 - 4) or (0) to abort?";
+	say "     [if invcolumns is not 1][link][bracket]1[close bracket][as]1[end link][otherwise][bold type][bracket]1[close bracket][roman type][end if]  [if invcolumns is not 2][link][bracket]2[close bracket][as]2[end link][otherwise][bold type][bracket]2[close bracket][roman type][end if]  [if invcolumns is not 3][link][bracket]3[close bracket][as]3[end link][otherwise][bold type][bracket]3[close bracket][roman type][end if]  [if invcolumns is not 4][link][bracket]4[close bracket][as]4[end link][otherwise][bold type][bracket]4[close bracket][roman type][end if]  [link][bracket]0[close bracket] - Abort[as]0[end link][line break]";
+	while gsexit is 0:
+		say "Choice? (0-4)>[run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber < 5:
+			now invcolumns is calcnumber;
+			now gsexit is 1;
+		otherwise if calcnumber is 0:
+			now gsexit is 1;
+		otherwise:
+			say "Invalid: Choose between 0 and 4.";
+
+
 Book 10 - Let the Games Begin
 
-understand "saveword" as savewording;
-understand "save" as savewording;
+understand "saveword" as savewording.
+understand "save" as savewording.
 understand "oldsave" as saving the game.
 
 savewording is an action applying to nothing.
@@ -7445,6 +7513,9 @@ to say promptsay:
 	say ", Visible Things: ";
 	repeat with y running through the things in the location of the player:
 		if y is a door, next;
+		if y is the player:
+			say "[link][y][as]look me[end link] ";
+			next;
 		say "[link][y][as]look [y][end link] ";
 	say "[link]area[as]look[end link]";
 	say "[line break]>";
@@ -7467,7 +7538,7 @@ When play begins:
 		now tempname is name entry in lower case;
 		now sortname entry is tempname;
 	sort the table of game objects in sortname order;
-	change the right hand status line to "[list of valid directions]";
+	now the right hand status line is "[list of valid directions]";
 	say "Before the game begins...";[warn the player what to expect next]
 	say "Do you want hyperlinks? (Y/N)[line break]";
 	if player consents:
@@ -7494,3 +7565,4 @@ When play begins:
 	if ovipreglevel is not 1, now ovipreglevel is 2;
 	increase the score by 10;
 	regularstart; [original start method.  easier to move everything then leave here]
+	

@@ -24,19 +24,19 @@ To savetrix:
 
 Trixie is a person. Trixie is in Grey Abbey Library.
 
-The scent of trixie is "Trixie smells of broken universes and rewritten fate.  How anything can smell like that or how you can even know that smell disturbs you to your very core.";
+The scent of trixie is "Trixie smells of broken universes and rewritten fate.  How anything can smell like that or how you can even know that smell disturbs you to your very core.".
 
-The description of trixie is "[trixiedesc]";
+The description of trixie is "[trixiedesc]".
 
 to say trixiedesc:
 	say "     Look, it's Trixie, the story fairy! She's about three inches tall, large for her particular breed. She has bright reddish-purple hair and smooth brown skin. Wielded in her right hand is a relatively large wand of old world oak with a great fancy bauble at the end that looks like a cutely renditioned skunk girl head, grinning at you no matter what angle you view it from. Trixie is well shaped, with, relative to the rest of her mass, B cup breasts and wide hips. Her feet are covered in shimmering gold sandals of sorts. Her chest is covered in a t-shirt that reads 'Let's skip to the good stuff!'.";
 	say "     Trixie's got a button on her t-shirt that says 'Cheaters type [link]iwannacheat[end link]' on it, and a second one that says 'Check out the [link]artwork credits[end link]'  Hmmm.";
-	say "     She's also found a ballcap on that says '[link]load game[end link] to activate your last save word.   Using [link]saveword[end link] will replace it with a [bold type]new[roman type] magic word.'  That's a lot to put on a ballcap that small, but for some reason you're able to read it all easily.";
+	say "     She's also found a ballcap on that says '[link]load game[end link] to activate your last save word.  Using [link]saveword[end link] will replace it with a [bold type]new[roman type] magic word.'  That's a lot to put on a ballcap that small, but for some reason you're able to read it all easily.";
 
-The conversation of trixie is { "Hello. I will teach you a magic word. To use it, just stand in front of me after [bold type]starting a new game[roman type] and [bold type]recite[roman type] the word back to me. I'll also save a copy of your most recent magic word.  To access that one, use [link]load game[end link] in this room. This will let you bend time and probability, returning you to the condition you were in when made the magic word.... mostly. I will do my best, but my powers are not infinite. Also, I'm 'Out of Character', so you really don't see me. Confused yet? Good!" };
+The conversation of trixie is { "Hello. I will teach you a magic word. To use it, just stand in front of me after [bold type]starting a new game[roman type] and [bold type]recite[roman type] the word back to me. I'll also save a copy of your most recent magic word.  To access that one, use [link]load game[end link] in this room. This will let you bend time and probability, returning you to the condition you were in when made the magic word... mostly. I will do my best, but my powers are not infinite. Also, I'm 'Out of Character', so you really don't see me. Confused yet? Good!" }.
 
 [
-The conversation of trixie is { "Hello. I will teach you a magic word. To use it, just stand in front of me after starting a new game and [bold type]recite[roman type] the word back to me. This will let you bend time and probability, returning you to the condition you were in when you first said the words.... Mostly. I will do my best, but my powers are not infinite. Also, I'm 'Out of Character', so you really don't see me. Confused yet? Good! Here's the magic word:[line break][line break][magic word][line break]" };
+The conversation of trixie is { "Hello. I will teach you a magic word. To use it, just stand in front of me after starting a new game and [bold type]recite[roman type] the word back to me. This will let you bend time and probability, returning you to the condition you were in when you first said the words... Mostly. I will do my best, but my powers are not infinite. Also, I'm 'Out of Character', so you really don't see me. Confused yet? Good! Here's the magic word:[line break][line break][magic word][line break]" }.
 ]
 
 To say magic word:
@@ -44,7 +44,7 @@ To say magic word:
 		wrcurserecede;	[puts player back to normal form and restores proper stats for saving]
 	now trixsavetext1 is "[strength of player]}[dexterity of player]}[stamina of player]}[charisma of player]}[perception of player]}[intelligence of player]}[level of player]}[maxhp of player]}[humanity of player]}[score - 50]}[hp of doctor matt]}[bodyname of player]}[facename of player]}[skinname of player]}[tailname of player]}[cockname of player]}[SatisfiedTanuki]}[hospquest]}[cocks of player]}[breasts of player]}[cunts of player]}[breast size of player]}[cock length of player]}[cock width of player]}[cunt length of player]}[cunt width of player]}[weapon object of player]}0}0}[if Hyper Squirrel Girl is resolved]1[otherwise]0[end if]}0}[location of coleen]}[coleentalk]}[coleenfound]}[coleencollared]}[coleenalpha]}[coleenslut]}[coleenspray]}[hp of doctor mouse]}[coonstatus]}[featunlock]}[butterflymagic]}[catnum]}[mateable]}[gryphoncomforted]}[shiftable]}[medeaget]}[mtp]}[hyg]}[nes]}[mtrp]}[boristalk]}[borisquest]}[progress of alex]}[angiehappy]}[angietalk]}[deerconsent]}[deerhappy]}[mattcollection]";
 	now trixsavetext2 is "chantpartA}[hp of Orthas]}[fancyquest]}[hp of sven]}[lust of sven]}[sarahslut]}[sarahtalk]}[sarahpups]}0}[alexbrunch]}[treasurefound]}[tmapfound]}[hp of Sandra]}[franksex]}[hp of Fang]}[libido of Fang]}[pigfed]}[pigfucked]}[if cute crab is tamed]1[otherwise]0[end if]}[if exotic bird is tamed]1[otherwise]0[end if]}[if Felinoid companion is tamed]1[otherwise]0[end if]}[hp of bee girl]}[if house cat is tamed]1[otherwise]0[end if]}[if little fox is tamed]1[otherwise]0[end if]}[if skunk kit is tamed]1[otherwise]0[end if]}[if helper dog is tamed]1[otherwise]0[end if]}[mousecurse]}[hp of Elijah]}[npcEint]}[if latexhuskymode is true]1[otherwise]0[end if]}[if insectlarva is true]1[otherwise]0[end if]}[hp of Leonard]}[hp of Solstice]}[hp of Ronda]}[hp of Athanasia]}[skunkbeaststatus]}[ktp]}[release number]}[tattoohunter]}[tatsave]}[piercesave]}[diegochanged]}[hp of Eric]}[hp of Christy]}[dragontype]}[dragonessfuck]}[hp of Doctor Medea]}[hp of Doctor Moffatt]}[hp of Lucy]}[thirst of david]}[lust of david]}[hp of david]}[hp of Adam]}[hp of Alexandra]}[hp of Larissa]}[hp of Sam]}[wrcursestatus]}[wrcurseNermine]}[hp of Doctor Utah]}[hp of Mike]}[hp of Xerxes]}[hp of Helen]}[libido of Helen]}[hp of Rex]}[hp of Karen]}[hp of François]}[libido of François]}[level of Alexandra]}[hp of Thomas]}[libido of Thomas]}[lust of Thomas]}[ThomasQuestVar]}[hp of rubber tigress]}[hp of Septus]}[lust of Xerxes]}[lust of Helen]}[hp of tristian]}[hp of Icarus]}[hp of Joanna]}[lust of Joanna]}[angiearoused]}[DBCaptureQuestVar]}[DemonBruteStatus]}[hp of Lilith]}[LilithKidCounter]}[hp of Felix]}[Libido of Felix]}[VikingRelationship]}[VikingKidCounter]}[MovingOrwell]}[hp of Jimmy]}[libido of David]}[hp of Amy]}[libido of Amy]}[SquadEncounters]}[thirst of Corbin]}[hp of Corbin]}[CorbinKidCounter]}[hp of Anthony]}[hp of Duke]}[thirst of Duke]}[hp of Zigor]}[thirst of Amy]";
-	now trixsavetext3 is "chantpartB}[hp of Nadia]}[NadiaFertilityCounter]}[NadiaChickCounter]}[npcNadiaint]}[level of Amy]}[Xp of Amy]}[Dexterity of Amy]}[SvenAmySex]}[BrutusAmySex]}[lust of Zephias]}[hp of Ares]}[if hp of hayato is 30]20[otherwise][hp of Hayato][end if]}[hp of Tehuantl]}[hp of Carl]}[level of Carl]}[hp of Kristen]}[libido of Kristen]}[hp of Brooke]}[hp of Bubble]}[hp of Newt]}0}[piginitiation]}[hp of Gillian]}[hp of Stella]}[StellaNPCInt]}[OrcSlaverStatus]}[CellDoorStatus]}[xp of Onyx]}[hp of Val]}[thirst of Val]}[ValPregCounter]}[ValPregnancy]}[SlaveRaidEncounters]}[hp of Chris]}[hp of Vanessa]}[xp of Vanessa]}[hp of Meredith]}[level of Meredith]}[hp of Gwen]}[hp of Rane]}[thirst of Elijah]";
+	now trixsavetext3 is "chantpartB}[hp of Nadia]}[NadiaFertilityCounter]}[NadiaChickCounter]}[npcNadiaint]}[level of Amy]}[Xp of Amy]}[Dexterity of Amy]}[SvenAmySex]}[BrutusAmySex]}[lust of Zephias]}[hp of Ares]}[if hp of hayato is 30]20[otherwise][hp of Hayato][end if]}[hp of Tehuantl]}[hp of Carl]}[level of Carl]}[hp of Kristen]}[libido of Kristen]}[hp of Brooke]}[hp of Bubble]}[hp of Newt]}0}[piginitiation]}[hp of Gillian]}[hp of Stella]}[StellaNPCInt]}[OrcSlaverStatus]}[CellDoorStatus]}[xp of Onyx]}[hp of Val]}[thirst of Val]}[ValPregCounter]}[ValPregnancy]}[SlaveRaidEncounters]}[hp of Chris]}[hp of Vanessa]}[xp of Vanessa]}[hp of Meredith]}[level of Meredith]}[hp of Gwen]}[hp of Rane]}[thirst of Elijah]}[SpidertaurRelationship]}[CatgirlFucked]}[FionaFangStatus]}[FionaCarlStatus]";
 	say "[trixsavetext1][line break]";
 	say "[trixsavetext2][line break]";
 	say "[trixsavetext3][line break]";
@@ -777,7 +777,7 @@ To reciting2:
 						now carried of phoenix egg is 1;
 					if hp of Athanasia >= 3:
 						now lastfuck of Athanasia is turns;
-						now Government Assistance is resolved; 
+						now Government Assistance is resolved;
 						now Approaching the Capitol Building is known;
 					if hp of Athanasia >= 4:
 						now lastfuck of Athanasia is turns + 8;
@@ -1244,7 +1244,7 @@ To reciting2:
 					otherwise if level of Alexandra is 2:
 						add "Cuckold" to feats of player, if absent;
 						remove "Top Dog" from feats of player, if present;
-			-- 127:   [Thomas HP]
+			-- 127: [Thomas HP]
 				if the player's command matches "[number]":
 					now hp of Thomas is the number understood;
 					if hp of Thomas is 0 and guy is not banned or hermaphrodite is not banned:
@@ -1254,22 +1254,22 @@ To reciting2:
 						move Thomas to Dry Plains;
 					if hp of Thomas is 0 or hp of Thomas is 100:
 						remove Thomas from play;
-			-- 128:   [Thomas Libido]
+			-- 128: [Thomas Libido]
 				if the player's command matches "[number]":
 					now Libido of Thomas is the number understood;
 					now ThomasSaved is turns;
 					now SandySaved is turns;
 					now FelixSaved is turns;	[for Felix stalker quest]
 					if hp of Thomas is 0, now libido of Thomas is 0;
-			-- 129:   [Thomas Lust]
+			-- 129: [Thomas Lust]
 				if the player's command matches "[number]":
 					now Lust of Thomas is the number understood;
 					if hp of Thomas is 0, now lust of Thomas is 0;
-			-- 130:   [Thomas Quest]
+			-- 130: [Thomas Quest]
 				if the player's command matches "[number]":
 					now ThomasQuestVar is the number understood;
 					if hp of Thomas is 0, now ThomasQuestVar is 0;
-			-- 131:   [Artemis]
+			-- 131: [Artemis]
 				if the player's command matches "[number]":
 					now hp of rubber tigress is the number understood;
 					now Poor Kitty is unresolved;
@@ -1294,7 +1294,7 @@ To reciting2:
 					now thirst of rubber tigress is 0;
 					now lisaartemiscount1 is 0;
 					now lisaartemiscount2 is 0;
-			-- 132:   [Septus/Football Wolfman]
+			-- 132: [Septus/Football Wolfman]
 				if the player's command matches "[number]":
 					now hp of Septus is the number understood;
 					now Wolfman Lair is unknown;
@@ -1310,15 +1310,15 @@ To reciting2:
 							setmonster "Football Wolfman";
 							choose row monster from the table of random critters;
 							now area entry is "nowhere";
-			-- 133:   [Awesome Xerxes]
+			-- 133: [Awesome Xerxes]
 				if the player's command matches "[number]":
 					now lust of Xerxes is the number understood;
 					if hp of Xerxes is 0, now lust of Xerxes is 0;
-			-- 134:   [Awesomer Helen]
+			-- 134: [Awesomer Helen]
 				if the player's command matches "[number]":
 					now lust of Helen is the number understood;
 					if hp of Helen is 0, now lust of Helen is 0;
-			-- 135:   [Tristian]
+			-- 135: [Tristian]
 				if the player's command matches "[number]":
 					now hp of Tristian is the number understood;
 					now Tristbrother is resolved;
@@ -1330,7 +1330,7 @@ To reciting2:
 					if hp of Tristian is 10 or hp of Tristian is 12, now hp of Tristian is 7;
 					if hp of Tristian is 11:
 						move Lance to PALOMINO;
-			-- 136:   [Icarus/Blue Chaffinch]
+			-- 136: [Icarus/Blue Chaffinch]
 				if the player's command matches "[number]":
 					now hp of Icarus is the number understood;
 					if hp of Icarus > 0:
@@ -1349,7 +1349,7 @@ To reciting2:
 						now tti_scene is 0;
 					if hp of Icarus is 9:
 						now hp of Icarus is 8;	[Icarus waiting for more]
-			-- 137:   [hp of Joanna]
+			-- 137: [hp of Joanna]
 				if the player's command matches "[number]":
 					now hp of Joanna is the number understood;
 					move Joanna to Flower Garden;
@@ -1368,7 +1368,7 @@ To reciting2:
 						now hp of Joanna is 5;
 					if hp of Joanna >= 90:
 						now PALOMINO is known;
-			-- 138:   [lust of Joanna]
+			-- 138: [lust of Joanna]
 				if the player's command matches "[number]":
 					now lust of Joanna is the number understood;
 					if hp of Joanna <= 4 or hp of Joanna >= 90:
@@ -1376,7 +1376,7 @@ To reciting2:
 					if hp of Joanna >= 7 and hp of Joanna < 90:
 						if lust of Joanna < 3, now lust of Joanna is 3;
 						now plantdefeat is 1;
-			-- 139:   [Angie]
+			-- 139: [Angie]
 				if the player's command matches "[number]":
 					now angiearoused is the number understood;
 					if AngieAroused is 50:
@@ -1481,7 +1481,7 @@ To reciting2:
 						if thirst of Corbin is 1:
 							move Corbin to Worker Barracks;
 						otherwise if thirst of Corbin is 2:
-							move Corbin to Milking Shed; 
+							move Corbin to Milking Shed;
 			-- 155: [hp of Corbin]
 				if the player's command matches "[number]":
 					now hp of Corbin is the number understood;
@@ -1772,8 +1772,8 @@ To reciting2:
 				if the player's command matches "[number]":
 					now SlaveRaidEncounters is the number understood;
 					if OrcSlaverStatus > 0 and SlaveRaidEncounters is 0: [security clause for those who load an old saveword]
-						now SlaveRaidEncounters is 2;   [enslaved]
-						now ValPregnancy is 48;         [knocked up]
+						now SlaveRaidEncounters is 2; [enslaved]
+						now ValPregnancy is 48; [knocked up]
 						now thirst of Val is 1;					[...by an orc]
 					if SlaveRaidEncounters < 2:
 						remove Val from play;
@@ -1851,6 +1851,24 @@ To reciting2:
 			-- 202: [thirst of Elijah]
 				if the player's command matches "[number]":
 					now thirst of Elijah is the number understood;						
+			-- 203: [SpidertaurRelationship]
+				if the player's command matches "[number]":
+					now SpidertaurRelationship is the number understood;						
+					if SpidertaurRelationship > 4 and carried of silk hammock is 0:
+						increase carried of silk hammock by 1;
+					if SpidertaurRelationship > 5:
+						now Spider's Web is known;
+					otherwise:
+						now Spider's Web is not known;
+			-- 204: [CatgirlFucked]
+				if the player's command matches "[number]":
+					now CatgirlFucked is the number understood;				
+			-- 205: [FionaFangStatus]
+				if the player's command matches "[number]":
+					now FionaFangStatus is the number understood;			
+			-- 206: [FionaCarlStatus]
+				if the player's command matches "[number]":
+					now FionaCarlStatus is the number understood;														
 	if hospquest is 3, now hospquest is 2;
 	now progress of Doctor Mouse is turns;
 	if hospquest is 8, now Dinosaur Nest is unresolved;
@@ -1936,7 +1954,7 @@ To reciting2:
 
 
 savetrix2 is an action applying to nothing.
-understand "load game" as savetrix2;	
+understand "load game" as savetrix2.	
 
 Check savetrix2:
 	if trixie is not visible, say "Your words have no effect. Maybe you should tell them to Trixie in the library instead of just talking to yourself." instead;
@@ -1975,7 +1993,7 @@ Carry out savetrix2:
 
 [
 testsven is an action applying to nothing.
-understand "tsven" as testsven;	
+understand "tsven" as testsven;.
 carry out testsven:
 	now hp of Sven is 4;
 	move Sven to Bunker;
@@ -1992,9 +2010,10 @@ Carry out reciting:
 	let x be the topic understood;
 [	say "Current restoration string: [X][line break]";	]
 	replace the text " " in X with "`";
-[	say "Current restoration string: [X][line break]";  ]
+[	say "Current restoration string: [X][line break]";	]
 	let lev be the level of the player;
 	let upit be 0;
+	let zeta be 0;
 	repeat with z running from 1 to number of words in x:
 		let b be word number z in x;
 		replace the text "`" in b with " ";
@@ -2007,10 +2026,13 @@ Carry out reciting:
 			next;		
 		change the text of the player's command to b;
 		if upit is 1:
-			increase z by 58;
+			increase zeta by 58;
 		otherwise if upit is 2:
-			increase z by 160;  
-		if Z is:
+			increase zeta by 160;
+		let current be 0;
+		increase current by z;
+		increase current by zeta;
+		if current is:
 			-- 1:		[Strength]
 				if the player's command matches "[number]":
 					now the strength of player is the number understood;
@@ -2698,7 +2720,7 @@ Carry out reciting:
 						now carried of phoenix egg is 1;
 					if hp of Athanasia >= 3:
 						now lastfuck of Athanasia is turns;
-						now Government Assistance is resolved; 
+						now Government Assistance is resolved;
 						now Approaching the Capitol Building is known;
 					if hp of Athanasia >= 4:
 						now lastfuck of Athanasia is turns + 8;
@@ -3165,7 +3187,7 @@ Carry out reciting:
 					otherwise if level of Alexandra is 2:
 						add "Cuckold" to feats of player, if absent;
 						remove "Top Dog" from feats of player, if present;
-			-- 127:   [Thomas HP]
+			-- 127: [Thomas HP]
 				if the player's command matches "[number]":
 					now hp of Thomas is the number understood;
 					if hp of Thomas is 0 and guy is not banned or hermaphrodite is not banned:
@@ -3175,21 +3197,21 @@ Carry out reciting:
 						move Thomas to Dry Plains;
 					if hp of Thomas is 0 or hp of Thomas is 100:
 						remove Thomas from play;
-			-- 128:   [Thomas Libido]
+			-- 128: [Thomas Libido]
 				if the player's command matches "[number]":
 					now Libido of Thomas is the number understood;
 					now ThomasSaved is turns;
 					now SandySaved is turns;
 					if hp of Thomas is 0, now libido of Thomas is 0;
-			-- 129:   [Thomas Lust]
+			-- 129: [Thomas Lust]
 				if the player's command matches "[number]":
 					now Lust of Thomas is the number understood;
 					if hp of Thomas is 0, now lust of Thomas is 0;
-			-- 130:   [Thomas Quest]
+			-- 130: [Thomas Quest]
 				if the player's command matches "[number]":
 					now ThomasQuestVar is the number understood;
 					if hp of Thomas is 0, now ThomasQuestVar is 0;
-			-- 131:   [Artemis]
+			-- 131: [Artemis]
 				if the player's command matches "[number]":
 					now hp of rubber tigress is the number understood;
 					now Poor Kitty is unresolved;
@@ -3214,7 +3236,7 @@ Carry out reciting:
 					now thirst of rubber tigress is 0;
 					now lisaartemiscount1 is 0;
 					now lisaartemiscount2 is 0;
-			-- 132:   [Septus/Football Wolfman]
+			-- 132: [Septus/Football Wolfman]
 				if the player's command matches "[number]":
 					now hp of Septus is the number understood;
 					now Wolfman Lair is unknown;
@@ -3230,15 +3252,15 @@ Carry out reciting:
 							setmonster "Football Wolfman";
 							choose row monster from the table of random critters;
 							now area entry is "nowhere";
-			-- 133:   [Awesome Xerxes]
+			-- 133: [Awesome Xerxes]
 				if the player's command matches "[number]":
 					now lust of Xerxes is the number understood;
 					if hp of Xerxes is 0, now lust of Xerxes is 0;
-			-- 134:   [Awesomer Helen]
+			-- 134: [Awesomer Helen]
 				if the player's command matches "[number]":
 					now lust of Helen is the number understood;
 					if hp of Helen is 0, now lust of Helen is 0;
-			-- 135:   [Tristian]
+			-- 135: [Tristian]
 				if the player's command matches "[number]":
 					now hp of Tristian is the number understood;
 					now Tristbrother is resolved;
@@ -3250,7 +3272,7 @@ Carry out reciting:
 					if hp of Tristian is 10 or hp of Tristian is 12, now hp of Tristian is 7;
 					if hp of Tristian is 11:
 						move Lance to PALOMINO;
-			-- 136:   [Icarus/Blue Chaffinch]
+			-- 136: [Icarus/Blue Chaffinch]
 				if the player's command matches "[number]":
 					now hp of Icarus is the number understood;
 					if hp of Icarus > 0:
@@ -3269,7 +3291,7 @@ Carry out reciting:
 						now tti_scene is 0;
 					if hp of Icarus is 9:
 						now hp of Icarus is 8;	[Icarus waiting for more]
-			-- 137:   [hp of Joanna]
+			-- 137: [hp of Joanna]
 				if the player's command matches "[number]":
 					now hp of Joanna is the number understood;
 					move Joanna to Flower Garden;
@@ -3288,7 +3310,7 @@ Carry out reciting:
 						now hp of Joanna is 5;
 					if hp of Joanna >= 90:
 						now PALOMINO is known;
-			-- 138:   [lust of Joanna]
+			-- 138: [lust of Joanna]
 				if the player's command matches "[number]":
 					now lust of Joanna is the number understood;
 					if hp of Joanna <= 4 or hp of Joanna >= 90:
@@ -3296,7 +3318,7 @@ Carry out reciting:
 					if hp of Joanna >= 7 and hp of Joanna < 90:
 						if lust of Joanna < 3, now lust of Joanna is 3;
 						now plantdefeat is 1;						
-			-- 139:   [Angie]
+			-- 139: [Angie]
 				if the player's command matches "[number]":
 					now angiearoused is the number understood;
 					if AngieAroused is 50:
@@ -3401,7 +3423,7 @@ Carry out reciting:
 						if thirst of Corbin is 1:
 							move Corbin to Worker Barracks;
 						otherwise if thirst of Corbin is 2:
-							move Corbin to Milking Shed; 
+							move Corbin to Milking Shed;
 			-- 155: [hp of Corbin]
 				if the player's command matches "[number]":
 					now hp of Corbin is the number understood;
@@ -3440,7 +3462,7 @@ Carry out reciting:
 						if thirst of Duke is 1:
 							move Duke to Sheep Meadow SW;
 						otherwise if thirst of Duke is 2:
-							move Duke to Sheep Meadow SE; 
+							move Duke to Sheep Meadow SE;
 			-- 160: [hp of Zigor]
 				if the player's command matches "[number]":
 					now hp of Zigor is the number understood;
@@ -3679,8 +3701,8 @@ Carry out reciting:
 				if the player's command matches "[number]":
 					now SlaveRaidEncounters is the number understood;
 					if OrcSlaverStatus > 0 and SlaveRaidEncounters is 0: [security clause for those who load an old saveword]
-						now SlaveRaidEncounters is 2;   [enslaved]
-						now ValPregnancy is 48;         [knocked up]
+						now SlaveRaidEncounters is 2; [enslaved]
+						now ValPregnancy is 48; [knocked up]
 						now thirst of Val is 1;					[...by an orc]
 					if SlaveRaidEncounters < 2:
 						remove Val from play;
@@ -3753,12 +3775,38 @@ Carry out reciting:
 					otherwise if hp of Rane is 6:
 						move Rane to shrine;
 					otherwise if hp of Rane is 7:
-						move Rane to Grey Abbey 2F;		
+						move Rane to Grey Abbey 2F;
+					if hp of Rane is 5:
+						now The blue Oni is unresolved;
+					otherwise:
+						now The blue Oni is resolved;
+					if hp of Rane > 4:
+						now Rooftop Rumble is resolved;
+					otherwise:
+						now Rooftop Rumble is unresolved;	
 			-- 202: [thirst of Elijah]
 				if the player's command matches "[number]":
-					now thirst of Elijah is the number understood;									
-		if upit is 1, decrease z by 58;
-		if upit is 2, decrease z by 160;
+					now thirst of Elijah is the number understood;				
+			-- 203: [SpidertaurRelationship]
+				if the player's command matches "[number]":
+					now SpidertaurRelationship is the number understood;						
+					if SpidertaurRelationship > 4 and carried of silk hammock is 0:
+						increase carried of silk hammock by 1;
+					if SpidertaurRelationship > 5:
+						now Spider's Web is known;
+					otherwise:
+						now Spider's Web is not known;	
+			-- 204: [CatgirlFucked]
+				if the player's command matches "[number]":
+					now CatgirlFucked is the number understood;				
+			-- 205: [FionaFangStatus]
+				if the player's command matches "[number]":
+					now FionaFangStatus is the number understood;			
+			-- 206: [FionaCarlStatus]
+				if the player's command matches "[number]":
+					now FionaCarlStatus is the number understood;																	
+		if upit is 1, decrease zeta by 58;
+		if upit is 2, decrease zeta by 160;
 	if hospquest is 3, now hospquest is 2;
 	now progress of Doctor Mouse is turns;
 	if hospquest is 8, now Dinosaur Nest is unresolved;
@@ -3842,7 +3890,7 @@ Carry out reciting:
 	wait for any key;
 
 
-restoreletter is a text that varies.  restoreletter is normally "0";
+restoreletter is a text that varies.  restoreletter is normally "0".
 
 to npcEint-Restore:
 	npcEint-Read 1;
@@ -3946,8 +3994,8 @@ carry out Trixiecheck1:
 	say "Tail: [tailname of player]  Cock: [cockname of player][line break]";
 	say "Tanuki: [SatisfiedTanuki]   Hospquest: [hospquest][line break]";
 	say "Cocks x [cocks of player]   Breasts x [breasts of player]   Cunts x [cunts of player]   Breast size: [breast size of player][line break]";
-	say "COCK:   Length: [cock length of player]   Width: [cock width of player][line break]";
-	say "CUNT:   Length: [cunt length of player]   Width: [cunt width of player][line break]";
+	say "COCK: Length: [cock length of player]   Width: [cock width of player][line break]";
+	say "CUNT: Length: [cunt length of player]   Width: [cunt width of player][line break]";
 	say "Weapon: [weapon object of player]   Snow: [location of Snow]   Sandra: [location of Sandra][line break]";
 	say "Hyper Squirrel: [if Hyper Squirrel Girl is resolved]1[otherwise]0[end if]  Needy Bunny: [if Needy Rabbit Girl is resolved]1[otherwise]0[end if][line break]";
 	say "COLEEN: Location: [location of coleen]   Talk: [coleentalk]   Found: [coleenfound]   Collared: [coleencollared]   Alpha: [coleenalpha]   Slut: [coleenslut]   Spray: [coleenspray][line break]";

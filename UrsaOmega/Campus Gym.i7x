@@ -13,7 +13,7 @@ Campus Gym by UrsaOmega begins here.
 Section 1 - Finding the gym
 
 Working Out is a situation.
-the sarea of Working Out is "Campus";
+the sarea of Working Out is "Campus".
 
 Instead of resolving a Working Out:
 	say "      You come across a large building; through the glass windows you can see rows of exercise equipment. The whole setup is still in remarkably good shape. This must have been the campus['] gym! Interestingly enough, it appears to still be occupied; you can see some figures moving inside. Do you want to check inside now?";
@@ -29,7 +29,7 @@ Section 2 - Campus Gym
 
 Campus Gym is a room. It is fasttravel. It is private.
 
-The description of Campus Gym is "The interior of the gym is in even better shape than the exterior; the equipment all appears to be clean, and in good order, and the room itself has been kept quite pristine and orderly. Gear and supplies stacked against some of the walls is the only indicator that something is off outside.  Some of the equipment is occupied by humanoid figures, focusing on their workouts.";
+The description of Campus Gym is "The interior of the gym is in even better shape than the exterior; the equipment all appears to be clean, and in good order, and the room itself has been kept quite pristine and orderly. Gear and supplies stacked against some of the walls is the only indicator that something is off outside.  Some of the equipment is occupied by humanoid figures, focusing on their workouts.".
 
 instead of sniffing Campus Gym:
 	say "The room smells like sweat and hard work.";
@@ -38,8 +38,8 @@ Section 3 - Randy
 
 Randy is a man.
 Randy is in Campus Gym.
-The description of Randy is "A tall, muscular male rhino-man wearing a tank top and track pants. A nametag states his name as simply 'Randy'. From the way he walks around the gym floor helping people, you suspect he's a former (current?) staff member of the gym.";
-The conversation of Randy is { "What's up?" };
+The description of Randy is "A tall, muscular male rhino-man wearing a tank top and track pants. A nametag states his name as simply 'Randy'. From the way he walks around the gym floor helping people, you suspect he's a former (current?) staff member of the gym.".
+The conversation of Randy is { "What's up?" }.
 lastworkout is a number that varies. lastworkout is usually 500.
 workoutprice is a number that varies. workoutprice is usually 100.
 the hp of Randy is usually 0.
@@ -253,14 +253,15 @@ to say wrestlesex:
 			otherwise:
 				if cocks of player > 0:		[Anal]
 					say "     You position yourself behind Randy, rubbing your [cock size desc of player] [cock of player] cock between his tight buttcheeks while you raise his thick legs over your shoulders. Realizing you have no lube, you wet a few fingers in your mouth before dipping them between his thighs. Randy lets out a manly sigh as you tease his tight, muscular anus with your slick fingers, spreading your saliva around the rim of his hole. Randy rolls his hips back against you eagerly, and you press a finger inside of him, finding him tight but accomodating - he seems to be no shy virgin when it comes to taking it under the tail. You slip a few more fingers in, scissoring them outward to stretch and lubricate his ass. Of course, you make sure to tease his prostate in the process, making his thick rhino meat twich and drip precum. Finally, you decide he's ready to be fucked, and withdraw your fingers before replacing them with the tip of your [cock of player] cock.";
-					if waiterhater is 0, wait for any key;
+					if waiterhater is 0:
+						wait for any key;
 					say "     You quickly establish a rhythm, slowly pulling your length from the hot embrace of his ass before feeding it back in, relishing the way his ring spreads around your [cock of player] cock. You move a spare hand to Randy's thick rhino meat, which has been drooling precum like a broken tap ever since you first pinned him. You spread some of that precum over his length, using it to help you slowly stroke him in time with your thrusts. 'C'mon, you can fuck me harder than that!', Randy says huskily. You oblige, pounding his hole with quick, powerful thrusts, speeding up the jerking of his cock in kind. The room fills with the sound of flesh hitting flesh and your combined grunting and sighing.";
 					if waiterhater is 0, wait for any key;
 					say "      Your frantic fucking reaches a crescendo as he starts to squeeze his powerful rear around your length, embracing you each time you withdraw from his ass. The gripping sensation is too much for you, and you cross the finish line with a deep thrust, pumping your [cum load size of player] load in his guts. Your hand brings Randy do his own orgasm, his rhino cock stiffening and spurting cum between your bodies. You collapse over the rhino man, panting and sweating from the exertion. [if hp of Randy < 2]'Damn, haven't been fucked like that in a long time!'[otherwise]'Fuck, you're good at that!'[end if], Randy pants. 'Rematch sometime?', he says hopefully as you disentangle your bodies. He finds a towel and you dry off before getting your gear together and leaving.";
 					infect "Rhino";
 					now lastfuck of Randy is turns;
 					stop the action;
-				otherwise:			[Riding]
+				if cocks of player is 0:			[Riding]
 					say "     You straddle Randy's body, reaching one hand down between your legs to position his thick rhino meat at the entrance to your [if cunts of player > 0]pussy[otherwise]ass[end if]. Your wrestling has gotten him quite worked up, and his flared tip is dripping a copious supply of precum between your thighs. You start to sink down on his length, sighing as his glans spreads your [if cunts of player > 0]labia[otherwise]asshole[end if] open. You slid down until you feel his hefty balls rest against your bare, [bodydesc of player] ass. Every bit of your [if cunts of player > 0]vagina[otherwise]rectum[end if] feels stuffed with the grey malehood of the rhino. You roll your hips, working your body up and down his cock.";
 					say "     Randy grunts and tries to thrust up into you, but being pinned under your body, you control the pace; you tease him by pulling off his cock slowly before slamming yourself back down, loving the feeling of being filled with thick rhino dick. Each time he bottoms out in you, you bear down on him, gripping him with your internal muscles, eliciting a moan and a jet of warm precum from Randy each time. As his orgasm nears, he brings his muscular hands to your hips, pulling you down into his powerful thrusts. With a cry, he bottoms out inside you before unloading, filling you up with thick rhino cream.[impregchance]";
 					say "    You collapse on top of him, panting and sweating, dully aware of the seed dripping from your well-worked [if cunts of player > 0]snatch[otherwise]anus[end if]. [if hp of Randy is 1]'Damn, haven't been fucked like that in a long time!'[otherwise]'Fuck, you're good at that!'[end if], Randy pants. 'Rematch sometime?', he says hopefully as you disentangle your bodies. He finds a towel and you dry off before getting your gear together and leaving.";

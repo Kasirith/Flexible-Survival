@@ -221,7 +221,7 @@ to say pitbull_vsex1:		[receive fellatio]
 
 to say pitbull_vsex2:		[receive cunnilingus]
 	say "     Pulling the pit bull upright, you offer [if cunts of player > 1]one of [end if]your exposed, [bodytype of player] cunt[sfn] to them. H[if pitbullgender is 2]is[otherwise]er[end if] expression one of ill-regard to this prospect, your compelled to grind the dripping, [cunt size desc of player] portal against h[if pitbullgender is 2]is[otherwise]er[end if] face until [if pitbullgender is 1]s[end if]he obliges you. Tongue's imposed affection offered against it's supple lips, it inevitably descends upon its depths, portal now slick with a mix of saliva and sexual fluids[if cocks of player > 2], your exposed dicks driven hard for wont of attention, forcing your hands to occupy two of them[otherwise if cocks of player is 2], your exposed dicks driven hard for wont of attention, forcing your hands to occupy both of them[otherwise if cocks of player is 1], your exposed dick driven hard for wont of attention, forcing one of your hands to occupy it[end if].";
-	say "      Prior restraint slowly dissolved in the wake of [if pitbullgender is 2]his[otherwise]her[end if] own, rising need, [if pitbullgender is 2]he[otherwise]she[end if] offers up tainted moans as [if pitbullgender is 2]he[otherwise]she[end if] tastes your wanton honey, [if pitbullgender is 2]his[otherwise]her[end if] audible regard vibrating against this yielding hole. Stroking [if pitbullgender is 2]him[otherwise]her[end if]self as [if pitbullgender is 2]he[otherwise]she[end if] attends your needs, it's not long before you reach your bliss, [if cocks of player > 0]cock[smn] exploding with gouts of cum, painting the canine[otherwise]dousing the canine's face[end if] with your release.";
+	say "     Prior restraint slowly dissolved in the wake of [if pitbullgender is 2]his[otherwise]her[end if] own, rising need, [if pitbullgender is 2]he[otherwise]she[end if] offers up tainted moans as [if pitbullgender is 2]he[otherwise]she[end if] tastes your wanton honey, [if pitbullgender is 2]his[otherwise]her[end if] audible regard vibrating against this yielding hole. Stroking [if pitbullgender is 2]him[otherwise]her[end if]self as [if pitbullgender is 2]he[otherwise]she[end if] attends your needs, it's not long before you reach your bliss, [if cocks of player > 0]cock[smn] exploding with gouts of cum, painting the canine[otherwise]dousing the canine's face[end if] with your release.";
 	say "     Furiously [if pitbullgender is 2]strok[otherwise]fondl[end if]ing [if pitbullgender is 2]him[otherwise]her[end if]self in the wake of this, [if pitbullgender is 2]he[otherwise]she[end if] spends [if pitbullgender is 2]him[otherwise]her[end if]self all over the ground soon thereafter, left in a lustful haze as you inevitably depart, tainted need satisfied.";
 
 to say pitbull_vsex3:		[give vaginal]
@@ -348,7 +348,7 @@ When Play begins:
 	now body change entry is "it becomes adapted for fighting. Muscles grow and become lean. Your legs go digitigrade and claws pop out of your feet. Make that paws now. You feel ready to take on the world"; [ body change text. format as "Your body feels funny as (your text)." ]
 	now skin change entry is "short, white hairs pop out all over, with a few black patches, most notably a splotch on your eye"; [ skin change text. format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "it becomes attractively muscled and you feel a sharp pop as a small nub of a tail pops out"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
-	now cock change entry is "Your cock feels funny as a knot forms on the base while a sheath forms towards the bottom, it shimmers in color before deciding on a deep burgundy color"; [ cock change text. format as "Your cock feels funny as (your text)." ]
+	now cock change entry is "Your cock feels funny as a knot forms on the base while a sheath forms towards the bottom, it shimmers in colour before deciding on a deep burgundy colour"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 16;
 	now dex entry is 16;
 	now sta entry is 14;					
@@ -373,7 +373,7 @@ When Play begins:
 	now loot entry is "dirty water";			[ Loot monster drops, ]
 	now lootchance entry is 20;		[ Chance of loot dropping 0-100 ]
 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]tough[or]muscled[or]lean-and-mean[at random]";
 	now type entry is "canine";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]

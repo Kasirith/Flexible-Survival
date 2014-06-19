@@ -5,7 +5,7 @@ Section 1- Corgi quest
 maxq is a number that varies.  maxq is usually 0.
 
 Meeting the corgi is a situation.
-The sarea of Meeting the corgi is "Outside";
+The sarea of Meeting the corgi is "Outside".
 when play begins:
 	add Meeting the corgi to badspots of furry;
 	add Meeting the corgi to badspots of guy;
@@ -23,14 +23,14 @@ Instead of resolving Meeting the corgi:
 			Now corgitalk is -1;
 			now Meeting the corgi is resolved;
 		otherwise:
-			say "After the dominator is reduced to a quivering mess, [']the small furry missile['] now revealed to be the corgi from before, removes the shoulder bag the dominator was carrying and turns towards you, 'Hey there, thanks for holding him off, stupid [slutname] tried to steal my bag, almost got away too, didn't you, ya little fucker?' he says before stomping hard onto the [slutname][apostrophe]s groin, resulting in a pained shout of the now awake dominator. 'Anyway, name's Max, glad to see another sane one 'round here.....you are sane right?' Quickly nodding, the corgi gives a sigh and continues on. 'Just had to be sure , lately these [apostrophe]dominators[apostrophe]' the corgi says sarcastically 'have been trying everything to get me for the last week or so, and it's getting pretty annoying. Well whatever, if you drop by the gym any time soon give me a shout , there[apostrophe]s a bunch of us holed up there if ya need any help.' The corgi walks off, dragging a very distressed [slutname] behind him[line break]";
+			say "After the dominator is reduced to a quivering mess, [']the small furry missile['] now revealed to be the corgi from before, removes the shoulder bag the dominator was carrying and turns towards you, 'Hey there, thanks for holding him off, stupid [slutname] tried to steal my bag, almost got away too, didn't you, ya little fucker?' he says before stomping hard onto the [slutname][']s groin, resulting in a pained shout of the now awake dominator. 'Anyway, name's Max, glad to see another sane one 'round here... you are sane right?' Quickly nodding, the corgi gives a sigh and continues on. 'Just had to be sure, lately these [']dominators['] the corgi says sarcastically 'have been trying everything to get me for the last week or so, and it's getting pretty annoying. Well whatever, if you drop by the gym any time soon give me a shout, there[']s a bunch of us holed up there if ya need any help.' The corgi walks off, dragging a very distressed [slutname] behind him[line break]";
 			Increase corgitalk by 1;
 			now Meeting the corgi is resolved;
 	otherwise:
 		say "Looking around, you spot the remains of some recent activity in the form of sticky messes littered about.  Their scent is strong, making you think of those strong dominators you've seen around.  It seems a few of them found and made more of those strange sluts out of their victims.  There is something strange about their behaviour.  Perhaps you should have a couple of encounters with them to investigate further.  Some 'domincounters' as it were.";
 			
 pendant hunting is a situation.
-The sarea of pendant hunting is "Outside";
+The sarea of pendant hunting is "Outside".
 	
 Instead of resolving pendant hunting:
 	if maxq is 1:
@@ -46,7 +46,7 @@ Instead of resolving pendant hunting:
 		otherwise:
 			say " deciding that it would be better to try again later, you quickly run off";
 	otherwise:
-		say "as you continue to search the city you find yourself looking at a group of 3 hyenas, one of with is wearing a blue pendant, thankfully there distracted and don't notice you";	
+		say "as you continue to search the city you find yourself looking at a group of 3 hyenas, one of with is wearing a blue pendant, thankfully they[']re distracted and don't notice you";	
 		
 
 Section 2-Max
@@ -56,7 +56,7 @@ lastcorgifucked is a number that varies.  lastcorgifucked is usually 130.
 understand "corgi" as Max.
 understand "max" as Max.
 
-The description of Max is "     Max is a Pembroke Welsh corgi, he has a short but strong, sturdily built and is covered in a coat of light auburn fur with a white underside and a black diamond on his back, Max is wearing a pair of black ripped jeans that reach his knees, his forearms and legs are tapped up with white bandages. He also has a black whip/bracelet tied round his right forearm and a red diamond pendant hanging from his neck. ";
+The description of Max is "     Max is a Pembroke Welsh corgi, he has a short but strong, sturdily built and is covered in a coat of light auburn fur with a white underside and a black diamond on his back, Max is wearing a pair of black ripped jeans that reach his knees, his forearms and legs are tapped up with white bandages. He also has a black whip/bracelet tied round his right forearm and a red diamond pendant hanging from his neck. ".
 
 The conversation of Max is { "Stuff!" }.
 
@@ -82,8 +82,8 @@ instead of conversing the Max:
 			otherwise:
 				say "'Just give me a shout when you're ready to go.'";	
 			stop the action;	
-	otherwise if location of player is Mall Atrium:  [start of normal converce]
-		say "'Hey, glad we got out of there [if Mistresswon is 1]and got rid of that demented creature too![end if]'";
+	otherwise if location of player is Mall Atrium: [start of normal converce]
+		say "'Hey, glad we got out of there[if Mistresswon is 1] and got rid of that demented creature too[end if]!'";
 		if Mistresswon is 0:
 			say "'If you want, we can go back and try to attack those sluts and dominatrices again?'";
 			if the player consents: 
@@ -113,23 +113,23 @@ instead of conversing the Max:
 			otherwise if maxq is 1:
 				say "'Apologizing for your lack of progress you quickly head out once again to try and find the corgi's missing pendant, maybe if you hunt for the pendant you'll have more luck?'";	
 	otherwise if location of player is Rec room:
-		say "'You want to trade some stuff? miles and me have got some goody bags for you if you want them, if you have a bit of water and food to spare, you may find yourself suprised.'  Maybe  you want to GIVE MAX some of your supplies?'";
+		say "'You want to trade some stuff? miles and me have got some goody bags for you if you want them, if you have a bit of water and food to spare, you may find yourself surprised.'  Maybe  you want to GIVE MAX some of your supplies?'";
 
 
 Section 3- corgitrading
 
 corgi trade is a person. 
-The description of corgi trade is "Max is willing to trade some of his supplies for yours mayby you shouls TRADE or GIVE MAX some food and water?";
+The description of corgi trade is "Max is willing to trade some of his supplies for yours mayby you shouls TRADE or GIVE MAX some food and water?".
 
 corgigiving is an action applying to nothing.
 
-understand "give max" as corgigiving;
-understand "give corgi" as corgigiving;
-understand "trade corgi" as corgigiving;
-understand "trade max" as corgigiving;
+understand "give max" as corgigiving.
+understand "give corgi" as corgigiving.
+understand "trade corgi" as corgigiving.
+understand "trade max" as corgigiving.
 
 check corgigiving:
-	if Max is not visible, say "you cant do this here" instead;
+	if Max is not visible, say "you can[']t do this here" instead;
 
 
 carry out corgigiving:
@@ -139,13 +139,13 @@ carry out corgigiving:
 		delete water bottle;
 		let Z be a random number between 1 and 11;
 		if Z is 1:
-			Say "...... nothing.....absolutly nothing... even the bag is useless!";
+			Say "nothing... absolutely nothing... even the bag is useless!";
 		otherwise if Z is 2:
 			say "a bottle of water and some food, seems you get what you paid for after all";
 			Add "food" to invent of player;
 			Add "water bottle" to invent of player;
 		otherwise If Z is 3:
-			say "alot of food and water, this is definitly a good goody bag";
+			say "a lot of food and water, this is definitely a good goody bag";
 			Add "food" to invent of player;
 			Add "water bottle" to invent of player;
 			Add "food" to invent of player;
@@ -163,7 +163,7 @@ carry out corgigiving:
 			Add "protein shake" to invent of player;
 			Add "protein shake" to invent of player;
 		otherwise If Z is 7:
-			say "alot of protein shakes";
+			say "a lot of protein shakes";
 			Add "protein shake" to invent of player;
 			Add "protein shake" to invent of player;
 			Add "protein shake" to invent of player;
@@ -194,7 +194,7 @@ lastkitsufucked is a number that varies.  lastkitsufucked is usually 130.
 understand "kitsune" as Miles.
 understand "miles" as Miles.
 
-The description of Miles is "     Miles is a kitsune, he looks like a fox but with two tails, his fur is normally red but it seems like he can control its colour, he is wearing a plain t-shirt and black joggers, he also has and a blue diamond pendant hanging from his neck. ";
+The description of Miles is "     Miles is a kitsune, he looks like a fox but with two tails, his fur is normally red but it seems like he can control its colour, he is wearing a plain t-shirt and black joggers, he also has and a blue diamond pendant hanging from his neck. ".
 
 The conversation of Miles is { "Stuff!" }.
 
@@ -205,7 +205,7 @@ instead of conversing the Miles:
 			now maxq is 3;
 			stop the action;
 		otherwise if maxq is 3:	
-			say "When you approach the kitsune, you find he is crouched over a pair of swords, when you inquire about them he tells you there for a quest that's not finished but if you want he'll give you them now......with a warning, [line break] the bloody sword drains health each turn, and while slightly stronger the demonic sword drains sanity, in there future there will be away of changing the effects but for now...good luck[line break] n for bloody y for demonic";
+			say "When you approach the kitsune, you find he is crouched over a pair of swords, when you inquire about them he tells you there for a quest that's not finished but if you want he'll give you them now... with a warning, [line break] the bloody sword drains health each turn, and while slightly stronger the demonic sword drains sanity, in there future there will be away of changing the effects but for now...good luck[line break] n for bloody y for demonic";
 			if the player consents:
 				add "demonic sword" to invent of player;
 				now maxq is 4;
@@ -215,7 +215,7 @@ instead of conversing the Miles:
 				now maxq is 4;
 				stop the action;
 		otherwise if maxq is 4:
-			say "'This city's got existing hasn't it, and crazy......defiantly crazy.'"	
+			say "'This city's got existing hasn't it, and crazy... defiantly crazy.'"	
 		
 		
 
