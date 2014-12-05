@@ -12,11 +12,11 @@ Use MAX_PROP_TABLE_SIZE of 51000000.
 use MAX_STATIC_DATA of 12500000.
 Use MAX_OBJ_PROP_COUNT of 1280.
 use MAX_SYMBOLS of 13000000. ["Compiler finished with code 10"]
-use MAX_NUM_STATIC_STRINGS of 150000. [ Code 10 ]
+use MAX_NUM_STATIC_STRINGS of 160000. [ Code 10 ]
 use SYMBOLS_CHUNK_SIZE of 25000. [ Code 10 ]
 use ALLOC_CHUNK_SIZE of 1450000.
 use MAX_DICT_ENTRIES of 15000.
-use MAX_OBJECTS of 1250.
+use MAX_OBJECTS of 1450.
 use MAX_ACTIONS of 320.
 use MAX_VERBS of 330.
 use MAX_ARRAYS of 100000.
@@ -49,7 +49,7 @@ To end the game saying (T - text):
 	
 
 Instead of sniffing something (called x):
-	if the scent of x is "":
+	if the scent of x is empty:
 		say "It smells pretty normal for a/an [x].";
 	otherwise:
 		say "[scent of x][line break]";
@@ -642,8 +642,8 @@ The marea of library door is "Outside".
 to say bunker desc:
 	say "     Sparsely appointed, the bunker was built back during the Cold War, then abandoned to become a forgotten curiosity at best.  Its walls are solid concrete and the shelves are at least in good repair.  There are several cots bolted to the floor and walls for those taking shelter here to [bold type]rest[roman type] upon";
 	if "cot" is listed in invent of Bunker:
-		say ".  One of the cots was poorly installed and the bolts attaching it to the floor have come loose.  You could take along if you'd like";
-	say ".  The small sink seems to be broken, producing no water no matter how much the knob is turned.  There is a secure looking door leading [bold type]outside[roman type].";
+		say ".  One of the cots was poorly installed and the bolts attaching it to the floor have come loose.  You could take it along if you'd like";
+	say ".  The small sink seems to be broken, producing no water no matter how much the knob is turned.  There is a secure-looking door leading [bold type]outside[roman type].";
 	if "old boombox" is listed in invent of Bunker:
 		say "     You have set up the old boombox in one corner where it continues to play without power, providing a mix of tunes and the occasional weather report on the continuing heat wave.  Fiddling with the dials can get different songs and genres of music, but no actual news or broadcast radio.  The radio broadcaster you hear seems the same across the stations, though his tone and delivery suits the format of the current [']station['].  Its dials and settings change on their own from time to time as if to provide music to suit the situation or dropping its volume when you're taking a nap.";
 
@@ -1089,7 +1089,7 @@ water bottle is a grab object. It is a part of the player. The trade of water bo
 Does the player mean using the dirty water: it is unlikely.
 dog milk is a grab object. It is a part of the player.  it is milky.
 The purified of dog milk is "water bottle".
-The purified of Wyvern Goop is "food".
+The purified of wyvern goop is "food".
 soda is a grab object. It is a part of the player.
 chips is a grab object. It is a part of the player.
 glob of goo is a grab object. It is a part of the player. glob of Goo is infectious. The strain of glob of goo is "Goo Girl".
@@ -1265,6 +1265,10 @@ Avianpredlist is a marker.	[list of predatory avian/bird infections]
 when play begins:
 	add { "Bald Eagle", "Fluffy Owl", "Hermaphrodite Gryphon", "Hawkman" } to infections of Avianpredlist;
 
+Rodentlist is a marker.	[list of rodent infections]
+when play begins:
+	add { "Slut Rat", "squirrel" } to infections of Rodentlist;
+
 Taurlist is a marker.	[list of tauric infections]
 when play begins:
 	add { "Reptaur", "Centaur Mare", "Centaur Stallion", "Mutant Centaur", "Panther Taur", "tigertaur", "Wolftaur", "Skunk Taur" } to infections of Taurlist;
@@ -1334,8 +1338,8 @@ carry out hunting:
 				add y to q;
 				if "Like Attracts Like" is listed in feats of player:
 					add y to q;
-				if humanity of player < 85:
-					repeat with x running from 1 to ( ( 100 - humanity of player ) / 16 ):
+				if humanity of player < 75:
+					repeat with x running from 1 to ( ( 100 - humanity of player ) / 25 ):
 						add y to q;
 				break;
 	if insectlarva is true and larvaegg is 1 and gestation of child is 0:		[hunted by wasp hive anywhere outdoors]
@@ -1398,7 +1402,7 @@ carry out hunting:
 				say "You are almost certain you saw some [name entry] tracks...";
 				now found is 1;
 				add x to q;
-				let zed be perception of player / 4;
+				let zed be perception of player / 3;
 				if zed > 8, now zed is 8;
 				repeat with N running from 1 to zed:
 					add x to q;
@@ -1985,7 +1989,7 @@ carry out destinationcheck:
 			say "| [link][bracket]Lion's Den[close bracket][as]nav Lion's Den[end link] ";
 		say "[line break]";
 	[another sub-section of the 'outside' area (named Commercial District here)]
-	if Smith Haven Mall Lot South is known or Back Alley is known or Comic Shop is known or Isolated Street is known or Kristen's Hideout is known or Lingerie Store is known or New Ewe Storeroom is known or The Palomino is known or SlutRat Den is known:
+	if Smith Haven Mall Lot South is known or Back Alley is known or Comic Shop is known or Isolated Street is known or Kristen's Hideout is known or Lingerie Store is known or New Ewe Storeroom is known or The Palomino is known or SlutRat Den is known or K9 Vans is known:
 		say "[bold type]Commercial District[roman type]: ";
 		if Smith Haven Mall Lot South is known:
 			say "[link][bracket]Smith Haven Mall[close bracket][as]nav Smith Haven Mall Lot South[end link] - ";
@@ -1995,6 +1999,8 @@ carry out destinationcheck:
 			say "| [link][bracket]Comic Shop[close bracket][as]nav Comic Shop[end link] ";
 		if Isolated Street is known:
 			say "| [link][bracket]Isolated Street[close bracket][as]nav Isolated Street[end link] ";
+		if K9 Vans is known:
+			say "| [link][bracket]K9 Vans[close bracket][as]nav K9 Vans[end link] ";
 		if Kristen's Hideout is known:
 			say "| [link][bracket]Kristen's Hideout[close bracket][as]nav Kristen's Hideout[end link] ";
 		if Lingerie Store is known:
@@ -2087,10 +2093,12 @@ carry out destinationcheck:
 			say "| [link][bracket]Shifting Room[close bracket][as]nav Shifting Room[end link] ";
 		say "[line break]";
 	[start of the Museum area]
-	if Museum Foyer is known:
+	if Museum Foyer is known or Egypt Wing Entrance is known:
 		say "[bold type]Museum[roman type]: ";
 		if Museum Foyer is known:
-			say "[link][bracket]Museum Foyer[close bracket][as]nav Museum Foyer[end link] -";
+			say "[link][bracket]Museum Foyer[close bracket][as]nav Museum Foyer[end link] - ";
+		if Egypt Wing Entrance is known:
+			say "| [link][bracket]Egypt Wing Entrance[close bracket][as]nav Egypt Wing Entrance[end link] ";
 		say "[line break]";
 	[start of the red light area]
 	if Entrance to the Red Light District is known or Bright Alley is known or Burned-Out Chapel is known or Cuero Lobo is known or Down Under Pub is known or Gillian's Flat is known or Police Car is known or Porn Store is known or Sven's Place is known or Tattoo Parlor is known:
@@ -2137,10 +2145,12 @@ carry out destinationcheck:
 			say "| [link][bracket]Master's Office[close bracket][as]nav Master's Office[end link] ";
 		say "[line break]";
 	[start of the college area]
-	if College Campus is known or Campus Gym is known or Paleontology Office is known or Phi Iota Gamma is known or Sports Arena Lockerroom is known:
+	if College Campus is known or Campus Gym is known or Paleontology Office is known or Phi Iota Gamma is known or Sports Arena Lockerroom is known or Astroslide Field Lockerroom is known:
 		say "[bold type]Tenvale College[roman type]: ";
 		if College Campus is known:
 			say "[link][bracket]College Campus[close bracket][as]nav College Campus[end link] - ";
+		if Astroslide Field Lockerroom is known:
+			say "| [link][bracket]Astroslide Field Lockerroom[close bracket][as]nav Astroslide Field Lockerroom[end link] ";
 		if Campus Gym is known:
 			say "| [link][bracket]Campus Gym[close bracket][as]nav Campus Gym[end link] ";
 		if Paleontology Office is known:
@@ -2357,7 +2367,7 @@ carry out Inventorying:
 	if Janice's blouse is owned, now jblouse is 1;
 	say "Peeking into your backpack, you see: [if the number of owned grab objects is 0]Nothing[otherwise][line break][end if]";
 	if the number of owned grab objects is greater than 0:
-		say "[bold type][bracket]U[close bracket][roman type]se, [bold type][bracket]L[close bracket][roman type]ook, [bold type][bracket]S[close bracket][roman type]mell, [bold type][bracket]D[close bracket][roman type]rop, [bold type][bracket]J[close bracket][roman type]unk, [bold type][bracket]X[close bracket][roman type]Junkall, [if the number of trader in the location of the player > 0 or ( Ronda is visible and hp of Ronda is 0 and dseed is 1 ) or ( Kristen is visible and hp of Kristen is 10 and jblouse is 1 )], [bold type][bracket]T[close bracket][roman type]rade[end if][if the number of smither in the location of the player > 0], [bold type][bracket]I[close bracket][roman type]mprove[end if], [bold type](*)[roman type] equipped/wielded, [bold type](+)[roman type] improved.";
+		say "[bold type][bracket]U[close bracket][roman type]se, [bold type][bracket]L[close bracket][roman type]ook, [bold type][bracket]S[close bracket][roman type]mell, [bold type][bracket]D[close bracket][roman type]rop, [bold type][bracket]J[close bracket][roman type]unk, [bold type][bracket]X[close bracket][roman type]Junkall, [if the number of trader in the location of the player > 0 or ( Ronda is visible and hp of Ronda is 0 and dseed is 1 ) or ( Kristen is visible and hp of Kristen is 10 and jblouse is 1 ) or ( Christy is visible and carried of super spicy sausage > 0 and hp of Christy > 1 and hp of Christy < 50 )], [bold type][bracket]T[close bracket][roman type]rade[end if][if the number of smither in the location of the player > 0], [bold type][bracket]I[close bracket][roman type]mprove[end if], [bold type](*)[roman type] equipped/wielded, [bold type](+)[roman type] improved.";
 		let weight be 0;
 		let newline be 0;
 		repeat with x running from 1 to the number of rows in the table of game objects:
@@ -2369,7 +2379,7 @@ carry out Inventorying:
 				say " [link][bracket][bold type]D[roman type][close bracket][as]drop [name entry][end link]";
 				say " [link][bracket][bold type]J[roman type][close bracket][as]junk [name entry][end link]";
 				say " [link][bracket][bold type]X[roman type][close bracket][as]junkall [name entry][end link]";
-				if trade of object entry is "":
+				if trade of object entry is empty:
 					let notval be 0;
 					if Ronda is visible and hp of Ronda is 0 and name entry is "demon seed":
 						say " [link][bracket][bold type]T[roman type][close bracket][as]give [name entry] to Ronda[end link]";
@@ -2379,6 +2389,8 @@ carry out Inventorying:
 						say " [link][bracket][bold type]T[roman type][close bracket][as]give [name entry] to Helen[end link]";
 					if Kristen is visible and hp of Kristen is 10 and name entry is "Janice's blouse":
 						say " [link][bracket][bold type]T[roman type][close bracket][as]give [name entry] to Kristen[end link]";
+					if Christy is visible and hp of Christy > 1 and hp of Christy < 50 and name entry is "super spicy sausage":
+						say " [link][bracket][bold type]T[roman type][close bracket][as]give [name entry] to Christy[end link]";
 				otherwise if the number of trader in the location of the player is greater than 0:
 					let tradeguy be a random trader in the location of the player;
 					say " [link][bracket][bold type]T[roman type][close bracket][as]give [name entry] to [tradeguy][end link]";
@@ -3042,7 +3054,7 @@ To process (X - a grab object):
 		delete x;
 	otherwise:
 		say "You use the [x]. ";
-	if usedesc of x is "":
+	if usedesc of x is empty:
 		now x is x;
 	otherwise:
 		say "[usedesc of x]";
@@ -3251,7 +3263,7 @@ To process (X - a grab object):
 			say "You stop using the [x].";
 			now x is not equipped;
 		otherwise:
-			if slot of x is "":
+			if slot of x is empty:
 				let zq be 0;
 			otherwise:
 				repeat with z running through equipped equipment:
@@ -3516,7 +3528,8 @@ To say blockquote-style:
 To say input-style:
 	(- glk_set_style(style_Input); -)
 
-Table of Common Color Values (continued)
+[
+Table of Common Color Values [(continued)]
 glulx color value	assigned number
 g-pure-blue	255		[== $0000FF] 
 g-bright-cyan	39423		[== $0099FF]
@@ -3530,8 +3543,10 @@ g-pure-yellow	16776960		[== $FFFF00]
 g-pure-magenta	16711935		[== $FF00FF]
 g-pure-red	16711680		[== $FF0000]
 [names can be changed if desired, also need to change matching name in table below.  choose color in hex, then convert to decimal for assigned number.]
+]
 
 Table of User Styles (continued)
+[
 style name	justification	obliquity	indentation	first-line indentation	boldness	fixed width	relative size	glulx color
 special-style-1	--	--	--	--	bold-weight	--	1	g-dark-green
 special-style-2	--	--	--	--	bold-weight	--	1	g-medium-red
@@ -3547,6 +3562,12 @@ bold-style	--	--	--	--	--	--	--	--[allows redefining of bold style]
 [blockquote, input, and fixed letter appear to be unused.  they could be redefined as desired for more colors/formating.]
 [alert, header, and note are used for a few game functions.  if you wanted to change those you could]
 [italics and bold are currently in a variety of places.  just a few italics, but bold is all over the place.  be aware if you choose to change them]
+]
+style name (a glulx text style)	background color (a text)	color (a text)	first line indentation (a number)	fixed width (a truth state)	font weight (a font weight)	indentation (a number)	italic (a truth state)	justification (a text justification)	relative size (a number)	reversed (a truth state)
+special-style-1	--	"#00CC00"	--	--	bold-weight	--	--	--	--	--
+special-style-2	--	"#CC0000"	--	--	bold-weight	--	--	--	--	--
+
+
 
 Part 3 - Item Code
 
@@ -3568,7 +3589,7 @@ carry out grabbing something(called x):
 			now found is 1;
 			add q to the invent of the player;
 			remove entry number from invent of the location of the player;
-			say "You pick up the [q] and tuck it in your backpack.";
+			say "You pick up the [printed name of x] and tuck it in your backpack.";
 			break;
 	if found is 0:
 		say "You don't see any [x] around here.";
@@ -3711,7 +3732,7 @@ Check Purifying:
    if the microwave is not visible, say "You see nothing to purify with." instead;
    
 Carry out Purifying:
-	if purified of noun is "":
+	if purified of noun is empty:
 		say "You don[apostrophe]t think that can get any more pure, at least not this way.";
 		stop the action;
 	let number be 0;
@@ -3784,7 +3805,7 @@ This is the sex change rule:
 			now cock width of player is 5;
 		if prevcock < cock width of player:		[did balls actually grow?]
 			follow the cock descr rule;
-			say "You can [if cockname of player is listed in infections of Internallist]feel your internal[otherwise]see your[end if] [one of]testes[or]balls[or]orbs[or]cum factories[at random] [one of]tingle[or]churn audibly[or]throb[at random] as they grows larger, [if cockname of player is listed in infections of Internallist]body straining to abide this[otherwise]your flesh growing taught with the[end if] expansion, leaving you with [one of]a pair of[or]a set of[at random] [ball size]!";
+			say "You can [if cockname of player is listed in infections of Internallist]feel your internal[otherwise]see your[end if] [one of]testes[or]balls[or]orbs[or]nuts[at random] [one of]tingle[or]churn audibly[or]throb[at random] as they grows larger, [if cockname of player is listed in infections of Internallist]body straining to abide this[otherwise]your flesh growing taught with the[end if] expansion, leaving you with [one of]a pair of[or]a set of[at random] [ball size]!";
 	otherwise if ( the sex entry is "Male" or the sex entry is "Both" ) and cock width of player > ( ( cock width entry times 150 ) / 100 ) and "One Way" is not listed in feats of player:
 		let prevcock be cock width of player;
 		decrease cock width of player by 1;
@@ -3795,7 +3816,7 @@ This is the sex change rule:
 			now cock width of player is 5;
 		if prevcock > cock width of player:		[did cock actually shrink?]
 			follow the cock descr rule;
-			say "You can feel a [one of]draining of[or]tightness around[or]pressure dropping in[at random] your [if cockname of player is listed in infections of Internallist]internal[otherwise]impressive[end if] [cockname of player] [one of]balls[or]testes[or]gonads[or]cum factories[at random] as they begin to diminish somewhat to better suit your new infection.  You cum hard to drain their seed as they dwindle in size, becoming [ball size].";
+			say "You can feel a [one of]draining of[or]tightness around[or]pressure dropping in[at random] your [if cockname of player is listed in infections of Internallist]internal[otherwise]impressive[end if] [cockname of player] [one of]balls[or]testes[or]gonads[or]nuts[at random] as they begin to diminish somewhat to better suit your new infection.  You cum hard to drain their seed as they dwindle in size, becoming [ball size].";
 	if cocks of player is less than cocks entry and ( the sex entry is "Male" or the sex entry is "Both" ) and "Female Preferred" is not listed in feats of player:
 		let prevcock be cocks of player;
 		if cocks of player is 0:
@@ -3836,7 +3857,7 @@ This is the sex change rule:
 			now cock width of player is 0;
 		if prevcock > cock length of player or prevcock2 > cock width of player:		[did cock actually shrink?]
 			follow the cock descr rule;
-			say " Strange [one of]erotic tingles[or]cold waves[or]hot flashes[at random] run over your [if cocks of player > 1][one of]cocks[or]penises[or]shafts[or]poles[at random] begin[otherwise][one of]cock[or]man meat[or]shaft[or]pole[at random] begins[end if] to shrink. [if cocks of player is greater than 1]They dwindle[otherwise]It dwindles[end if] in size, becoming [descr] while[if cockname of player is listed in infections of Internallist] you imagine[end if] your [one of]balls[or]testes[or]cum factories[or]gonads[at random] become [ball size]. ";
+			say " Strange [one of]erotic tingles[or]cold waves[or]hot flashes[at random] run over your [if cocks of player > 1][one of]cocks[or]penises[or]shafts[or]poles[at random] begin[otherwise][one of]cock[or]man meat[or]shaft[or]pole[at random] begins[end if] to shrink. [if cocks of player is greater than 1]They dwindle[otherwise]It dwindles[end if] in size, becoming [descr] while[if cockname of player is listed in infections of Internallist] you imagine[end if] your [one of]balls[or]testes[or]nuts[or]gonads[at random] become [ball size]. ";
 			if cock length of player is less than 1 or cock width of player is less than 1:
 				say "You barely have time to give a whimper as you cease to be a male.";
 				now the cocks of the player is 0;
@@ -4726,7 +4747,10 @@ check resting:
 		say "You have nothing to rest on.";
 		stop the action;
 	if companion of player is not rubber tigress:
-		if there is a dangerous door in the location of the player and location of player is not sleepsafe:
+		if ( there is a dangerous door in the location of the player or the location of player is fasttravel ) and location of player is not sleepsafe:
+			let l be a random visible dangerous door;
+			if l is not nothing, now battleground is the marea of l;
+			if l is nothing, now battleground is "Outside";	[***]
 			say "...";
 			attempttowait;
 			let intodds be 3;
@@ -5105,25 +5129,27 @@ This is the turnpass rule:
 			otherwise:				[MPreg]
 				say "Your [bodytype of player] belly protrudes in a firm dome from your [if cocks of player > 0]male[otherwise]neuter[end if] pregnancy, full with [if snakehijack is true][one of]your serpentine hijacker[or]the illegitimate occupant[or]the sneaky snake[as decreasingly likely outcomes][otherwise]growing life[end if][if snakeocc > 1]s[end if] which will soon emerge into the world.  Somehow, perhaps due to the nanites, you don't feel at all hindered despite being bloated.";
 			if a random chance of 1 in 10 succeeds and ( cunts of player > 0 or breast size of player > 0 ):
-				increase breast size of player by 1;
-				follow breast descr rule;
-				if cunts of player > 0:
-					say "Your breasts feel especially tender, swollen with your condition, now [breast size desc of player], the mammary flesh stretched lightly.  Pinching your nipples causes a little of the milk to feed the child growing inside you to dribble out.";
-				otherwise:
-					say "Your breasts feel especially tender and you are surprised to find them swelling larger despite being [if cocks of player > 0]male[otherwise]neuter[end if], now [breast size desc of player] breasts on your [bodytype of player] body.  Pinching your nipples causes a little of the milk to feed the child growing inside you to dribble out.";
+				if "Flat Chested" is not listed in feats of player:
+					increase breast size of player by 1;
+					follow breast descr rule;
+					if cunts of player > 0:
+						say "Your breasts feel especially tender, swollen with your condition, now [breast size desc of player], the mammary flesh stretched lightly.  Pinching your nipples causes a little of the milk to feed the child growing inside you to dribble out.";
+					otherwise:
+						say "Your breasts feel especially tender and you are surprised to find them swelling larger despite being [if cocks of player > 0]male[otherwise]neuter[end if], now [breast size desc of player] breasts on your [bodytype of player] body.  Pinching your nipples causes a little of the milk to feed the child growing inside you to dribble out.";
 		otherwise if gestation of child is less than 10:
 			if cunts of player > 0:
-				say "Your [bodydesc of player] body is somewhat rounded with the effects of [if ovipregnant is true]your oncoming pregnancy[otherwise]what feels like an egg growing inside you[end if].  It is progressing with worrying speed, but a warm sense of fulfillment keeps fear at bay.";
+				say "Your [bodydesc of player] body is somewhat rounded with the effects of [if ovipregnant is true]what feels like an egg growing inside you[otherwise]your oncoming pregnancy[end if].  It is progressing with worrying speed, but a warm sense of fulfillment keeps fear at bay.";
 			otherwise:
 				say "Your [bodydesc of player] body is somewhat enlarged by the effects of your unusual pregnancy.  It is progressing with worrying speed, but a strange sense of fulfillment keeps fear at bay.";
 			increase morale of player by 1;
 			if a random chance of 1 in 20 succeeds and ( cunts of player > 0 or breast size of player > 0 ):
-				increase breast size of player by 1;
-				follow breast descr rule;
-				if cunts of player > 0:
-					say "Your breasts feel especially tender, swollen with your condition, now [breast size desc of player], the mammary flesh stretched lightly.";
-				otherwise:
-					say "Your breasts feel especially tender and you are surprised to find them swelling larger despite being [if cocks of player > 0]male[otherwise]neuter[end if], now [breast size desc of player] breasts on your [bodytype of player] body.";
+				if "Flat Chested" is not listed in feats of player:
+					increase breast size of player by 1;
+					follow breast descr rule;
+					if cunts of player > 0:
+						say "Your breasts feel especially tender, swollen with your condition, now [breast size desc of player], the mammary flesh stretched lightly.";
+					otherwise:
+						say "Your breasts feel especially tender and you are surprised to find them swelling larger despite being [if cocks of player > 0]male[otherwise]neuter[end if], now [breast size desc of player] breasts on your [bodytype of player] body.";
 		otherwise if gestation of child is less than 30:
 			if a random chance of 1 in 2 succeeds:
 				if cunts of player > 0:
@@ -5366,21 +5392,21 @@ To say ball size:
 
 to say cum load size of ( x - a person ):
 	if cock width of x > 0:
-		if cock width of x is less than 3:
+		if cock width of x is less than 3:			[1, 2]
 			say "[one of]piddling[or]tiny[or]minuscule[or]feeble[or]small[or]meager[at random]";
-		otherwise if cock width of x is less than 6:
+		otherwise if cock width of x is less than 6:	[3 - 5]
 			say "[one of]average[or]normal-sized[or]fair-sized[or]moderate[or]adequate[or]regular-sized[at random]";
-		otherwise if cock width of x is less than 12:
+		otherwise if cock width of x is less than 12:	[6 - 11]
 			say "[one of]triple-dose[or]half-cup[or]cupfull[or]ample[or]above-average[or]generous[or]sizable[at random]";
-		otherwise if cock width of x is less than 16:
+		otherwise if cock width of x is less than 16:	[12 - 15]
 			say "[one of]half-litre[or]considerable[or]impressive[or]pint-full[or]copious[or]substantial[or]large[or]abundant[or]plentiful[at random]";
-		otherwise if cock width of x is less than 20:
+		otherwise if cock width of x is less than 20:	[16 - 19]
 			say "[one of]one-litre[or]flowing[or]heavy[or]quart-sized[or]drenching[or]jumbo[or]whopping[at random]";
-		otherwise if cock width of x is less than 25:
+		otherwise if cock width of x is less than 25:	[20 - 24]
 			say "[one of]two-litre[or]half-gallon[or]giant[or]huge[or]blasting[or]enormous[or]immense[at random]";
-		otherwise if cock width of x is less than 32:
+		otherwise if cock width of x is less than 32:	[25 - 31]
 			say "[one of]overflowing[or]bucket-filling[or]excessive[or]gushing[or]massive[at random]";
-		otherwise:
+		otherwise:								[32+]
 			say "[one of]torrential[or]monumental[or]colossal[or]gigantic[or]immeasurable[or]devastating[or]near-unending[at random]";
 
 This is the cunt descr rule:
@@ -5496,12 +5522,16 @@ This is the self examine rule:
 		if descmod of x is "", next;
 		if placement of x is "waist":
 			say "  [descmod of x][run paragraph on]";
+	if "Angie's Mate" is listed in feats of player:
+		say "  Thin lines of healed claw-marks run down your back, marking you as Angie's mate.";
+	if "Boghrim's Mark" is listed in feats of player:
+		say "  Two small scars from Boghrim's tusks mark your shoulder, a reminder of the first time the big orc fucked you.";
 	if weapon object of player is not journal:
 		say "  You are carrying a/an [weapon object of player] just in case of trouble";
 		if weapon object of player is unwieldy:
 			say ".  Due to its comparatively [if scalevalue of player > objsize of weapon object of player]small[otherwise]big[end if] size, it is [if absolute value of ( scalevalue of player - objsize of weapon object of player ) > 3]very unwieldy[otherwise if absolute value of ( scalevalue of player - objsize of weapon object of player ) is 3]rather unwieldy[otherwise]somewhat unwieldy[end if] for you to use at the moment";
 		say ".[run paragraph on]";
-	if tail of player is "":
+	if tail of player is empty:
 		say "";
 	otherwise:
 		say " [tail of the player][run paragraph on]";
@@ -5510,8 +5540,8 @@ This is the self examine rule:
 		if placement of x is "end":
 			say " [descmod of x]";
 	say "[line break]";
-	if cocktext is not "":
-		if cunttext is "":
+	if cocktext is not empty:
+		if cunttext is empty:
 			say "A private peek shows that you [cocktext]";
 		otherwise:
 			say "A private peek shows that you [cocktext]";
@@ -5863,7 +5893,7 @@ carry out scavenging:
 	if "Three Bags Full" is listed in feats of the player, increase bonus by 1;
 	let the dice be a random number from 1 to 20;
 	say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs 10: ";
-	if dice plus bonus is greater than 10:
+	if dice plus bonus is greater than 9:
 		now inasituation is true;
 		if a random chance of 3 in 4 succeeds:
 			try resolving potential resources;
@@ -6180,7 +6210,14 @@ to ratetheplayer:
 	say "[line break]";
 		
 when play ends:
-	if humanity of the player is less than 10 and hp of the player is greater than 0:
+	if thirst of player >= 100 or hunger of player >= 100:	[blocking regular endings]
+		now bodyname of player is "starvation";
+		now facename of player is "starvation";
+		now skinname of player is "starvation";
+		now tailname of player is "starvation";
+		now cockname of player is "starvation";
+		say "     You have perished from [if hunger of player >= 100 and thirst of player >= 100]starvation and thirst[otherwise if hunger of player >= 100]starvation[otherwise]thirst[end if] and are no more.  Your body becomes a meal for another of the more predatory creatures roaming the city.";
+	otherwise if humanity of the player is less than 10 and hp of the player is greater than 0:
 		if bodyname of player is "Dragoness" and hp of doctor matt <= 100:
 			say "Following some unknown instinct, you seek out another of your own, and home in on Orthas, the dragon that was guarding the lab. She pets you gently along your neck and makes soothing sounds that has you almost purring. She proves to be a loving and kind mistress and you protect her fiercely for the remainder of your long life.";
 	otherwise:
@@ -6553,6 +6590,7 @@ Include jackalman by Sarokcat.
 Include Twisted Pimp by Sarokcat.
 Include Amazonian for FS by Stripes.
 Include Pewter Consort By Blue Bishop.
+Include Maternity Lamia By Blue Bishop.
 Include Queen Bee for FS by Stripes.
 Include Saber Kitty by Blaydrex.
 Include Naga by Nuku Valente.
@@ -6694,6 +6732,7 @@ Include Minotaur by Kaleem mcintyre.
 Include Dalmatian by Kaleem mcintyre.
 Include Behemoth by Kaleem mcintyre.
 Include Goat Janitor by McRabid.
+Include Nerdy Mouse by McRabid.
 Include Coyote by Darthan.
 Include Mushroom Men by AGentlemanCalledB.
 Include Retriever by AGentlemanCalledB.
@@ -6716,12 +6755,19 @@ Include Grizzly Bear by UrsaOmega.
 Include Impala by UrsaOmega.
 Include Feral Gryphon by UrsaOmega.
 Include Shadow Beast by UrsaOmega.
-
-
+Include Hermaid by Xenophiliac.
+Include Foul Scuttler by Xenophiliac.
+Include Monkey King by Kln.
+Include Gorilla by Wahn.
+Include Mpreg Platypus by Sapphire.
+Include Erica by Wahn.
+Include Jackal Guard by Xenophiliac.
+Include Scarab Beetle by Xenophiliac.
 
 [NPCs]
 Include Velos by Blue Bishop.
 Include Doran by Blue Bishop.
+Include Phantom Pony by Blue Bishop.
 Include Stuck Dragon by Hiccup.
 Include DrMoffatt by Stripes.
 Include DrUtah by Stripes.
@@ -6763,6 +6809,7 @@ Include Sally by Stripes.
 Include Alexandra by Stripes.
 Include Jimmy by Stripes.
 Include Paula by Stripes.
+Include Master Mind by Stripes.
 Include Icarus by Stripes.
 Include Hayato by Stripes.
 Include Zigor by Stripes.
@@ -6782,6 +6829,7 @@ Include Mack for FS by Stripes.
 Include Meredith by Stripes.
 Include Stella by Stripes.
 Include Bubble by Stripes.
+Include G-Shep Squad by Stripes.
 Include Alpha Fang Scenes by Nuku Valente.
 Include Elijah by Wahn.
 Include Eric by Wahn.
@@ -6806,6 +6854,12 @@ Include Rane by Wahn.
 Include Orc Lair by Wahn.
 Include Val by Wahn.
 Include Chris by Wahn.
+Include NPC Interactions by Wahn.
+Include Pretty Kitty by Xenophiliac.
+Include Santa Claws by Wahn.
+Include Erica by Wahn.
+Include Egyptian Wing by Xenophiliac.
+Include Wild Mustang by Wahn.
 
 [Pets]
 Include Gryphon Companion by Sarokcat.

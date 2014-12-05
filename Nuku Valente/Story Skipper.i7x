@@ -1,5 +1,5 @@
-Version 200 of Story Skipper by Nuku Valente begins here.
-[ Version 200.1 - Restoring nanite collector status ]
+Version 211 of Story Skipper by Nuku Valente begins here.
+[ Version 211 - More Alexandra and station survivors ]
 
 The File of Trixsave  (owned by another project) is called "txsave".
 The File of Trixsave2  (owned by another project) is called "txsave2".
@@ -42,9 +42,9 @@ The conversation of trixie is { "Hello. I will teach you a magic word. To use it
 To say magic word:
 	if wrcursestatus is 5:
 		wrcurserecede;	[puts player back to normal form and restores proper stats for saving]
-	now trixsavetext1 is "[strength of player]}[dexterity of player]}[stamina of player]}[charisma of player]}[perception of player]}[intelligence of player]}[level of player]}[maxhp of player]}[humanity of player]}[score - 50]}[hp of doctor matt]}[bodyname of player]}[facename of player]}[skinname of player]}[tailname of player]}[cockname of player]}[SatisfiedTanuki]}[hospquest]}[cocks of player]}[breasts of player]}[cunts of player]}[breast size of player]}[cock length of player]}[cock width of player]}[cunt length of player]}[cunt width of player]}[weapon object of player]}0}0}[if Hyper Squirrel Girl is resolved]1[otherwise]0[end if]}0}[location of coleen]}[coleentalk]}[coleenfound]}[coleencollared]}[coleenalpha]}[coleenslut]}[coleenspray]}[hp of doctor mouse]}[coonstatus]}[featunlock]}[butterflymagic]}[catnum]}[mateable]}[gryphoncomforted]}[shiftable]}[medeaget]}[mtp]}[hyg]}[nes]}[mtrp]}[boristalk]}[borisquest]}[progress of alex]}[angiehappy]}[angietalk]}[deerconsent]}[deerhappy]}[mattcollection]";
-	now trixsavetext2 is "chantpartA}[hp of Orthas]}[fancyquest]}[hp of sven]}[lust of sven]}[sarahslut]}[sarahtalk]}[sarahpups]}0}[alexbrunch]}[treasurefound]}[tmapfound]}[hp of Sandra]}[franksex]}[hp of Fang]}[libido of Fang]}[pigfed]}[pigfucked]}[if cute crab is tamed]1[otherwise]0[end if]}[if exotic bird is tamed]1[otherwise]0[end if]}[if Felinoid companion is tamed]1[otherwise]0[end if]}[hp of bee girl]}[if house cat is tamed]1[otherwise]0[end if]}[if little fox is tamed]1[otherwise]0[end if]}[if skunk kit is tamed]1[otherwise]0[end if]}[if helper dog is tamed]1[otherwise]0[end if]}[mousecurse]}[hp of Elijah]}[npcEint]}[if latexhuskymode is true]1[otherwise]0[end if]}[if insectlarva is true]1[otherwise]0[end if]}[hp of Leonard]}[hp of Solstice]}[hp of Ronda]}[hp of Athanasia]}[skunkbeaststatus]}[ktp]}[release number]}[tattoohunter]}[tatsave]}[piercesave]}[diegochanged]}[hp of Eric]}[hp of Christy]}[dragontype]}[dragonessfuck]}[hp of Doctor Medea]}[hp of Doctor Moffatt]}[hp of Lucy]}[thirst of david]}[lust of david]}[hp of david]}[hp of Adam]}[hp of Alexandra]}[hp of Larissa]}[hp of Sam]}[wrcursestatus]}[wrcurseNermine]}[hp of Doctor Utah]}[hp of Mike]}[hp of Xerxes]}[hp of Helen]}[libido of Helen]}[hp of Rex]}[hp of Karen]}[hp of François]}[libido of François]}[level of Alexandra]}[hp of Thomas]}[libido of Thomas]}[lust of Thomas]}[ThomasQuestVar]}[hp of rubber tigress]}[hp of Septus]}[lust of Xerxes]}[lust of Helen]}[hp of tristian]}[hp of Icarus]}[hp of Joanna]}[lust of Joanna]}[angiearoused]}[DBCaptureQuestVar]}[DemonBruteStatus]}[hp of Lilith]}[LilithKidCounter]}[hp of Felix]}[Libido of Felix]}[VikingRelationship]}[VikingKidCounter]}[MovingOrwell]}[hp of Jimmy]}[libido of David]}[hp of Amy]}[libido of Amy]}[SquadEncounters]}[thirst of Corbin]}[hp of Corbin]}[CorbinKidCounter]}[hp of Anthony]}[hp of Duke]}[thirst of Duke]}[hp of Zigor]}[thirst of Amy]";
-	now trixsavetext3 is "chantpartB}[hp of Nadia]}[NadiaFertilityCounter]}[NadiaChickCounter]}[npcNadiaint]}[level of Amy]}[Xp of Amy]}[Dexterity of Amy]}[SvenAmySex]}[BrutusAmySex]}[lust of Zephias]}[hp of Ares]}[if hp of hayato is 30]20[otherwise][hp of Hayato][end if]}[hp of Tehuantl]}[hp of Carl]}[level of Carl]}[hp of Kristen]}[libido of Kristen]}[hp of Brooke]}[hp of Bubble]}[hp of Newt]}0}[piginitiation]}[hp of Gillian]}[hp of Stella]}[StellaNPCInt]}[OrcSlaverStatus]}[CellDoorStatus]}[xp of Onyx]}[hp of Val]}[thirst of Val]}[ValPregCounter]}[ValPregnancy]}[SlaveRaidEncounters]}[hp of Chris]}[hp of Vanessa]}[xp of Vanessa]}[hp of Meredith]}[level of Meredith]}[hp of Gwen]}[hp of Rane]}[thirst of Elijah]}[SpidertaurRelationship]}[CatgirlFucked]}[FionaFangStatus]}[FionaCarlStatus]";
+	now trixsavetext1 is "[strength of player]}[dexterity of player]}[stamina of player]}[charisma of player]}[perception of player]}[intelligence of player]}[level of player]}[maxhp of player]}[humanity of player]}[score - 50]}[hp of doctor matt]}[bodyname of player]}[facename of player]}[skinname of player]}[tailname of player]}[cockname of player]}[SatisfiedTanuki]}[hospquest]}[cocks of player]}[breasts of player]}[cunts of player]}[breast size of player]}[cock length of player]}[cock width of player]}[cunt length of player]}[cunt width of player]}[weapon object of player]}[franksex]}[frankmalesex]}[if Hyper Squirrel Girl is resolved]1[otherwise]0[end if]}0}[location of coleen]}[coleentalk]}[coleenfound]}[coleencollared]}[coleenalpha]}[coleenslut]}[coleenspray]}[hp of doctor mouse]}[coonstatus]}[featunlock]}[butterflymagic]}[catnum]}[mateable]}[gryphoncomforted]}[shiftable]}[medeaget]}[mtp]}[hyg]}[nes]}[mtrp]}[boristalk]}[borisquest]}[progress of alex]}[angiehappy]}[angietalk]}[deerconsent]}[deerhappy]}[mattcollection]";
+	now trixsavetext2 is "chantpartA}[hp of Orthas]}[fancyquest]}[hp of sven]}[lust of sven]}[sarahslut]}[sarahtalk]}[sarahpups]}0}[alexbrunch]}[treasurefound]}[tmapfound]}[hp of Sandra]}[libido of Frank]}[hp of Fang]}[libido of Fang]}[pigfed]}[pigfucked]}[if cute crab is tamed]1[otherwise]0[end if]}[if exotic bird is tamed]1[otherwise]0[end if]}[if Felinoid companion is tamed]1[otherwise]0[end if]}[hp of bee girl]}[if house cat is tamed]1[otherwise]0[end if]}[if little fox is tamed]1[otherwise]0[end if]}[if skunk kit is tamed]1[otherwise]0[end if]}[if helper dog is tamed]1[otherwise]0[end if]}[mousecurse]}[hp of Elijah]}[npcEint]}[if latexhuskymode is true]1[otherwise]0[end if]}[if insectlarva is true]1[otherwise]0[end if]}[hp of Leonard]}[hp of Solstice]}[hp of Ronda]}[hp of Athanasia]}[skunkbeaststatus]}[ktp]}[release number]}[tattoohunter]}[tatsave]}[piercesave]}[diegochanged]}[hp of Eric]}[hp of Christy]}[dragontype]}[dragonessfuck]}[hp of Doctor Medea]}[hp of Doctor Moffatt]}[hp of Lucy]}[thirst of david]}[lust of david]}[hp of david]}[hp of Adam]}[hp of Alexandra]}[hp of Larissa]}[hp of Sam]}[wrcursestatus]}[wrcurseNermine]}[hp of Doctor Utah]}[hp of Mike]}[hp of Xerxes]}[hp of Helen]}[libido of Helen]}[hp of Rex]}[hp of Karen]}[hp of François]}[libido of François]}[level of Alexandra]}[hp of Thomas]}[libido of Thomas]}[lust of Thomas]}[ThomasQuestVar]}[hp of rubber tigress]}[hp of Septus]}[lust of Xerxes]}[lust of Helen]}[hp of tristian]}[hp of Icarus]}[hp of Joanna]}[lust of Joanna]}[angiearoused]}[DBCaptureQuestVar]}[DemonBruteStatus]}[hp of Lilith]}[LilithKidCounter]}[hp of Felix]}[Libido of Felix]}[VikingRelationship]}[VikingKidCounter]}[MovingOrwell]}[hp of Jimmy]}[libido of David]}[hp of Amy]}[libido of Amy]}[SquadEncounters]}[thirst of Corbin]}[hp of Corbin]}[CorbinKidCounter]}[hp of Anthony]}[hp of Duke]}[thirst of Duke]}[hp of Zigor]}[thirst of Amy]";
+	now trixsavetext3 is "chantpartB}[hp of Nadia]}[NadiaFertilityCounter]}[NadiaChickCounter]}[npcNadiaint]}[level of Amy]}[Xp of Amy]}[Dexterity of Amy]}[SvenAmySex]}[BrutusAmySex]}[lust of Zephias]}[hp of Ares]}[if hp of hayato is 30]20[otherwise][hp of Hayato][end if]}[hp of Tehuantl]}[hp of Carl]}[level of Carl]}[hp of Kristen]}[libido of Kristen]}[hp of Brooke]}[hp of Bubble]}[hp of Newt]}0}[piginitiation]}[hp of Gillian]}[hp of Stella]}[StellaNPCInt]}[OrcSlaverStatus]}[CellDoorStatus]}[xp of Onyx]}[hp of Val]}[thirst of Val]}[ValPregCounter]}[ValPregnancy]}[SlaveRaidEncounters]}[hp of Chris]}[hp of Vanessa]}[xp of Vanessa]}[hp of Meredith]}[level of Meredith]}[hp of Gwen]}[hp of Rane]}[thirst of Elijah]}[SpidertaurRelationship]}[CatgirlFucked]}[FionaFangStatus]}[FionaCarlStatus]}[hp of Gabriel]}[hp of Erica]}[Thirst of Erica]}[population of Police Station]}[infpop of Police Station]";
 	say "[trixsavetext1][line break]";
 	say "[trixsavetext2][line break]";
 	say "[trixsavetext3][line break]";
@@ -239,10 +239,19 @@ To reciting2:
 						now weapon type of player is weapon type of Y;
 						say "You ready your [Y].";
 						break;
-			-- 28:	[redundant - removed]
-				now tempnum is 0;		[Duplicate removed]
-			-- 29:	[redundant - removed]
-				now tempnum is 0;		[Duplicate removed]
+			-- 28:	[re-purposed: Frank M/F count]
+				if the player's command matches "[number]":
+					now franksex is the number understood;
+			-- 29:	[re-purposed: Frank M/M count]
+				if the player's command matches "[number]":
+					now frankmalesex is the number understood;
+					if frankmalesex is 0, now libido of Frank is 0;
+					if franksex is 0 and frankmalesex is 0:
+						now Comic Shop is unknown;
+						now Mephitness is unresolved;
+					otherwise:
+						now Comic Shop is known;
+						now Mephitness is resolved;
 			-- 30:	[Snow]
 				if the player's command matches "[number]":
 					if the number understood is 1:
@@ -375,6 +384,8 @@ To reciting2:
 						Now AngieTrapped is resolved;
 					if AngieHappy is 2:
 						increase carried of catnip by 1;
+					if AngieHappy is 4 and "Angie's Mate" is not listed in feats of player:
+						add "Angie's Mate" to feats of player;
 			-- 56:	[Angie]
 				if the player's command matches "[number]":
 					now angietalk is the number understood;
@@ -437,12 +448,12 @@ To reciting2:
 			-- 61:	[Stables - Fancy Quest]
 				if the player's command matches "[number]":
 					now fancyquest is the number understood;
-					now findinghardware is unresolved;
-					now ignoredmemo is unresolved;
-					if fancyquest is greater than 4:
-						now findinghardware is resolved;
+					now Ignored Memos is unresolved;
+					now Hardware Fort is resolved;
+					if fancyquest is 4:
+						now Hardware Fort is unresolved;
 					if fancyquest is greater than 0:
-						now ignoredmemo is resolved;
+						now Ignored Memos is resolved;
 			-- 62:	[Sven]
 				if the player's command matches "[number]":
 					now hp of Sven is the number understood;
@@ -489,9 +500,11 @@ To reciting2:
 						now Sandra is in Rabbit Den;
 						now needy rabbit girl is not resolved;
 						now rabbit den is unknown;
-			-- 72:	[Frank]
+			-- 72:	[Frank - M/M top/bottom/switch]
 				if the player's command matches "[number]":
-					now franksex is the number understood;
+					now libido of Frank is the number understood;
+					if libido of Frank > 3, now libido of Frank is 3;		[***temporary fix]
+					if frankmalesex is 0, now libido of Frank is 0;
 			-- 73:	[Fang]
 				if the player's command matches "[number]":
 					now hp of Fang is the number understood;
@@ -620,12 +633,15 @@ To reciting2:
 						now the icon of Elijah is Figure of Elijah_good_icon;
 					otherwise if hp of Elijah is 99:
 						now the icon of Elijah is Figure of Elijah_evil_icon;
-					if hp of Elijah > 0:
+						now hp of Gabriel is 1;
+						move Elijah to Bunker;
+					if hp of Elijah > 0 and hp of Elijah < 99:
 						now Angel vs Demons is resolved;
 						now Burned-Out Chapel is known;
 					if hp of Elijah > 0 and hp of Elijah < 100:
 						move Elijah to Bunker;
 					if hp of Elijah is 100:
+						now Angel vs Demons is resolved;
 						remove Elijah from play;
 					if hp of Elijah is 2, now Sweet Surprise is unresolved;
 					if hp of Elijah is 2 and furry is not banned, now Examination Room is unresolved;
@@ -908,6 +924,10 @@ To reciting2:
 						now Sports Arena Lockerroom is known;
 					if hp of Eric is 100:
 						remove Eric from play;
+					otherwise if hp of Eric is 200:
+						remove Eric from play;
+						move Erica to bunker;					
+						now Dexterity of Erica is 5;
 					otherwise if hp of Eric > 0:
 						move Eric to Bunker;
 						now thirst of Eric is 1;
@@ -1042,6 +1062,9 @@ To reciting2:
 					now lust of Alexandra is 0;
 					now libido of Alexandra is 0;
 					move Alexandra to Police Station;
+					if hp of Alexandra is 59 or hp of Alexandra is 60:
+						now hp of Alexandra is 58;
+						say "[special-style-2]NOTICE:[roman type] Your completion of the Automatons 2 task has been undone due to task order revisions.";
 					if hp of Alexandra > 0:
 						[puts Doberman as lead monster in case of impregnation]
 						repeat with y running from 1 to number of filled rows in table of random critters:
@@ -1057,7 +1080,13 @@ To reciting2:
 						otherwise:
 							now Police Station is unknown;
 							move Alexandra to Grey Abbey Library;
-					if hp of Alexandra is 3 and hp of Alexandra is 5:
+						if hp of Alexandra >= 65 and hp of Alexandra <= 100:
+							now Master Mind is in Cell Block A;
+						otherwise:
+							remove Master Mind from play;
+						if hp of Alexandra is 61:
+							now Survivor Group is unresolved;
+					if hp of Alexandra is 3 or hp of Alexandra is 5:
 						now lust of Alexandra is 1;	[reset to start of pregnancy]
 					if hp of Alexandra is 4 or hp of Alexandra is 5:
 						now libido of Alexandra is a random number between 2 and 4;	[minimum children restored]
@@ -1721,7 +1750,7 @@ To reciting2:
 					if hp of Stella >= 2:
 						move Stella to Bunker;
 			-- 186:	[Stella threesome code - placeholder]
-				now StellaNPCInt is "[the player's command]";	[do nothing]
+				now StellaNPCInt is "AAAAAAAAAAAA";	[do nothing]
 				let xstella be 0;	[do nothing]
 			-- 187: [OrcSlaverStatus]
 				if the player's command matches "[number]":
@@ -1756,6 +1785,7 @@ To reciting2:
 					otherwise:
 						now Stablestoreroom is resolved;
 					if xp of Onyx is 100, now xp of Onyx is 0;
+					if xp of Onyx > 3, now daisytalk is 1;
 			-- 190: [hp of Val]
 				if the player's command matches "[number]":
 					now hp of Val is the number understood;
@@ -1850,10 +1880,10 @@ To reciting2:
 						now Rooftop Rumble is unresolved;
 			-- 202: [thirst of Elijah]
 				if the player's command matches "[number]":
-					now thirst of Elijah is the number understood;						
+					now thirst of Elijah is the number understood;
 			-- 203: [SpidertaurRelationship]
 				if the player's command matches "[number]":
-					now SpidertaurRelationship is the number understood;						
+					now SpidertaurRelationship is the number understood;
 					if SpidertaurRelationship > 4 and carried of silk hammock is 0:
 						increase carried of silk hammock by 1;
 					if SpidertaurRelationship > 5:
@@ -1862,13 +1892,48 @@ To reciting2:
 						now Spider's Web is not known;
 			-- 204: [CatgirlFucked]
 				if the player's command matches "[number]":
-					now CatgirlFucked is the number understood;				
+					now CatgirlFucked is the number understood;
 			-- 205: [FionaFangStatus]
 				if the player's command matches "[number]":
-					now FionaFangStatus is the number understood;			
+					now FionaFangStatus is the number understood;
 			-- 206: [FionaCarlStatus]
 				if the player's command matches "[number]":
-					now FionaCarlStatus is the number understood;														
+					now FionaCarlStatus is the number understood;
+			-- 207: [hp of Gabriel]
+				if the player's command matches "[number]":
+					now hp of Gabriel is the number understood;
+					if hp of Gabriel is 0:
+						if hp of Elijah > 0 and hp of Elijah is not 99:
+							now Angel vs Demons is resolved;
+					otherwise if hp of Gabriel is 1:
+						now Angel vs Demons is unresolved;
+					otherwise if hp of Gabriel > 1:
+						repeat with y running from 1 to number of filled rows in Table of random critters:
+							choose row y in table of random critters;
+							if name entry is "Seraphim":
+								now monster is y;
+								now area entry is "Red";
+								break;
+						now Angel vs Demons is resolved;
+			-- 208: [hp of Erica]
+				if the player's command matches "[number]":
+					now hp of Erica is the number understood;
+			-- 209: [thirst of Erica]
+				if the player's command matches "[number]":
+					now thirst of Erica is the number understood;
+			-- 210:	[population of Police Station]
+				if the player's command matches "[number]":
+					now population of Police Station is the number understood;
+					if population of Police Station > 50, now population of Police Station is 50;
+					if population of Police Station is not 0 and population of Police Station < 3, now population of Police Station is 3;
+					if hp of Alexandra < 63 or hp of Alexandra is 100:
+						now population of Police Station is 0;
+			-- 211:	[infpop of Police Station]
+				if the player's command matches "[number]":
+					now infpop of Police Station is the number understood;
+					if infpop of Police Station > population of Police Station, now infpop of Police Station is population of Police Station;
+					if infpop of Police Station < ( ( 2 * population of Police Station ) / 3 ), now infpop of Police Station is ( ( 2 * population of Police Station ) / 3 );
+					if infpop of Police Station is not 0 and infpop of Police Station < 3, now infpop of Police Station is 3;
 	if hospquest is 3, now hospquest is 2;
 	now progress of Doctor Mouse is turns;
 	if hospquest is 8, now Dinosaur Nest is unresolved;
@@ -1942,12 +2007,6 @@ To reciting2:
 		move Sarah to bunker;
 		now Husky Pack is resolved;
 	if sarahpups > 11 and "Proud Parent" is not listed in feats of player, add "Proud Parent" to feats of player;
-	if franksex is 0:
-		now Comic Shop is unknown;
-		now Mephitness is unresolved;
-	otherwise:
-		now Comic Shop is known;
-		now Mephitness is resolved;
 	say "Your spell washes through the universe. Trixie taps you on your [facename of player] nose lightly. 'All done!'";
 	wait for any key;
 
@@ -2196,10 +2255,19 @@ Carry out reciting:
 						now weapon type of player is weapon type of Y;
 						say "You ready your [Y].";
 						break;
-			-- 28:	[redundant - removed]
-				now tempnum is 0;		[Duplicate removed]
-			-- 29:	[redundant - removed]
-				now tempnum is 0;		[Duplicate removed]
+			-- 28:	[re-purposed: Frank M/F count]
+				if the player's command matches "[number]":
+					now franksex is the number understood;
+			-- 29:	[re-purposed: Frank M/M count]
+				if the player's command matches "[number]":
+					now frankmalesex is the number understood;
+					if frankmalesex is 0, now libido of Frank is 0;
+					if franksex is 0 and frankmalesex is 0:
+						now Comic Shop is unknown;
+						now Mephitness is unresolved;
+					otherwise:
+						now Comic Shop is known;
+						now Mephitness is resolved;
 			-- 30:	[Snow]
 				if the player's command matches "[number]":
 					if the number understood is 1:
@@ -2332,6 +2400,8 @@ Carry out reciting:
 						Now AngieTrapped is resolved;
 					if AngieHappy is 2:
 						increase carried of catnip by 1;
+					if AngieHappy is 4 and "Angie's Mate" is not listed in feats of player:
+						add "Angie's Mate" to feats of player;
 			-- 56:	[Angie]
 				if the player's command matches "[number]":
 					now angietalk is the number understood;
@@ -2381,12 +2451,12 @@ Carry out reciting:
 			-- 61:	[Stables - Fancy Quest]
 				if the player's command matches "[number]":
 					now fancyquest is the number understood;
-					now findinghardware is unresolved;
-					now ignoredmemo is unresolved;
-					if fancyquest is greater than 4:
-						now findinghardware is resolved;
+					now Hardware Fort is resolved;
+					now Ignored Memos is unresolved;
 					if fancyquest is greater than 0:
-						now ignoredmemo is resolved;
+						now Ignored Memos is resolved;
+					if fancyquest is 4:
+						now Hardware Fort is unresolved;
 			-- 62:	[Sven]
 				if the player's command matches "[number]":
 					now hp of Sven is the number understood;
@@ -2433,9 +2503,11 @@ Carry out reciting:
 						now Sandra is in Rabbit Den;
 						now needy rabbit girl is not resolved;
 						now rabbit den is unknown;
-			-- 72:	[Frank]
+			-- 72:	[Frank - M/M top/bottom/switch]
 				if the player's command matches "[number]":
-					now franksex is the number understood;
+					now libido of Frank is the number understood;
+					if libido of Frank > 3, now libido of Frank is 3;		[***temporary fix]
+					if frankmalesex is 0, now libido of Frank is 0;
 			-- 73:	[Fang]
 				if the player's command matches "[number]":
 					now hp of Fang is the number understood;
@@ -2563,13 +2635,16 @@ Carry out reciting:
 					otherwise if hp of Elijah is 4:
 						now the icon of Elijah is Figure of Elijah_good_icon;
 					otherwise if hp of Elijah is 99:
-						now the icon of Elijah is Figure of Elijah_evil_icon;					
-					if hp of Elijah > 0:
+						now the icon of Elijah is Figure of Elijah_evil_icon;
+						now hp of Gabriel is 1;
+						move Elijah to Bunker;
+					if hp of Elijah > 0 and hp of Elijah < 99:
 						now Angel vs Demons is resolved;
 						now Burned-Out Chapel is known;
 					if hp of Elijah > 0 and hp of Elijah < 100:
 						move Elijah to Bunker;
 					if hp of Elijah is 100:
+						now Angel vs Demons is resolved;
 						remove Elijah from play;
 					if hp of Elijah is 2, now Sweet Surprise is unresolved;
 					if hp of Elijah is 2 and furry is not banned, now Examination Room is unresolved;
@@ -2985,6 +3060,9 @@ Carry out reciting:
 					now lust of Alexandra is 0;
 					now libido of Alexandra is 0;
 					move Alexandra to Police Station;
+					if hp of Alexandra is 59 or hp of Alexandra is 60:
+						now hp of Alexandra is 58;
+						say "[special-style-2]NOTICE:[roman type] Your completion of the Automatons 2 task has been undone due to task order revisions.";
 					if hp of Alexandra > 0:
 						[puts Doberman as lead monster in case of impregnation]
 						repeat with y running from 1 to number of filled rows in table of random critters:
@@ -3000,7 +3078,13 @@ Carry out reciting:
 						otherwise:
 							now Police Station is unknown;
 							move Alexandra to Grey Abbey Library;
-					if hp of Alexandra is 3 and hp of Alexandra is 5:
+						if hp of Alexandra >= 65 and hp of Alexandra <= 100:
+							now Master Mind is in Cell Block A;
+						otherwise:
+							remove Master Mind from play;
+						if hp of Alexandra is 61:
+							now Survivor Group is unresolved;
+					if hp of Alexandra is 3 or hp of Alexandra is 5:
 						now lust of Alexandra is 1;	[reset to start of pregnancy]
 					if hp of Alexandra is 4 or hp of Alexandra is 5:
 						now libido of Alexandra is a random number between 2 and 4;	[minimum children restored]
@@ -3650,7 +3734,7 @@ Carry out reciting:
 					if hp of Stella >= 2:
 						move Stella to Bunker;
 			-- 186:	[Stella threesome code - placeholder]
-				now StellaNPCInt is "[the player's command]";	[do nothing]
+				now StellaNPCInt is "AAAAAAAAAAAA";	[do nothing]
 				let xstella be 0;	[do nothing]
 			-- 187: [OrcSlaverStatus]
 				if the player's command matches "[number]":
@@ -3685,6 +3769,7 @@ Carry out reciting:
 					otherwise:
 						now Stablestoreroom is resolved;
 					if xp of Onyx is 100, now xp of Onyx is 0;
+					if xp of Onyx > 3, now daisytalk is 1;
 			-- 190: [hp of Val]
 				if the player's command matches "[number]":
 					now hp of Val is the number understood;
@@ -3783,28 +3868,63 @@ Carry out reciting:
 					if hp of Rane > 4:
 						now Rooftop Rumble is resolved;
 					otherwise:
-						now Rooftop Rumble is unresolved;	
+						now Rooftop Rumble is unresolved;
 			-- 202: [thirst of Elijah]
 				if the player's command matches "[number]":
-					now thirst of Elijah is the number understood;				
+					now thirst of Elijah is the number understood;
 			-- 203: [SpidertaurRelationship]
 				if the player's command matches "[number]":
-					now SpidertaurRelationship is the number understood;						
+					now SpidertaurRelationship is the number understood;
 					if SpidertaurRelationship > 4 and carried of silk hammock is 0:
 						increase carried of silk hammock by 1;
 					if SpidertaurRelationship > 5:
 						now Spider's Web is known;
 					otherwise:
-						now Spider's Web is not known;	
+						now Spider's Web is not known;
 			-- 204: [CatgirlFucked]
 				if the player's command matches "[number]":
-					now CatgirlFucked is the number understood;				
+					now CatgirlFucked is the number understood;
 			-- 205: [FionaFangStatus]
 				if the player's command matches "[number]":
-					now FionaFangStatus is the number understood;			
+					now FionaFangStatus is the number understood;
 			-- 206: [FionaCarlStatus]
 				if the player's command matches "[number]":
-					now FionaCarlStatus is the number understood;																	
+					now FionaCarlStatus is the number understood;
+			-- 207: [hp of Gabriel]
+				if the player's command matches "[number]":
+					now hp of Gabriel is the number understood;
+					if hp of Gabriel is 0:
+						if hp of Elijah > 0 and hp of Elijah is not 99:
+							now Angel vs Demons is resolved;
+					otherwise if hp of Gabriel is 1:
+						now Angel vs Demons is unresolved;
+					otherwise if hp of Gabriel > 1:
+						repeat with y running from 1 to number of filled rows in Table of random critters:
+							choose row y in table of random critters;
+							if name entry is "Seraphim":
+								now monster is y;
+								now area entry is "Red";
+								break;
+						now Angel vs Demons is resolved;
+			-- 208: [hp of Erica]
+				if the player's command matches "[number]":
+					now hp of Erica is the number understood;
+			-- 209: [thirst of Erica]
+				if the player's command matches "[number]":
+					now thirst of Erica is the number understood;
+			-- 210:	[population of Police Station]
+				if the player's command matches "[number]":
+					now population of Police Station is the number understood;
+					if population of Police Station > 50, now population of Police Station is 50;
+					if population of Police Station is not 0 and population of Police Station < 3, now population of Police Station is 3;
+					if hp of Alexandra < 63 or hp of Alexandra is 100:
+						now population of Police Station is 0;
+			-- 211:	[infpop of Police Station]
+				if the player's command matches "[number]":
+					now infpop of Police Station is the number understood;
+					if infpop of Police Station > population of Police Station, now infpop of Police Station is population of Police Station;
+					if infpop of Police Station < ( ( 2 * population of Police Station ) / 3 ), now infpop of Police Station is ( ( 2 * population of Police Station ) / 3 );
+					if infpop of Police Station is not 0 and infpop of Police Station < 3, now infpop of Police Station is 3;
 		if upit is 1, decrease zeta by 58;
 		if upit is 2, decrease zeta by 160;
 	if hospquest is 3, now hospquest is 2;
@@ -3880,12 +4000,6 @@ Carry out reciting:
 		move Sarah to bunker;
 		now Husky Pack is resolved;
 	if sarahpups > 11 and "Proud Parent" is not listed in feats of player, add "Proud Parent" to feats of player;
-	if franksex is 0:
-		now Comic Shop is unknown;
-		now Mephitness is unresolved;
-	otherwise:
-		now Comic Shop is known;
-		now Mephitness is resolved;
 	say "Your spell washes through the universe. Trixie taps you on your [facename of player] nose lightly. 'All done!'";
 	wait for any key;
 
@@ -3996,25 +4110,21 @@ carry out Trixiecheck1:
 	say "Cocks x [cocks of player]   Breasts x [breasts of player]   Cunts x [cunts of player]   Breast size: [breast size of player][line break]";
 	say "COCK: Length: [cock length of player]   Width: [cock width of player][line break]";
 	say "CUNT: Length: [cunt length of player]   Width: [cunt width of player][line break]";
-	say "Weapon: [weapon object of player]   Snow: [location of Snow]   Sandra: [location of Sandra][line break]";
+	say "Weapon: [weapon object of player]   Frank M/F: [franksex]   Frank M/M: [frankmalesex][line break]";
 	say "Hyper Squirrel: [if Hyper Squirrel Girl is resolved]1[otherwise]0[end if]  Needy Bunny: [if Needy Rabbit Girl is resolved]1[otherwise]0[end if][line break]";
 	say "COLEEN: Location: [location of coleen]   Talk: [coleentalk]   Found: [coleenfound]   Collared: [coleencollared]   Alpha: [coleenalpha]   Slut: [coleenslut]   Spray: [coleenspray][line break]";
 	say "HP of Dr Mouse: [hp of doctor mouse]   Candy: [coonstatus]   featunlock: [featunlock]   Butterfly: [butterflymagic][line break]";
 	say "Catnum: [catnum]   Mateable: [mateable]   gryphoncomforted: [gryphoncomforted]   shiftable: [shiftable]   Medea: [medeaget][line break]";
 	say "MTP: [mtp]   HYG: [hyg]   NES: [nes]   MTRP: [mtrp]   Boristalk: [boristalk]   Borisquest: [borisquest]   Alex: [progress of alex][line break]";
 	say "Angiehappy: [angiehappy]   Angietalk: [angietalk]   Deerconsent: [deerconsent]   Deerhappy: [deerhappy][line break]";
-	say "Mattcollection: [mattcollection]   Orthas: [hp of Orthas][line break]";
-	say "Fancy: [fancyquest]   HP of Sven: [hp of sven]  Lust of Sven: [lust of sven][line break]";
-	say "SARAH: Slut: [sarahslut]   Talk: [sarahtalk]   Pups: [sarahpups][line break]";
-	say "VOIDED: 0   Alexbrunch: [alexbrunch]   Treasure found: [treasurefound]   Treasure map: [tmapfound][line break]";
-	say "Sandra: [hp of Sandra]   Frank: [franksex]   Fang: [hp of Fang][line break]";
+	say "Mattcollection: [mattcollection][line break]";
 
 carry out Trixiecheck2:
-	say "<Repetition of section>   Orthas: [hp of Orthas][line break]";
+	say "Orthas: [hp of Orthas][line break]";
 	say "Fancy: [fancyquest]   HP of Sven: [hp of sven]  Lust of Sven: [lust of sven][line break]";
 	say "SARAH: Slut: [sarahslut]   Talk: [sarahtalk]   Pups: [sarahpups][line break]";
 	say "VOIDED: 0   Alexbrunch: [alexbrunch]   Treasure found: [treasurefound]   Treasure map: [tmapfound][line break]";
-	say "Sandra: [hp of Sandra]   Frank: [franksex]   Fang: [hp of Fang]   <end repetition>[line break]";
+	say "Sandra: [hp of Sandra]   Frank (libido): [libido of Frank]   Fang: [hp of Fang][line break]";
 	say "Libido of Fang: [libido of Fang]   Pigfed: [pigfed]   Pigfucked: [pigfucked][line break]";
 	say "PETS:[line break]";
 	say "Cute crab: [if cute crab is tamed]1[otherwise]0[end if]   Exotic bird: [if exotic bird is tamed]1[otherwise]0[end if]   Felinoid: [if Felinoid companion is tamed]1[otherwise]0[end if][line break]";

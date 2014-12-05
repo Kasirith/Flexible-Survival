@@ -1,5 +1,5 @@
 Version 2 of Junkyard and Warehouse by Rimme begins here.
-[Version 2.2 - Human definitions expanded]
+[Version 2.3 - Tweaking entry]
 
 Chapter 1 - Abandoned Lot into Storage Room
 
@@ -41,7 +41,7 @@ Definition: a person is skintone human:
 	if the skinname of the player is "city sprite", yes;
 	if the skinname of the player is "Wood Elf", yes;
 	if the skinname of the player is "Elven Hunter", yes;
-	if the skinname of the player is "harpy", yes;
+	if the skinname of the player is "Harpy", yes;
 	if the skinname of the player is "Siren", yes;
 	if the skinname of the player is "Succubus", yes;
 	if the skinname of the player is "Incubus", yes;
@@ -87,6 +87,11 @@ Instead of going south from the abandoned lot:
 				say "Steven's eyes look at you for a moment, startled by your change in appearance. 'I'm sorry,' he whispers, 'but I [italic type]really[roman type] can't let you in here looking like that. Try changing your appearance somehow, okay?' before he closes the slat.";
 			otherwise:
 				say "You barely see a couple of eyes look back at you when you hear a man cry 'Yikes!' and the slat closes rapidly. Perhaps it was your [facename of player] face.";
+		otherwise if scalevalue of player is 1 or scalevalue of player > 3 or bodyname of player is listed in infections of Taurlist:
+			if Stevenswayed is 1:
+				say "Steven's eyes look at you for a moment, startled by your change in appearance. 'I'm sorry,' he whispers, 'but there's [italic type]no[roman type] way to hide how [if bodyname of player is listed in infections of Taurlist]those four feet of yours.  You're going to have to at least be humanoid, okay[otherwise if scalevalue of player is 1]really small you are.  They're sure to know something's up.  Try to find a way to get back to normal size, okay[otherwise]big you've gotten.  Try to find a way to shrink back down somehow, okay[end if]?' before he closes the slat.";
+			otherwise:
+				say "You barely see a couple of eyes look back at you when you hear a man cry 'Yikes!' and the slat closes rapidly. Perhaps it was your [if bodyname of player is listed in infections of Taurlist]tauric body[otherwise]altered body and its [body size of player] size[end if].";
 		otherwise:
 			say "'Hello! Who's there?' a man from behind the door says.";
 			if Stevenswayed is 1:
@@ -94,9 +99,12 @@ Instead of going south from the abandoned lot:
 				move player to Storage Room;
 			Otherwise:
 				let changed be false;
-				if the player is not skintone human, let changed be true;
-				if the tail of the player is not "", let changed be true;
-				if the player is not bodily human, let changed be true;
+				if the player is not skintone human:
+					now changed is true;
+				if the tail of the player is not "":
+					now changed is true;
+				if the player is not bodily human:
+					now changed is true;
 				if changed is false:
 					say "You explain that you are another survivor, that you wish to enter. 'Of course. Open her up!' he calls out, closing the slat. The door swings open, and you step through.";
 					move the player to Storage Room;
@@ -105,7 +113,7 @@ Instead of going south from the abandoned lot:
 					if soda is owned:
 						say "Do you give him a soda?";
 						if the player consents:
-							say "You dig into your backpack and give him your soda. He takes it eagerly and disappears. A few moments later, he shows up with another officer. The two mumble to each other for a moment, before the other officer speaks up.[line break]'All right, we will let you in. But if you try anything funny, we'll throw you out.' You promise you won't be any trouble, and the guards open the door for you.";
+							say "You dig into your backpack and give him your soda. He takes it eagerly and disappears. A few moments later, he shows up with another officer. The two mumble to each other for a moment, before the other officer speaks up.[line break]'All right, we will let you in. But if you try anything funny, we'll throw you out.' You promise you won't be any trouble, and the guards open the door for you, Steven slipping a raincoat over you to help conceal your changes a little.";
 							delete soda;
 							move the player to Storage Room;
 							now Stevenswayed is 1;
@@ -442,6 +450,10 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "red horse";
+	now attack entry is "nothing.";
+	now defeated entry is "nothing.";
+	now victory entry is "nothing.";
+	now desc entry is "nothing.";
 	now face entry is "flat-toothed, prehensile-lipped equine";
 	now body entry is "well-muscled";
 	now skin entry is "long red hairs up and down your";
@@ -463,9 +475,9 @@ When play begins:
 	now lev entry is 5;
 	now wdam entry is 7;
 	now area entry is "nowhere";
+	now cocks entry is 1;
 	now cock length entry is 15;
 	now cock width entry is 6;
-	now cocks entry is 1;
 	now breasts entry is 2;
 	now breast size entry is 4;
 	now male breast size entry is 0;
@@ -473,6 +485,7 @@ When play begins:
 	now cunt length entry is 15;
 	now cunt width entry is 7;
 	now libido entry is 40;
+	now loot entry is "";
 	now lootchance entry is 0;
 	[ These represent the new additions to the table of random critters ]
 	now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]

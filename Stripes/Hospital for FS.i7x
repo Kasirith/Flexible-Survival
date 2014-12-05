@@ -115,6 +115,7 @@ Instead of resolving a Operating Room:
 	say "     As you are about to turn a corner, you spot a team of several jaguar orderlies marching down the hall towards you.  You duck back quickly before they spot you and dive quietly into the nearest room.  As you wait quietly around the edge of the door, you can see that this is one of the hospital's operating rooms.  Once you hear the group head past and continue on, you let out a sigh of relief and decide to search the room while you're here.";
 	say "     It's clear there was some chaos in here, with overturned tables and surgical tools scattered across the floor.  Along with this are several sets of surgical scrubs and piles of clothing, much of it messy with stick fluids.  You steer clear of them and check the patient's chart, finding notes about exploratory surgery on an unusual and rapidly forming growth.  Clearly another case of a transforming patient gone amuck on the unprepared medical staff.";
 	say "     You do have some good fortune though and spot a bonesaw on the floor.  You pick it up and add it to your arsenal.  As you slip out the back into the doctor's prep room, you find an exit that leads around one of the barricades, enabling you to get around more of the hospital.";
+	say "     Bonesaw obtained.  Time to operate!";
 	increase carried of bonesaw by 1;
 	increase hospnav by 1;
 	say "[hospprogress]";
@@ -160,10 +161,13 @@ Maternity Ward is a situation.
 The sarea of Maternity Ward is "Hospital".
 
 Instead of resolving a Maternity Ward:
-	say "     Reaching the hospital's maternity ward, you suppress a shudder and morbidly take a look in to see what has become of it.  Inside you find the place busy with vixen nurses.  Several are tending to the bassinets while a few others are nurse feeding little foxcub babies.  The staff dutifully tend over the cubs, cooing and playing with them happily.  You turn and quietly leave, unsure if you are disturbed or relieved that it was not as you feared within.";
+	say "     Reaching the hospital's maternity ward, you suppress a shudder and morbidly take a look in to see what has become of it.  Inside you find the place busy with vixen nurses.  Several are tending to the bassinets while a few others are nurse feeding little foxcub babies.  The staff dutifully tend over the cubs, cooing and playing with them happily.  You turn and quietly leave, unsure if you are disturbed by the scene inside or relieved that it was not as you feared within.";
 	if hp of Doctor Medea is 3:
-		say "     During your quick peek, you did note that the items of medical equipment Dr. Medea mentioned did not seem to be in there, saving you from having to go in there and deal with the large group vixen nurses in there.  It seems like you'll have to look elsewhere in the hospital.";
+		say "     During your quick peek, you did note that the items of medical equipment Dr. Medea mentioned did not seem to be in there, saving you from having to go in and deal with the large group vixen nurses inside the ward.  It seems like you'll have to look elsewhere in the hospital though.";
 		increase score by 4;
+	if mlamiamet is true:
+		say "     As you're leaving, you hear a familiar voice behind you.  'Oh, did you come here looking for me?' the creamy voice says as the door behind you opens and shuts.  Turning, you see it to be the white-scaled lamia you encountered before.  Her smile becomes briefly skewed as she struggles to close up her overstuffed nurse's outfit, her many nipples wet with milk.  It's easy to surmise that she does a lot of the wet nursing for the mutant offspring.  'It's so nice of you to come visit me at work.  It makes me all warm and happy inside to know you care.  Come, give me a hug,' she says playfully.";
+		challenge "Lamia";
 	increase hospnav by 1;
 	say "[hospprogress]";
 	increase score by 1;

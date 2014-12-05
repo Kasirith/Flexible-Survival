@@ -74,7 +74,7 @@ to say fsdm attack:
 					otherwise:
 						say "it's quite a challenge to";
 					say " accommodate the sheer span of his masculine organ as he offers [if cunts of player > 0]little[otherwise]no[end if] restraint in burying it entirely within you.";
-					say "     Muffled by the obvious obstruction, you can't help but make a soft, song-like sound as your infection drives you to revel in your feral and submissive circumstances, your mind filling with only the desire to please this powerful male. Your tongue caresses its beastial length, his motion picking up a feverish pace as you feel him [if cunts of player > 0]licking[otherwise]nipping[end if] you, compelled by his wanton [if cunts of player > 0]need[otherwise]aggression[end if], only to finally have him roar out, his throbbing cock pumping your with an immense gouts of his thick, heady cum. Pinned, you can't pull away, and your belly is subsequently stuffed with the entire load of his expansive release.";
+					say "     Muffled by the obvious obstruction, you can't help but make a soft, song-like sound as your infection drives you to revel in your feral and submissive circumstances, your mind filling with only the desire to please this powerful male. Your tongue caresses its bestial length, his motion picking up a feverish pace as you feel him [if cunts of player > 0]licking[otherwise]nipping[end if] you, compelled by his wanton [if cunts of player > 0]need[otherwise]aggression[end if], only to finally have him roar out, his throbbing cock pumping your with an immense gouts of his thick, heady cum. Pinned, you can't pull away, and your belly is subsequently stuffed with the entire load of his expansive release.";
 					say "     He slowly gathers himself and pulls his rod from your maw, your submissive haze driving you to lick it clean. He seems a bit amused by your obedience, [if cunts of player > 0]and regards you with an affectionate nuzzle before he[otherwise]and once he's properly satisfied with making you his little sea dragon bitch he[end if] turns to dive back into the water";
 			say ". It takes several long minutes to recover from your bestial haze, eventually going about your business once more";
 		otherwise:
@@ -156,7 +156,7 @@ to say fsdm attack:
 								increase FSDOPEN by 1; [This will deflect the opening submit/lose line, check will need to be added for it]
 								say "[fsdm attack]";
 						Otherwise:
-							say "     Doubtlessly exhausted as he is he turns to depart, leaving you to retreat and gather your belongings--strewn across the beach as they are--along the way.";           
+							say "     Doubtlessly exhausted as he is he turns to depart, leaving you to retreat and gather your belongings--strewn across the beach as they are--along the way.";
 							now FSDOPEN is 0;
 				Otherwise:
 					say "     In due time you come to, greeted by the thick and hard confines of an egg, light from the outside spilling through the translucent surface and compelling you to break yourself free. Exposed to the salty air once more, you were thankfully left on the beach, and you clean yourself off before gathering your belongings as they are, strewn across the beach.";
@@ -173,7 +173,7 @@ to say fsdm attack:
 				say "     You twitch with every irreverent and jerking thrust, only teasing tests of your [bodytype of player] asshole's willingness to accommodate his flared head, [if scalevalue of player is 3]and when it's clear that -- in spite of your small size -- you will easily abide him[otherwise]before[end if] you feel him put on the pressure as he slowly squeezes the rigid organ past your tight ring, the intense sensation of which grants you inevitable reprieve when you get past that spade-shaped tip. The beast lets out an airy hiss in approval, but only lets you acclimate to his girth briefly before he begins fucking you in earnest.";
 				say "     His assault quickly becomes relentless in its pace, intent on using you with little regard to your well being. Any protests you might offer up rapidly diminish as you feel his pre incrementally spurt within your depth, what pain and discomfort you might have had driven away in favour of an immense and overwhelming desire to continue to be reamed by this powerful dragon, and soon you are drowning in ecstasy with every forceful thrust.";
 				say "     [if cocks of player > 0]You orgasm over and over again, sandy ground under you made sticky as your own, [cock size desc of player] cock[smn] make[smv] a mess of things, driving you into a manic and blinding lust-frenzy[otherwise if cunts of player > 0]You orgasm over and over again, driving you into a manic and blinding lust-frenzy[otherwise]You are driven into a manic and blinding lust-frenzy, exacerbated by the tormenting lack of any way to satiated it[end if].  The powerful beast begins pressing harder against your beleaguered form as he draws closer to his own release, and if you had any working sense of self-preservation you'd worry over your well-being but by now all you can feel is his flesh, his heat envelop you more and more.";
-				say "     You feel like you're going to pass out, the immense pleasure of this monster more than you can handle before he suddenly lets out a deafening roar. You begin to feel his massive load firing inside you, your [if scalevalue of player is 3]already-bulging belly quicking expanding[otherwise]belly slowly bulging[end if] further and further with each progressive throb. Slowly, as he recovers, he crawls off of you, relinquishing you of his now-softened cock. Still in a lustful haze, you briefly attempt to lick yourself clean of his of his fluids before you collapse from exhaustion. When you come to the dragon's nowhere to be seen, no doubt satisfied with leaving you on this beach exposed and sore as you likely are now.[mimpregchance]";
+				say "     You feel like you're going to pass out, the immense pleasure of this monster more than you can handle before he suddenly lets out a deafening roar. You begin to feel his massive load firing inside you, your [if scalevalue of player is 3]already-bulging belly quickly expanding[otherwise]belly slowly bulging[end if] further and further with each progressive throb. Slowly, as he recovers, he crawls off of you, relinquishing you of his now-softened cock. Still in a lustful haze, you briefly attempt to lick yourself clean of his of his fluids before you collapse from exhaustion. When you come to the dragon's nowhere to be seen, no doubt satisfied with leaving you on this beach exposed and sore as you likely are now.[mimpregchance]";
 			otherwise if "More Anal" is listed in feats of player and (a random chance of 1 in 4 succeeds or ("Kinky" is listed in feats of player and a random chance of 2 in 5 succeeds)): [rimjob]
 				say "     Carefully, the beast shifts more of its weight over you.  [if hp of player < 1]Much in spite of what protests you can offer against him, he's simply too heavy for you to make any effort of pushing him off[otherwise]Satisfied with his grip on you, he seems more intent on abusing you rather than fucking you properly, an intent of which he obligingly informs you when you feel his tongue begin to force its way past your anal ring[end if].";
 				say "     [if scalevalue of player < 4 and the player is not twistcapped]The slimy organ really puts the strain on you as it's too large to easily fit in that hole, but the beast is diligent if nothing else and in due time you feel it slowly worm its way in.  You're so diminutive relative to his own scale that your behind is easily eclipsed by his toothy maw, making you frightful that the beast may have half a mind to swallow you whole, though for now it only has the effect of coating your lower half in his saliva[otherwise]It's initial efforts are probing, curious as to how pliable your hole might be, before the slimy organ begins to worm its way into the depths of your bowels with little obstruction.  With a huff and a rumble the unengulfed portion of his long frequently buckles and bends prior to its brief re-immersion, the organ making a mess of your [bodytype of player] thighs and groin as he fucks you with his tongue[end if].";
@@ -435,9 +435,9 @@ to say FSDM_1: [Anal Pitching]
 	say ". [if boundmod is 1]Now-submissive sea dragon's relegation to a mere fucktoy all he cares about[otherwise]Once-dominant sea dragon now relegated to a mere fucktoy[end if], he's quickly lost in a haze of lust under your[if scalevalue of player < 4] diminutive[end if] body's weight, [bodytype of player] form trembling with each[if scalevalue of player > 3] powerful[end if] thrust.";
 	say "     As time passes, your grip along the thick girth of the beast tightens, drawing ever close to bliss. [if boundmod is 1]Monster twisting and pressing against you, he can't get enough of[otherwise]Tainted mind twisted to acclimate to this new relegation, the monster groans and writhes against[end if] your cock[if tempnum2 is 1]s[end if]. Shall you pull out at the last second?";
 	if player consents:
-		say "    Just at the cusp of ecstasy, you wrench your tool[if tempnum2 is 1]s[end if] free of the sea dragon's tight hole, grinding against his hide until you're set off, firing your [cum load size of player] against his underside, [if cock width of player > 19]utterly drenching it[otherwise]making an embarrassing mess of it[end if]. It doesn't seem to be enough to set him off, his unattended dick dribbling against the open air. Should you help him out?";
+		say "     Just at the cusp of ecstasy, you wrench your tool[if tempnum2 is 1]s[end if] free of the sea dragon's tight hole, grinding against his hide until you're set off, firing your [cum load size of player] against his underside, [if cock width of player > 19]utterly drenching it[otherwise]making an embarrassing mess of it[end if]. It doesn't seem to be enough to set him off, his unattended dick dribbling against the open air. Should you help him out?";
 		if player consents:
-			say "    Simple handjob? Else you'll suck him off.";
+			say "     Simple handjob? Else you'll suck him off.";
 			if player consents:
 				say "     Stained by your own seed, you grab his impressive, slick organ, rapidly pumping along its length. [if boundmod is 1]Groaning deeply, the needy[otherwise]Growling deeply, the[end if] sea dragon doesn't take long before your attendance gives him reprieve, quickly sputtering its virile load into the sand and further making an embarrassing mess of himself.";
 			otherwise:
@@ -521,7 +521,7 @@ to say FSDM_3: [Oral Receiving Cunt]
 		say "     [if tempnum is 1]Eager to begin[otherwise if tempnum is 2]Eager and drooling to begin[otherwise]With little effort[end if]";
 	otherwise:
 		say "     [if tempnum is 1]Having warmed up to you slightly[otherwise if tempnum is 2]Having warmed up to you by a bit now[otherwise]With persistent chastising, along with the cock's persistent prodding against his snout[end if]";
-	say ", he obliges your need, scaled lips parting to envelop [if cocks of player > 1]one of your pussies[otherwise]your pussy[end if] within its embrace. Thick tongue slathering along its  supple entrance, [if cunt length of player > 17]he easily thrusts the slick, writhing organ into your pliable depths[otherwise]he thrusts the slick, writhing organ into your depths, quickly straining you with its impressive size[end if]. The touch of his saliva[if tempnum is 2], along with that lingering in your maw,[end if] [one of]seeming to intensify[or]intensifying[stopping] your arousal, you can't help but press against against his snout, the dragon [if boundmod is 1]rumbling in approval[otherwise]snorting in disdain[end if].";
+	say ", he obliges your need, scaled lips parting to envelop [if cocks of player > 1]one of your pussies[otherwise]your pussy[end if] within its embrace. Thick tongue slathering along its supple entrance, [if cunt length of player > 17]he easily thrusts the slick, writhing organ into your pliable depths[otherwise]he thrusts the slick, writhing organ into your depths, quickly straining you with its impressive size[end if]. The touch of his saliva[if tempnum is 2], along with that lingering in your maw,[end if] [one of]seeming to intensify[or]intensifying[stopping] your arousal, you can't help but press against against his snout, the dragon [if boundmod is 1]rumbling in approval[otherwise]snorting in disdain[end if].";
 	say "     Writhing against the beast's touch, [if boundmod is 1]happily[otherwise]slowly[end if] making you twitch and writhe with each motion of his worming appendage, you find it difficult to keep a clear head as you rapidly approach ecstasy";
 	if cocks of player > 0:
 		say ". You don't think you'll be able to hold back for any longer, dick[smn] drooling against the open air. Shall you pull out at the last second and shame the sea dragon with your cum? Otherwise you'll spare him the humiliation.";
@@ -576,7 +576,7 @@ to say FSDM_4: [Cunt Catching]
 		say ". The dragon can only rumble and [if boundmod is 1]moan in approval, lost in a haze of[otherwise]groan in disdain, muffled under the throes of his[end if] tainted ecstasy.";
 	otherwise:
 		now tempnum2 is 0;
-		say "     Unable to hold back for any longer, the sea dragon finally roars out in bliss, body wrached with wave after successive wave of thick seeds from his sputtering dick, [if scalevalue of player < 4]blatantly bloating to abide it, until it begins to sputter from your stuffed hole[otherwise][bodytype of player] body visibly bloating to abide it[end if]";
+		say "     Unable to hold back for any longer, the sea dragon finally roars out in bliss, body wracked with wave after successive wave of thick seeds from his sputtering dick, [if scalevalue of player < 4]blatantly bloating to abide it, until it begins to sputter from your stuffed hole[otherwise][bodytype of player] body visibly bloating to abide it[end if]";
 		if cocks of player > 0:
 			say ". Your own cock[smn] unleashing your [cum load size of player] load, you [if cock width of player > 19]utterly drench the beast[otherwise]stain the beast[end if] with your cum, who can only rumble and [if boundmod is 1]moan in approval, lost in a haze of[otherwise]groan in disdain, muffled under the throes of his[end if] tainted ecstasy.";
 		otherwise:
@@ -627,7 +627,7 @@ to say FSDM_5: [Anal Catching]
 			say ". The dragon can only rumble and [if boundmod is 1]moan in approval, lost in a haze of[otherwise]groan in disdain, muffled under the throes of his[end if] tainted ecstasy.";
 	otherwise:
 		now tempnum2 is 0;
-		say "     Unable to hold back for any longer, the sea dragon finally roars out in bliss, body wrached with wave after successive wave of thick seeds from his sputtering dick, [if scalevalue of player < 4]blatantly bloating to abide it, until it begins to sputter from your stuffed hole[otherwise][bodytype of player] body visibly bloating to abide it[end if]";
+		say "     Unable to hold back for any longer, the sea dragon finally roars out in bliss, body wracked with wave after successive wave of thick seeds from his sputtering dick, [if scalevalue of player < 4]blatantly bloating to abide it, until it begins to sputter from your stuffed hole[otherwise][bodytype of player] body visibly bloating to abide it[end if]";
 		if cocks of player > 0:
 			say ". Your own cock[smn] unleashing your [cum load size of player] load, you [if cock width of player > 19]utterly drench the beast[otherwise]stain the beast[end if] with your cum, who can only rumble and [if boundmod is 1]moan in approval, lost in a haze of[otherwise]groan in disdain, muffled under the throes of his[end if] tainted ecstasy.";
 		otherwise if cunts of player > 0:
@@ -669,9 +669,9 @@ to say FSDM_6: [Oral Giving Cock]
 		say ". Shall you engulf the head within your mouth at the last second?";
 		if player consents:
 			now boundsegment is 1;
-			say "    [if scalevalue of player > 3]Easily s[otherwise]S[end if]ubmerging the monster's drooling cockhead between your lips[if scalevalue of player < 4], no doubt strained to contain such a impressive tool[end if], it's more than enough";
+			say "     [if scalevalue of player > 3]Easily s[otherwise]S[end if]ubmerging the monster's drooling cockhead between your lips[if scalevalue of player < 4], no doubt strained to contain such a impressive tool[end if], it's more than enough";
 		otherwise:
-			say "    Alright, shall you aim his release with the specific intent of shaming him?";
+			say "     Alright, shall you aim his release with the specific intent of shaming him?";
 			if player consents:
 				now boundsegment is 2;
 			otherwise:
@@ -685,7 +685,7 @@ to say FSDM_6: [Oral Giving Cock]
 		if boundsegment is 1:
 			say ". [if scalevalue of player < 4][one of]At first, you assume he might overtake you again, but instead his submissive influence seems to diminish and elongate his release, slowing the pace enough for you to keep up[or]Submissive influence diminishing and elongating his release, you're allowed to feast on every last drop of his heady seed[stopping][otherwise]Not that someone of your size needs it, but his submissive influence has diminished and elongated his release, prolonging your persistent milking of his heady seed[end if]";
 		otherwise:
-			say ". [if boundsegment is 2]Aiming the monster's impressive tool towards his face, he's hailed by a flood of his heady seed, revelling in being made an embarrassing mess of himself[otherwise]Monster's impressive tool throbbing with each gout of heady seed, it quickly makes a bit of a mess, wasted as its spent across the sand[end if]";
+			say ". [if boundsegment is 2]Aiming the monster's impressive tool towards his face, he's hailed by a flood of his heady seed, revelling in being made an embarrassing mess of himself[otherwise]Monster's impressive tool throbbing with each gout of heady seed, it quickly makes a bit of a mess, wasted as it's spent across the sand[end if]";
 		if tempnum2 is 1:
 			say ". The whole [if boundsegment is 1]ordeal[otherwise]sight[end if], combined with the sea dragon's own attendance, is more that enough to set you off, your [if cocks of player > 0]own, [cum load size of player] load flooding his maw as it encircles your tool[otherwise] cunt aching against his tongue's slathering affection[end if].";
 		otherwise:
@@ -695,7 +695,7 @@ to say FSDM_6: [Oral Giving Cock]
 		if boundsegment is 1:
 			say ". [if scalevalue of player < 4]It's extremely difficult for you to keep up with the ensuing flood of heady seed, quickly sputtering from your maw[otherwise]You're briefly taken aback by the ensuing flood of heady seed, but it's nothing someone of your size can't handle[end if]";
 		otherwise:
-			say ". [if boundsegment is 2]Aiming the monster's impressive tool towards his face, he's hailed by a flood of his heady seed, quickly making an embarrassing mess of himself[otherwise]Monster's impressive tool throbbing with each gout of heady seed, it quickly makes a bit of a mess, wasted as its spent across the sand[end if]";
+			say ". [if boundsegment is 2]Aiming the monster's impressive tool towards his face, he's hailed by a flood of his heady seed, quickly making an embarrassing mess of himself[otherwise]Monster's impressive tool throbbing with each gout of heady seed, it quickly makes a bit of a mess, wasted as it's spent across the sand[end if]";
 		say ". Once his flow dies down, you pull away from the sea dragon, a spent and [if boundsegment is 2]shameful[otherwise]exhausted[end if] mess, too weakened to really do anything but lay there now. Satisfied with your work, you choose to leave here, a fair bit lust-addled though you may be.";
 
 Section 2 - Monster Insertion
@@ -709,7 +709,7 @@ When Play begins:
 	now name entry is "Feral Sea Dragon"; 
 	now attack entry is "[one of]The dragons massive head slams against you.[or]The dragon slaps you against a cluster of rocks with its rudder like tail.[or]It slams you into the soft sand by hammering you with its narrow tail.[or]He stomps you into the soft sand with its webbed hand like paw.[at random]";
 	now defeated entry is "[fsdm loss]"; [ Text or say command used when Monster is defeated.]
-	now victory entry is  "[fsdm attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
+	now victory entry is "[fsdm attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
 	now desc entry is "[fsdm desc]";[ Description of the creature when you encounter it.]
 	now face entry is "very much draconic in shape, adorned with a set of barbed and savage teeth.  Clearly aquatic in design, ridges and fins adorn the sides of your head, and you find it a challenge to maneuver any building with such an elongated neck";[ Reference "You have a (your text) face."] 
 	now body entry is "distinctly bloated and bulky fare, though somewhat streamlined in presentation, inferring that you'd be better suited for hauling it underwater, if your webbed and finned limbs were any indication";[ Body Description, format as the text "Your Body is (your text)"] 
@@ -764,31 +764,38 @@ to fsdmvore:
 	let trixieexit be 0;
 	while trixieexit is 0:
 		if clearnomore is 0, clear the screen;
+		if hp of player > 0 or humanity of player < 50:
+			now obliging is true;
+		checkboundrecover;
 		if lustatt > 99:
 			say "     Finding yourself overtaken by lust, you are given no choice but to furiously [if cocks of player > 0]jerk yourself off[otherwise]fondle yourself[end if], writhing and twisting in these dark, damp confines until you finally find reprieve, [if cocks of player > 0]unloading your [cum load size of player] load against the supple flesh[otherwise if cunts of player > 0]cunt throbbing firmly against the supple flesh[otherwise]a particularly trying task given your lack of outlet[end if][if cocks of player > 0 and cock width of player > 20]. This wasn't a particularly wise task, as you're now made to swim in a pool of your own seed, though it thankfully diminishes over time[end if]. Panting to catch your breath, your mental faculties eventually return to you, leaving you to assess the matter at hand.[line break]";
-			decrease libido of player by (libido of player / 10) + 1;
-			if libido of player < 0, now libido of player is 0;
+			if libido of player > 25, decrease libido of player by (libido of player / 10) + 1;
 			now lustatt is libido of player;
 			if struggleatt > 0, decrease struggleatt by 1;
-			if boundstate is true, decrease humanity of player by 15 + (psycheadjust * 5);
+			if enduring is true:
+				decrease humanity of player by 8 + (psycheadjust * 2);
+			otherwise:
+				decrease humanity of player by 15 + (psycheadjust * 5);
 		if boundsegment is not 2, increase boundcounter by 1;
 		if boundcounter is 5:
 			say "     The sea dragon's body churns and he seems to have reached a point where he can keep you down. It seems your prolongued presence here has given you no other choice but to leave the beast through the other way out.";
 			now boundmod2 is 1;
 			increase boundcounter by 1;
 		if boundsegment is 1:
-			say "     Lost in utter blackness of the sea dragon's gullet, you feel yourself constantly being pushed downward to your inevitable destination, slick tunnel tightly wrapped around you. Your captor [one of]rumbles lowly, causing your prison to tremble as he mocks you[or]seems to be trying to physically force you the rest of the way down with one of his fins[or]audibly endeavours to swallow you down, each attempt constricting you more firmly[purely at random]. You imagine your only active option is to [bold type]S[roman type]truggle enough until they let you go, lest you [bold type]A[roman type]bide these questionable circumstances.[line break]";
+			say "     Lost in utter blackness of the sea dragon's gullet, you feel yourself constantly being pushed downward to your inevitable destination, slick tunnel tightly wrapped around you. Your captor [one of]rumbles lowly, causing your prison to tremble as he mocks you[or]seems to be trying to physically force you the rest of the way down with one of his fins[or]audibly endeavours to swallow you down, each attempt constricting you more firmly[purely at random]. You imagine your only active option is to [bold type]S[roman type]truggle enough until they let you go, else you can [if obliging is true][bold type]O[roman type]blige[otherwise][bold type]A[roman type]bide[end if] them, or [if boundrecover is true][bold type]R[roman type]ecover from[otherwise][bold type]E[roman type]ndure[end if] these questionable circumstances.[line break]";
 		otherwise if boundsegment is 2:
-			say "     Swimming in the ocean, you're briefly free of the sea dragon's hold. It doesn't appear you'll be free for long, though, as he's making his way to you right now. Your only options are to [bold type]S[roman type]truggle your way to the beach, lest you succumb and [bold type]A[roman type]bide the beast's intent on having you once more.";
+			say "     Swimming in the ocean, you're briefly free of the sea dragon's hold. It doesn't appear you'll be free for long, though, as he's making his way to you right now. You imagine your only active option is to [bold type]S[roman type]truggle your way to the beach, else you can succumb [if obliging is true][bold type]O[roman type]blige[otherwise][bold type]A[roman type]bide[end if] he beast's intent on having you once more. You probably figure this isn't the best time to try and [if boundrecover is true][bold type]R[roman type]ecover[otherwise][bold type]E[roman type]ndure[end if], as it'll have the same effect of getting you caught again.[line break]";
 		otherwise:
-			if a random chance of 4 in 5 succeeds:
+			if (enduring is true and a random chance of 2 in 5 succeeds) or (enduring is false and a random chance of 4 in 5 succeeds):
 				increase hunger of player by 1;
 				increase thirst of player by 2;
-			otherwise:
+			otherwise if enduring is false or (enduring is true and a random chance of 2 in 3 succeeds):
 				increase thirst of player by 1;
-			say "     Submerged in a churning mass of flesh, you're utterly lost in the sea dragon's stomach, the whole affair a disorienting mess as you feel yourself getting slowly drained. [one of]The prison smells of fish and seawater, making it hard to focus[or]The beast rumbles lowly, clearly enjoying how his meal writhes around[or]Your captor happily swims about, deliberately exacerbating your situation[at random]. You imagine your only active option is to [bold type]S[roman type]truggle enough until they let you go, lest you [bold type]A[roman type]bide these questionable circumstances.[line break]";
+			say "     Submerged in a churning mass of flesh, you're utterly lost in the sea dragon's stomach, the whole affair a disorienting mess as you feel yourself getting slowly drained. [one of]The prison smells of fish and seawater, making it hard to focus[or]The beast rumbles lowly, clearly enjoying how his meal writhes around[or]Your captor happily swims about, deliberately exacerbating your situation[at random]. You imagine your only active option is to [bold type]S[roman type]truggle enough until they let you go, else you can [if obliging is true][bold type]O[roman type]blige[otherwise][bold type]A[roman type]bide[end if] them, or [if boundrecover is true][bold type]R[roman type]ecover from[otherwise][bold type]E[roman type]ndure[end if] these questionable circumstances.[line break]";
+		now enduring is false;
 		say "[bold type]1[roman type] - [link]Struggle[as]1[end link][line break][run paragraph on]";
-		say "[bold type]2[roman type] - [link]Abide[as]2[end link][line break][run paragraph on]";
+		say "[bold type]2[roman type] - [link][if obliging is true]Oblige[otherwise]Abide[end if][as]2[end link][line break][run paragraph on]";
+		say "[bold type]3[roman type] - [link][if boundrecover is false]Endure[otherwise]Recover[end if][as]3[end link][line break][run paragraph on]";
 		say "Sanity: [humanity of player]/ 100	Lust: [lustatt]/100	Hunger: [hunger of player]	Thirst: [thirst of player]	Struggle: [fsdstrugglebar][line break][run paragraph on]";
 		if humanity of player < 1:
 			repeat with y running from 1 to number of filled rows in table of random critters:
@@ -816,6 +823,8 @@ to fsdmvore:
 			while keychar is "INVALID":
 				now k is the chosen letter;
 				translate k;
+				if 1 is 1:
+					say ""; [There's an error with the new inform, this is to "Fix" it...]
 				if the player's command matches "[number]":
 					now keychar is "[number understood]";
 			if keychar in lower case exactly matches the text "s" or keychar in lower case exactly matches the text "1" or keychar in lower case exactly matches the text "return" or keychar in lower case matches the text "struggle":
@@ -864,7 +873,7 @@ to fsdmvore:
 							follow the turnpass rule;
 				otherwise:
 					if struggleatt < 3 and struggleatt is not 0:
-						say "     You continue to struggle and protest against these twisted confines, trying to upset the beast's stomach enough to free you. [if struggleatt is 1]You don't seem to make any headway[otherwise]He begins to groan as your prison rumbles[end if]....";
+						say "     You continue to struggle and protest against these twisted confines, trying to upset the beast's stomach enough to free you. [if struggleatt is 1]You don't seem to make any headway[otherwise]He begins to groan as your prison rumbles[end if]...";
 						increase lustatt by 7 + (lustadjust * 2);
 						wyvhumanityroll;
 						wait for any key;
@@ -875,7 +884,7 @@ to fsdmvore:
 							now boundsegment is 1;
 							now struggleatt is 1;
 						otherwise:
-							say "     Body loudly groaning, you feel it constrict around you as you're forced down past a tight ring, descending into the sea dragon's bowels. Twisted and pushed around the monster's labyrinth of flesh, your trip meets its inevitably destination as you're forced past that final ring and hit with a wall of cool seawater. Desperately climbing to the surface, you're exposed to the elements of the outside once more.";
+							say "     Body loudly groaning, you feel it constrict around you as you're forced down past a tight ring, descending into the sea dragon's bowels. Twisted and pushed around the monster's labyrinth of flesh, your trip meets its inevitable destination as you're forced past that final ring and hit with a wall of cool seawater. Desperately climbing to the surface, you're exposed to the elements of the outside once more.";
 							if a random chance of 1 in 3 succeeds or ("Kinky" is listed in feats of player and a random chance of 1 in 3 succeeds):
 								say "     Roaring angrily at you as he wheels around, your captor isn't about to let his meal escape, even after being ejected so embarrassingly. You'll have to swim back before he catches up with you!";
 								now boundsegment is 2;
@@ -888,19 +897,19 @@ to fsdmvore:
 								now trixieexit is 1;
 								follow the turnpass rule;		
 				next;
-			otherwise:
+			otherwise if (obliging is true and (keychar in lower case exactly matches the text "o" or keychar in lower case matches the text "oblige")) or (obliging is false and (keychar in lower case exactly matches the text "a" or keychar in lower case matches the text "abide")) or keychar in lower case exactly matches the text "2":
 				say "[line break]";
-				if boundsegment is 1, increase boundmod by 2;
-				if boundsegment is 2:
-					say "     Perhaps too exhausted to continue, you concede to your fate, the sea dragon immediately catching up on you. Maw agape to scoop you up from the water, you're engulfed darkness, the sea dragon's slick, supple flesh enveloping you once more. Awash in the beast's now-familiar, acrid breath, he pulls you into the air with his maw. Allowing gravity to aid him as he audibly gulps you down, powerful muscles plunging you down his slick depths. Hot tube constricting against you tightly, the monster's elongated gullet bulges visibly with your occupancy.";
-					say "     Once again in the sea dragon's gullet. You've started all the way back from the beginning!";
-					now boundsegment is 1;
-					now boundcounter is 0;
-					now boundmod is 0;
-				otherwise if boundsegment is 1:
-					if boundmod > 2:
+				if obliging is true:
+					if boundsegment is 1, increase boundmod by 4;
+					if boundsegment is 2:
+						say "     Overtaken by desire to return, you submit to your fate, the sea dragon immediately catching up on you. Maw agape to scoop you up from the water, you're engulfed darkness, the sea dragon's slick, supple flesh enveloping you once more. Awash in the beast's now-familiar, acrid breath, he pulls you into the air with his maw. Allowing gravity to aid him as he audibly gulps you down, powerful muscles plunging you down his slick depths. Hot tube constricting against you tightly, the monster's elongated gullet bulges visibly with your occupancy.";
+						say "     Once again in the sea dragon's warm, inviting gullet. Just as you wanted!";
+						now boundsegment is 1;
+						now boundcounter is 0;
+						now boundmod is 0;
+					otherwise if boundsegment is 1:
 						say "     [if struggleatt > 1]Briefly given a glimpse of the outside world, you're suddenly plunged back into the black depths of the monster's throat, punctuating your failed escape[otherwise]Your descent inevitable, the monster punctuates your ultimate fate[end if] with one final gulp. Squeezed[if tempnum2 is 4] back[end if] through his tight ring, you're confined to the slightly looser -- albeit no less slick and dark -- prison of the sea dragon's stomach. Your surroundings slowly draining you, you imagine you won't last long in here!";
-						increase lustatt by 7 + (lustadjust * 2);
+						increase lustatt by 14 + (lustadjust * 2);
 						if tempnum2 is not 4:
 							now tempnum2 is 4;
 							say "     Roaring out in satisfaction over your [if hp of player < 1]utter defeat[otherwise]ultimate fate[end if], the sea dragon moves around to take to the ocean once more, tussling you about in the process. The motion doesn't get any less disorienting once he's swimming in the ocean, a dizzying sensation of your prison moving up and down with each wave. No doubt this will make the ordeal of escaping all the more of a challenge.";
@@ -908,12 +917,93 @@ to fsdmvore:
 						now boundsegment is 0;
 						now struggleatt is 0;
 					otherwise:
-						say "     You choose to submit to your fate. No doubt it won't take long before the beast has his way....";
-						increase lustatt by 7 + (lustadjust * 2);
+						say "     You actively submit to your current confines, [one of]the beast rumbling lowly in approval of your compliance[or]your captor contently swimming as he enjoys his meal[or]the beast offering an airy cackle towards your eagerness[at random].";
+						increase lustatt by 14 + (lustadjust * 2);
+						wyvhumanityroll;
 				otherwise:
-					say "     You oblige your current confines, [one of]the beast rumbling lowly in approval of your compliance[or]your captor contently swimming as he enjoys his meal[or]the beast offering an airy cackle towards your submission[at random].";
-					increase lustatt by 7 + (lustadjust * 2);
-					wyvhumanityroll;
+					if boundsegment is 1, increase boundmod by 2;
+					if boundsegment is 2:
+						say "     Perhaps too exhausted to continue, you concede to your fate, the sea dragon immediately catching up on you. Maw agape to scoop you up from the water, you're engulfed darkness, the sea dragon's slick, supple flesh enveloping you once more. Awash in the beast's now-familiar, acrid breath, he pulls you into the air with his maw. Allowing gravity to aid him as he audibly gulps you down, powerful muscles plunging you down his slick depths. Hot tube constricting against you tightly, the monster's elongated gullet bulges visibly with your occupancy.";
+						say "     Once again in the sea dragon's gullet. You've started all the way back from the beginning!";
+						now boundsegment is 1;
+						now boundcounter is 0;
+						now boundmod is 0;
+					otherwise if boundsegment is 1:
+						if boundmod > 2:
+							say "     [if struggleatt > 1]Briefly given a glimpse of the outside world, you're suddenly plunged back into the black depths of the monster's throat, punctuating your failed escape[otherwise]Your descent inevitable, the monster punctuates your ultimate fate[end if] with one final gulp. Squeezed[if tempnum2 is 4] back[end if] through his tight ring, you're confined to the slightly looser -- albeit no less slick and dark -- prison of the sea dragon's stomach. Your surroundings slowly draining you, you imagine you won't last long in here!";
+							increase lustatt by 7 + (lustadjust * 2);
+							if tempnum2 is not 4:
+								now tempnum2 is 4;
+								say "     Roaring out in satisfaction over your [if hp of player < 1]utter defeat[otherwise]ultimate fate[end if], the sea dragon moves around to take to the ocean once more, tussling you about in the process. The motion doesn't get any less disorienting once he's swimming in the ocean, a dizzying sensation of your prison moving up and down with each wave. No doubt this will make the ordeal of escaping all the more of a challenge.";
+							now boundmod is 0;
+							now boundsegment is 0;
+							now struggleatt is 0;
+						otherwise:
+							say "     You choose to abide your fate. No doubt it won't take long before the beast has his way...";
+							increase lustatt by 7 + (lustadjust * 2);
+					otherwise:
+						say "     You abide your current confines, [one of]the beast rumbling lowly in approval of your compliance[or]your captor contently swimming as he enjoys his meal[or]the beast offering an airy cackle towards your submission[at random].";
+						increase lustatt by 7 + (lustadjust * 2);
+						wyvhumanityroll;
+				say "[line break]";
+				wait for any key;
+				next;
+			otherwise:
+				now enduring is true;
+				say "[line break]";
+				if boundsegment is 1 and a random chance of 2 in 3 succeeds, increase boundmod by 1;
+				if boundrecover is true:
+					increase humanity of player by 3;
+					if humanity of player > 100, now humanity of player is 100;
+					if boundsegment is 2:
+						say "     You choose this, of all times, to try and recover from your prior captivity, only for the sea dragon to catch up on you. Maw agape to scoop you up from the water, you're engulfed darkness, the sea dragon's slick, supple flesh enveloping you once more. Awash in the beast's now-familiar, acrid breath, he pulls you into the air with his maw. Allowing gravity to aid him as he audibly gulps you down, powerful muscles plunging you down his slick depths. Hot tube constricting against you tightly, the monster's elongated gullet bulges visibly with your occupancy.";
+						say "     Once again in the sea dragon's gullet. You've started all the way back from the beginning!";
+						now boundsegment is 1;
+						now boundcounter is 0;
+						now boundmod is 0;
+					otherwise if boundsegment is 1:
+						if boundmod > 2:
+							say "     With a brief flash of insight, you're able to find a glimpse of mental clarity within these confines, recovering a small portion of your lost humanity... However, the beast doesn't spare you this moment to really appreciate it.";
+							say "     [if struggleatt > 1]Briefly given a glimpse of the outside world, you're suddenly plunged back into the black depths of the monster's throat, punctuating your failed escape[otherwise]Your descent inevitable, the monster punctuates your ultimate fate[end if] with one final gulp. Squeezed[if tempnum2 is 4] back[end if] through his tight ring, you're confined to the slightly looser -- albeit no less slick and dark -- prison of the sea dragon's stomach. Your surroundings slowly draining you, you imagine you won't last long in here!";
+							increase lustatt by 4 + lustadjust;
+							if tempnum2 is not 4:
+								now tempnum2 is 4;
+								say "     Roaring out in satisfaction over your [if hp of player < 1]utter defeat[otherwise]ultimate fate[end if], the sea dragon moves around to take to the ocean once more, tussling you about in the process. The motion doesn't get any less disorienting once he's swimming in the ocean, a dizzying sensation of your prison moving up and down with each wave. No doubt this will make the ordeal of escaping all the more of a challenge.";
+							now boundmod is 0;
+							now boundsegment is 0;
+							now struggleatt is 0;
+						otherwise:
+							say "     With a brief flash of insight, you're able to find a glimpse of mental clarity within these confines, recovering a small portion of your lost humanity... But you don't have much time in here.";
+							increase lustatt by 4 + lustadjust;
+					otherwise:
+						say "     With a brief flash of insight, you're able to find a glimpse of mental clarity within these confines, recovering a small portion of your lost humanity.";
+						increase lustatt by 4 + lustadjust;
+						wyvhumanityroll;
+					now boundrecover is false;
+				otherwise:
+					if boundsegment is 2:
+						say "     By some curious whim, you consider enduring right now, but it's utterly useless to you at this moment, and the sea dragon ends up catching up to you! Maw agape to scoop you up from the water, you're engulfed darkness, the sea dragon's slick, supple flesh enveloping you once more. Awash in the beast's now-familiar, acrid breath, he pulls you into the air with his maw. Allowing gravity to aid him as he audibly gulps you down, powerful muscles plunging you down his slick depths. Hot tube constricting against you tightly, the monster's elongated gullet bulges visibly with your occupancy.";
+						say "     Once again in the sea dragon's gullet. You've started all the way back from the beginning!";
+						now boundsegment is 1;
+						now boundcounter is 0;
+						now boundmod is 0;
+					otherwise if boundsegment is 1:
+						if boundmod > 2:
+							say "     Resist though you may, you can't hold your position forever. [if struggleatt > 1]Briefly given a glimpse of the outside world, you're suddenly plunged back into the black depths of the monster's throat, punctuating your failed escape[otherwise]Your descent inevitable, the monster punctuates your ultimate fate[end if] with one final gulp. Squeezed[if tempnum2 is 4] back[end if] through his tight ring, you're confined to the slightly looser -- albeit no less slick and dark -- prison of the sea dragon's stomach. Your surroundings slowly draining you, you imagine you won't last long in here!";
+							increase lustatt by 4 + (lustadjust * 2);
+							if tempnum2 is not 4:
+								now tempnum2 is 4;
+								say "     Roaring out in satisfaction over your [if hp of player < 1]utter defeat[otherwise]ultimate fate[end if], the sea dragon moves around to take to the ocean once more, tussling you about in the process. The motion doesn't get any less disorienting once he's swimming in the ocean, a dizzying sensation of your prison moving up and down with each wave. No doubt this will make the ordeal of escaping all the more of a challenge.";
+							now boundmod is 0;
+							now boundsegment is 0;
+							now struggleatt is 0;
+						otherwise:
+							say "     You choose this moment to endure. Even though you're stalling, there's no doubt that it won't take long before the beast has his way...";
+							increase lustatt by 4 + lustadjust;
+					otherwise:
+						say "     You endure your current confines, [one of]the beast rumbling lowly towards you[or]your captor contently swimming as he enjoys his meal[or]the beast offering an airy cackle towards his victim[at random].";
+						increase lustatt by 4 + lustadjust;
+						wyvhumanityroll;
 				say "[line break]";
 				wait for any key;
 				next;

@@ -105,6 +105,8 @@ to prepforfight:		[Do all the pre-fight setup, reset values, and display the mon
 		if "Black Belt" is listed in feats of player, increase plhitbonus by 1;
 	if weapon object of player is chair and name entry is "Wrestling Wolf":
 		increase plhitbonus by 2;
+	if weapon object of player is riding crop and ( bodyname of player is "Latex Mistress" or player is dominant ):
+		increase plhitbonus by 2;
 	if weapon object of player is journal:
 		if "Black Belt" is listed in feats of player, increase plhitbonus by 1;
 	if "Know Thyself" is listed in feats of player:
@@ -291,7 +293,7 @@ this is the monster combat mode rule:
 	let foundcom be 0;
 	if there is no altcombat in row monster of Table of Random Critters:
 		now searchparam is "default";	[no change]
-	otherwise if altcombat entry is "" or altcombat entry is "default" or altcombat entry is " ":
+	otherwise if altcombat entry is "" or altcombat entry is "default" or altcombat entry is " " or altcombat entry is empty:
 		now searchparam is "default";	[no change]
 	otherwise:
 		let searchparam be altcombat entry;
@@ -1503,7 +1505,7 @@ this is the ftaurpounce rule:		[double-damage pouncing]
 	if hardmode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 		now dam is (dam * 150) divided by 100;
 		say "The enemy finds a particular vulnerability in your defense - Critical Hit![line break]";
-	say "The [one of][name entry][of]feline[or]feline taur[or]large cat[purely at random] growls and pounces playfully atop you, [one of]knocking[or]pushing[or]slamming[purely at random] you down briefly.  It's many paws knead and claw at you while the feline rumbles and purrs at having caught its [one of]toy[or]prey[or]plaything[purely at random], rubbing its body against yours.  This [one of]powerful[or]strong[or]devastating[purely at random] assault does [special-style-2][dam][roman type] damage!";
+	say "The [one of][name entry][or]feline[or]feline taur[or]large cat[purely at random] growls and pounces playfully atop you, [one of]knocking[or]pushing[or]slamming[purely at random] you down briefly.  It's many paws knead and claw at you while the feline rumbles and purrs at having caught its [one of]toy[or]prey[or]plaything[purely at random], rubbing its body against yours.  This [one of]powerful[or]strong[or]devastating[purely at random] assault does [special-style-2][dam][roman type] damage!";
 	now damagein is dam;
 	say "[noshieldabsorbancy]";		[unable to use shield while pinned]
 	if absorb is greater than dam:

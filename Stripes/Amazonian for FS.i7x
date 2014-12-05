@@ -67,7 +67,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Amazonian"; [Name of your new Monster]
-	now attack entry is "Amazonian uses their [one of]Superior Fist[or]Penetrating Stare[or]Snap Kick[or]mutant power[at random]"; [Text used when the monster makes an Attack]
+	now attack entry is "[one of]She[or]The Amazonian[or]The Amazon woman[or]The muscular herm[at random] [one of]strikes you with a powerful punch[or]connects with a snap kick[or]strikes you with a powerful blow[at random].";
 	now defeated entry is "[beattheamazonian]";
 	now victory entry is  "[losetoamazonian]";
 	now desc entry is "[amazoniandesc]";
@@ -180,7 +180,7 @@ to say estosterogen pill use:
 		say ".  With a feeling of tightness at your chest, you see a pair of breasts form on your chest, concluding your sudden gender shift.";
 	otherwise:
 		increase breast size of player by 1;
-		if breast size of player > 10, increase breast size by 1;
+		if breast size of player > 10, increase breast size of player by 1;
 		if breast size of player > 26, now breast size of player is 26;
 		follow the breast descr rule;
 		say ".  With a feeling of tightness and a flush of warmth at your chest, you see your breasts inflating, giving you a set of [descr] tits.";
