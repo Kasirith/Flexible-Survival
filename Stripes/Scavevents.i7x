@@ -459,7 +459,11 @@ Instead of resolving a Plains Scavenging:
 		otherwise:
 			say "extremely difficult";
 		say " to contend with.";
+		let petbonus be false;
 		let bonus be ( the charisma of the player plus level of the player minus 10 ) divided by 2;
+		if companion of player is equinoid warrior or companion of player is felinoid companion or companion of player is demon brute:
+			increase bonus by 2;
+			now petbonus is true;
 		if hardmode is true and bonus > 10, now bonus is 10;
 		if "Three Bags Full" is listed in feats of the player, increase bonus by 1;
 		let dice be a random number from 1 to 20;
@@ -468,7 +472,7 @@ Instead of resolving a Plains Scavenging:
 		if difficulty is greater than dice:
 			say "It would seem that negotiations have failed and the mutants now want you gone. By the looks on their faces, it would be wise for you to get lost... and fast!";
 		otherwise :
-			say "Coming to a mutually beneficial agreement, you find that the other mutants are willing to give up the item to you in trade for some information.  It would seem that there are still some decent [']people['] in the world after all.  You quickly add [y] to your satchel and then bob your head gratefully to the others before going about your way.";
+			say "Coming to a mutually beneficial agreement, you find that the other mutants are willing to give up the item to you in trade for some information.  It would seem that there are still some decent [']people['] in the world after all[if petbonus is true].  Though having an intimidating guard by your side may have helped a little[end if].  You quickly add [y] to your satchel and then bob your head gratefully to the others before going about your way.";
 			add y to invent of player;
 	otherwise if x is 3:
 		let difficulty be a random number from 6 to 16;
@@ -578,7 +582,7 @@ Instead of resolving a Free Drink:
 		infect "Satyr";
 		if winefound is 1:
 			say "     You do manage to save some of the wine in a vial to give to Nermine.";
-			now winefound is 2;				
+			now winefound is 2;
 		if bodyname of player is "Satyr" and player is pure and cocks of player > 0:
 			say "     Taking the drink, you swallow down the rich, flavorful wine. It quenches some of your thirst and gets you in a rather nice mood, waking the need to party and enjoy yourself in you. And that's not the only thing it wakes - your cock starts to fill out a bit as you imagine drunken revels with some very shapely partners. Laughing at your obvious arousal, one of the satyrs slaps you on the back and asks 'Hey brother, wanna come with us to the Phi Alpha Nu frat-house? We're the surprise guests and it'll be... legendary!' He gives you a salacious look as he does so, eyes wandering down to your crotch, then winks meaningfully.";
 			say "     [line break]";
@@ -588,7 +592,7 @@ Instead of resolving a Free Drink:
 				say "     [Satyr Frat Party]"; [Further content in Wahn/Satyr Frat.i7x]
 			otherwise:
 				say "     [line break]";
-				say "     You shake your head and tell the two of them that you can't come with em right now. The satyr who invited you looks a bit deflated at you declining his offer and tries to come up with a convincing reason to join them anyways - until he's interrupted by his friend. 'Let's get going Kerr, he doesn't want to come. I wanna go on and party with some hunky fratboys...' With a sigh, Kerr the satyr gives you a little wave, then gets back to rolling the the cask along with his partner. Before they get too far away to understand it over the rumbling noise of the wooden barrel on the stone floor, you can hear him wonder 'Why would anyone not go to a party? Some people are strange...'";
+				say "     You shake your head and tell the two of them that you can't come with em right now. The satyr who invited you looks a bit deflated at you declining his offer and tries to come up with a convincing reason to join them anyways - until he's interrupted by his friend. 'Let's get going Kerr, he doesn't want to come. I wanna go on and party with some hunky fratboys...' With a sigh, Kerr the satyr gives you a little wave, then gets back to rolling the cask along with his partner. Before they get too far away to understand it over the rumbling noise of the wooden barrel on the stone floor, you can hear him wonder 'Why would anyone not go to a party? Some people are strange...'";
 		otherwise:
 			say "     Taking the drink, you swallow down the rich, flavourful wine. It quenches some of your thirst, but leaves you feeling a little strange as well. They laugh and slap you on the back after taking big drinks of their own. Their break done, the satyrs cork it back up and resume rolling the large cask.";
 			decrease thirst of player by 10;
@@ -628,7 +632,7 @@ The placement of shoulder pad is "body".
 The descmod of shoulder pad is "A single, armoured pad is strapped to your shoulder.".
 The slot of shoulder pad is "body".
 
-the scent of shoulder pad is "The shoulder pad stinks of the '90s.".
+the scent of shoulder pad is "The shoulder pad stinks of the [']90s.".
 
 
 Section 14 - Hospital Scavenging

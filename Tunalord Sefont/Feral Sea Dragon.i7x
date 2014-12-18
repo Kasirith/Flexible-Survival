@@ -50,7 +50,7 @@ to say fsdm attack:
 			if cunts of player > 0 and cunt length of player > 11:
 				say "     Circling around to mount you, you soon feel the head of his hard organ press against[if cunts of player > 1] one of[end if] your [cunt size desc of player] cunt[sfn].  He makes a soft growling sound as the shaft's flared head sinks slowly inside you, sending waves of intense pleasure before that head is fully engulfed. Quite the tease, he only engulfs the rod half-way before pulling it out almost entirely, the influence of your feral infection driving you to whine out in despair--much to his amusement--before you find solace in its return.  The dragon plays this game with you only briefly before he's taken by the imperative of his own bestial need and starts ramming you with his cock proper.";
 				say "     You writhe limply under the beast's girth, mind ahaze in pleasure.  It's as though this creature's cock was made just for you, your needy cunt constricting against its rigid mass out of a carnal need to have it in you, it's motion no doubt lubricated by your sexual fluids mixed with his own.";
-				say "     Though you would rather he fuck you forever it's inevitable that he concludes with one final thrust, his hilted dick flooding your womb until it's bloated with his seed, triggering your own climax in response[if cocks of player > 1], all the while your own, [cock size desc of player], and very much neglected members spill their [cum load size of player] load across the sand before both[otherwise if cocks of player > 0], all the while your own, [cock size desc of player], and very much neglected member spills its [cum load size of player] load across the sand before both[otherwise].  Both[end if] of you cry out in celebration of this dual orgasm. His a deep throaty roar, yours a beautifully sounding song. [impregchance][line break]";
+				say "     Though you would rather he fuck you forever it's inevitable that he concludes with one final thrust, his hilted dick flooding your womb until it's bloated with his seed, triggering your own climax in response[if cocks of player > 1], all the while your own, [cock size desc of player], and very much neglected members spill their [cum load size of player] load across the sand before both[otherwise if cocks of player > 0], all the while your own, [cock size desc of player], and very much neglected member spills its [cum load size of player] load across the sand before both[otherwise].  Both[end if] of you cry out in celebration of this dual orgasm. His a deep throaty roar, yours a beautifully sounding song.[impregchance][line break]";
 				say "     Satisfied, he dismounts you. Forcing his cock free of your abused hole with [one of]a moist sucking[or]a wet popping[at random] sound.  Huffing a little, he's kind enough to give you a soft, affectionate lick across your side before he dives back into the water's depths, no doubt waiting for your return";
 			otherwise:
 				if cunts of player > 0:        [Lead-in for inadequately sized female]
@@ -65,7 +65,7 @@ to say fsdm attack:
 							say ", much to his ignorance";
 						say ".  Regardless, your infection's influence can't help but compel gratification from the rough treatment of such a virile male[if hp of player < 1], In spite of your better judgement[end if].";
 						say "     You writhe limply under the beast's girth, mind ahaze in pleasure.  It's as though this creature's cock was made just for you, your needy ring constricting against its rigid mass out of a carnal need to have it in you, it's motion no doubt lubricated in its endeavours by his own sexual fluids.";
-						say "     Though you would rather he fuck you forever it's inevitable that he concludes with one final thrust, his hilted dick flooding your bowels until they're bloated with his seed[if cocks of player > 1], your own neglected, [cock size desc of player] members wasting their [cum load size of player] load impotently into the sand[otherwise if cocks of player > 0], your own neglected, [cock size desc of player] member wasting its [cum load size of player] load impotently into the sand[otherwise if cunts of player > 0], triggering your own climax in response[otherwise], struggling weakly as you lack the sexual outlet necessary to satisfy yourself[end if][if cunts of player > 0].  Both of you cry out in celebration of this dual orgasm. His a deep throaty roar. Yours a beautifully sounding song.[otherwise if cocks of player > 0].  Both of you cry out in celebration of this dual orgasm. His a deep throaty roar while you feign a feminine-sounding song, driven by your feral-tainted mind to reinforce his more masculine dominion over your lesser male form[otherwise].  In the ecstasy of his sole release he lets out a deep throaty roar, of which you can only abide in frustration and embarrassment[end if]. [mimpregchance][line break]";
+						say "     Though you would rather he fuck you forever it's inevitable that he concludes with one final thrust, his hilted dick flooding your bowels until they're bloated with his seed[if cocks of player > 1], your own neglected, [cock size desc of player] members wasting their [cum load size of player] load impotently into the sand[otherwise if cocks of player > 0], your own neglected, [cock size desc of player] member wasting its [cum load size of player] load impotently into the sand[otherwise if cunts of player > 0], triggering your own climax in response[otherwise], struggling weakly as you lack the sexual outlet necessary to satisfy yourself[end if][if cunts of player > 0].  Both of you cry out in celebration of this dual orgasm. His a deep throaty roar. Yours a beautifully sounding song.[otherwise if cocks of player > 0].  Both of you cry out in celebration of this dual orgasm. His a deep throaty roar while you feign a feminine-sounding song, driven by your feral-tainted mind to reinforce his more masculine dominion over your lesser male form[otherwise].  In the ecstasy of his sole release he lets out a deep throaty roar, of which you can only abide in frustration and embarrassment[end if].[mimpregchance][line break]";
 						say "     Satisfied, he dismounts you. [if cunts of player > 0]Forcing[otherwise]Wrenching[end if] his cock free of your abused hole with [one of]a moist sucking[or]a wet popping[at random] sound.  Huffing a little, [if cunts of player > 0]he's kind enough to give you a soft, affectionate lick across your side before he dives back into the water's depths,[otherwise]he nips your ass playfully, amused by his little cock sleeve before he dives back into the water's depths,[end if] no doubt waiting for your return";
 				otherwise:
 					say "     He climbs on top of you, his bulky weight pinning you to the sandy floor.  He's shameless in prodding his proud dick against your snout, and by now your feral-tainted mind cannot resist submitting to this virile beast's needs.  You open your jaws, your thick tongue the only cushion when it's [if cunts of player > 0]firmly[otherwise]harshly[end if] thrusted into the confines of your quickly stuffed maw maw. Gently suckling it, ";
@@ -367,8 +367,8 @@ to fsdbiasshift:
 			now fsdbias is 4;
 			if bodyname of player is "Feral Sea Dragon" or bodyname of player is "Feral Sea Dragoness":
 				say "     [italic type]Your tainted mind echoes with your defeat, revelling in your exposure to the female beast. Surely your fate is tied to her, should you succumb[roman type].";
-			
-			
+
+
 [to fsdpostureshift:
 	if tempnum2 is 1:
 		if fsdmposture is 0:
@@ -397,7 +397,7 @@ to fsdbiasshift:
 			if bodyname of player is "Feral Sea Dragon" or bodyname of player is "Feral Sea Dragoness":
 				say "     [italic type]Your tainted mind echoes with your victory, revelling in your dominance of the beast[if player is submissive], even against your submissive inclinations[end if]. Surely this is a sign of your fate, should you succumb[roman type].";
 	now tempnum2 is 0;]
-				
+
 to say FSDM_1: [Anal Pitching]
 	if boundmod is 1:
 		say "     It doesn't take much before the[if scalevalue of player < 4] massive[end if] beast obliges your endeavour to expose his undercarriage, churring lowly in tainted compliance";
@@ -462,7 +462,7 @@ to say FSDM_1: [Anal Pitching]
 			say ". You'd imagine he'd be embarrassed by the whole ordeal, but you're not sure as to the long-term implications of such a dominant creature being abused in such a way...";
 	now tempnum is 0;
 	now tempnum2 is 0;
-	
+
 to say FSDM_2: [Oral Receiving Cock]
 	say "     Circling around the sea dragon to meet his head, the exhausted beast can only ";
 	if boundmod is 1:
@@ -495,7 +495,7 @@ to say FSDM_2: [Oral Receiving Cock]
 	otherwise:
 		say "     It's not long before you finally cry out in bliss, firing your [cum load size of player] load into the creature's[if boundmod is 1] obliging[end if] maw. [if boundmod is 1]Whining softly, he's gulps audibly in an eager desire[otherwise]Rumbling in detest, he can only oblige being forced[end if] to swallow your cum[if cock width of player > 20], the sheer volume of which quickly causing it to ooze from his lips[end if].";
 	say "     Satisfied, you step away from the dragon, writhing against the sand with a need to satisfy his own, lingering lust in the wake of your task. No doubt the beast will have to attend to his own need after your turn and depart.";
-	
+
 to say FSDM_3: [Oral Receiving Cunt]
 	say "     Circling around the sea dragon to meet his head, the exhausted beast can only ";
 	if boundmod is 1:
@@ -572,7 +572,7 @@ to say FSDM_4: [Cunt Catching]
 		if cocks of player > 0:
 			say "     Your own bliss quickly following suit, your cock[smn] unleash your [cum load size of player] load on the beast, [if tempnum2 is 1 and cock width of player > 19]further embarrassing him as he's now utterly drenched in cum[otherwise if tempnum2 is 1]further embarrassing him as your cum also stains him[otherwise if cock width of player > 19]utterly drenching him in your cum[otherwise]staining him with your cum[end if]";
 		otherwise:
-			say "     Your own bliss quickly following suit, you oozing cunt[sfn] aching against the the beast, [if tempnum2 is 1]further embarrassing him as he's stained with your juices[otherwise]staining him with your juices[end if]";
+			say "     Your own bliss quickly following suit, you oozing cunt[sfn] aching against the beast, [if tempnum2 is 1]further embarrassing him as he's stained with your juices[otherwise]staining him with your juices[end if]";
 		say ". The dragon can only rumble and [if boundmod is 1]moan in approval, lost in a haze of[otherwise]groan in disdain, muffled under the throes of his[end if] tainted ecstasy.";
 	otherwise:
 		now tempnum2 is 0;
@@ -622,7 +622,7 @@ to say FSDM_5: [Anal Catching]
 		if cocks of player > 0:
 			say "     Your own bliss quickly following suit, your cock[smn] unleash your [cum load size of player] load on the beast, [if tempnum2 is 1 and cock width of player > 19]further embarrassing him as he's now utterly drenched in cum[otherwise if tempnum2 is 1]further embarrassing him as your cum also stains him[otherwise if cock width of player > 19]utterly drenching him in your cum[otherwise]staining him with your cum[end if]";
 		otherwise if cunts of player > 0:
-			say "     Your own bliss quickly following suit, you cunt[sfn] aching against the the beast, [if tempnum2 is 1]further embarrassing him as he's stained with your juices[otherwise]staining him with your juices[end if]";
+			say "     Your own bliss quickly following suit, your cunt[sfn] aching against the beast, [if tempnum2 is 1]further embarrassing him as he's stained with your juices[otherwise]staining him with your juices[end if]";
 		if cocks of player > 0 or cunts of player > 0:
 			say ". The dragon can only rumble and [if boundmod is 1]moan in approval, lost in a haze of[otherwise]groan in disdain, muffled under the throes of his[end if] tainted ecstasy.";
 	otherwise:
@@ -706,14 +706,14 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Feral Sea Dragon"; 
+	now name entry is "Feral Sea Dragon";
 	now attack entry is "[one of]The dragons massive head slams against you.[or]The dragon slaps you against a cluster of rocks with its rudder like tail.[or]It slams you into the soft sand by hammering you with its narrow tail.[or]He stomps you into the soft sand with its webbed hand like paw.[at random]";
 	now defeated entry is "[fsdm loss]"; [ Text or say command used when Monster is defeated.]
-	now victory entry is "[fsdm attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
+	now victory entry is "[fsdm attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[fsdm desc]";[ Description of the creature when you encounter it.]
-	now face entry is "very much draconic in shape, adorned with a set of barbed and savage teeth.  Clearly aquatic in design, ridges and fins adorn the sides of your head, and you find it a challenge to maneuver any building with such an elongated neck";[ Reference "You have a (your text) face."] 
-	now body entry is "distinctly bloated and bulky fare, though somewhat streamlined in presentation, inferring that you'd be better suited for hauling it underwater, if your webbed and finned limbs were any indication";[ Body Description, format as the text "Your Body is (your text)"] 
-	now skin entry is "[one of]light blue, smooth[or]light blue[or]light blue, delicate[at random]";[Reference "You have (your text) skin"] 
+	now face entry is "very much draconic in shape, adorned with a set of barbed and savage teeth.  Clearly aquatic in design, ridges and fins adorn the sides of your head, and you find it a challenge to maneuver any building with such an elongated neck";[ Reference "You have a (your text) face."]
+	now body entry is "distinctly bloated and bulky fare, though somewhat streamlined in presentation, inferring that you'd be better suited for hauling it underwater, if your webbed and finned limbs were any indication";[ Body Description, format as the text "Your Body is (your text)"]
+	now skin entry is "[one of]light blue, smooth[or]light blue[or]light blue, delicate[at random]";[Reference "You have (your text) skin"]
 	now tail entry is "You have a long, somewhat bulky tail, top adorned with a sail-like fin.";
 	now cock entry is "[one of]spade-tipped and tapered[or]black[at random]";
 	now face change entry is "you undergo the effects of this infectious strain.  Your face draws forward, narrowing into a distinctly draconic muzzle, the features of which are subtly masculine and finned for aquatic travel, and you nearly fall over as you find your neck suddenly elongated"; [Reference "Your face feels funny as (your text)" ]
@@ -745,7 +745,7 @@ When Play begins:
 	now loot entry is "";
 	now lootchance entry is 0;
 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 5;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 5;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]large[or]bulky[or]aquatic[or]muscled[at random]";
 	now type entry is "[one of]draconic[or]reptilian[purely at random]";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
@@ -1118,7 +1118,7 @@ when play ends:
 						say ". After you assert your dominance, you make him lead you to his cave and claim it as your own.";
 						say "     Your days are filled with the constant abuse of your new servant, forcing him to attend to your every whim and desire. Over time ";
 						if cocks of player > 0:
-							say "[if girl is not banned and girl is not warded]your harem slowly grows in size, your overwhelming, bestial need requiring you to sate a desire for offspring by collecting some females just for you[otherwise]you subjugate more of them under your will[end if], and though you have plenty a subjects to sate your lust";
+							say "you[if girl is not banned and girl is not warded]r harem slowly grows in size, your overwhelming, bestial need requiring you to sate a desire for offspring by collecting some females just for you[otherwise] subjugate more of them under your will[end if], and though you have plenty a subjects to sate your lust";
 						otherwise:
 							say "you subjugate more of them under your will, and though your bestial need[if cunts of player > 0] for offspring[end if] is plenty sated by your subjects";
 						say " you remain particularly fond of abusing your first...";

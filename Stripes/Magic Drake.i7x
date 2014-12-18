@@ -1,5 +1,5 @@
-Version 1 of Magic Drake by Stripes begins here.
-[ Version 1.3 - Player victory receiving vaginal/anal options added ]
+Version 2 of Magic Drake by Stripes begins here.
+[ Version 2.0 - cock/ball staff adjustment ]
 
 "Adds a shemale drake sorceress creature to Flexible Survivals Wandering Monsters table."
 
@@ -8,8 +8,10 @@ Section 1 - Monster Responses
 mdasslevel is a number that varies.
 mdrakeloss is a number that varies.			[fights lost]
 mdrakebeaten is a number that varies.		[fights won]
+mdrakeoversized is a number that varies.		[times oversized own ass]
 mdrakeanal is a number that varies.			[times fucked by MD]
 mdstaffface is a truth state that varies.	[staff blasted face]
+mdmaxlossscene is a number that varies.	[helps cycle max loss scenes]
 
 when play begins:
 	add { "Magic Drake" } to infections of hermaphrodite;	[shemale]
@@ -27,7 +29,7 @@ to say losetomagicdrake:
 			now tail of player is tail entry;
 			now mdasslevel is 2;
 		otherwise:
-			say "     [if hp of player > 0]Submitting yourself to the dragoness's whims rather than fight further, you[otherwise]Resisting as best you can, you can eventually fight no longer and[end if] are groped and manhandled by your assailant.  She eyes your altered ass and gives it a hard swat.  'Oh, this will not do at all.  Where's the fine booty we were working on?  You're a naughty familiar and deserve to be punished,' she says with a teasing growl.  She grinds her throbbing cock against you, that five foot pillar of green flesh drooling precum onto you.";
+			say "     [if hp of player > 0]Submitting yourself to the dragoness's whims rather than fight further, you[otherwise]Resisting as best you can, you can eventually fight no longer and[end if] are groped and manhandled by your assailant.  She eyes your altered ass and gives it a hard swat.  'Oh, this will not do at all.  Where's the fine booty we were working on?  You're a naughty familiar and deserve to be punished,' she says with a teasing growl.  She grinds her throbbing cock against you, that five foot pillar of green flesh drooli ng precum onto you.";
 			say "     Drawing upon her magical powers, she takes her staff and slaps its headpiece against your ass repeatedly.  'Gj v fem yenf wef bmjl jbrab Ahrtob's sab-n-datbjl,' she chants incomprehensibly.  Tingles run through your flesh beyond just the sting of the spanking.  Looking back, you can see a glowing aura around the end of the staff that seems to spew forth from the golden phallus.  It clings to you and seeps into your ass, inducing a transformation to make it fuller and rounded.  As the dragoness cums, veritably soaking you in her excessive spooge, there comes an orgasmically pleasurable surge through you and a long, reptilian tail forms at your rear[if mdasslevel is 3].  By the time her spell's completed, that plump, rounded booty from before has returned[otherwise if mdasslevel is 4].  By the time her spell's completed, that impressively large booty from before has returned[otherwise if mdasslevel is 5].  By the time her spell's completed, that huge booty from before has returned[otherwise if mdasslevel is 6].  By the time her spell's completed, that titanic mega-booty from before has returned[end if].";
 			now tailname of player is "Magic Drake";
 			now tail of player is tail entry;
@@ -52,7 +54,7 @@ to say losetomagicdrake:
 		otherwise:
 			say "     Despite your attempts to fight, you're beaten by the dragoness, much to her delight.  'Don't you see, you willful creature?  There is no point in resisting your mistress.  I think it's time for some proper training so you can fulfill your duties as my familiar and whore,' she growls as she pushes you to the ground on all fours.  Standing in front of you, she grabs your draconic tail and yanks it up, showing off your ass all while offering up her throbbing cock to your mouth once again.  Knowing what she wants and that she'll take it by force if need be, you start licking her titanic green glans before opening your mouth.  With a firm press of her powerful hand, it's forced back into your mouth, stretching it wide to take the foot-thick pillar of meat.";
 		say "     Tightening her grip on your tail, she waves her free hand in the air, directing her staff to levitate.  It moves around behind you and soon you're feeling a cool, sticky prodding at your anus.  Your ass squirms at its touch, but the dragoness's grip is strong and your infected bottom wants to be filled.  With a slick pop, the golden phallus atop the staff pops into you and starts thrusting with a casual flick of the dragoness's talon.  You can't help but moan as you feel it pumping into you, your plump booty grinding back onto it and squeezing around it as you're spitroasted.";
-		say "     As she uses her magical staff like a dildo on you, your front end fares no better, her epic cock being forced into your mouth and down your throat, stretching your flesh to the point of bulging to be able to fit it.  You can feel it pulsating and throbbing with every beat of her heart, leaking more precum down your throat and into your belly.  She works her penis deeper to stretch out more of your insides, panting and rumbling in pleasure as she does.  She pushes and thrusts to get it roughly half-buried inside you before the the dragoness seems satisfied for now.  She swaps to thrusting back and forth inside your bulging throat and torso as she starts to chant.";
+		say "     As she uses her magical staff like a dildo on you, your front end fares no better, her epic cock being forced into your mouth and down your throat, stretching your flesh to the point of bulging to be able to fit it.  You can feel it pulsating and throbbing with every beat of her heart, leaking more precum down your throat and into your belly.  She works her penis deeper to stretch out more of your insides, panting and rumbling in pleasure as she does.  She pushes and thrusts to get it roughly half-buried inside you before the dragoness seems satisfied for now.  She swaps to thrusting back and forth inside your bulging throat and torso as she starts to chant.";
 		say "     'Lp pkob tath j'sis Lvtus vckum yuc-pck.  Jtin ffdse bab jg, ifb tabs safp romfet pof vckul jkfem bd,' she intones and you can feel a growing fullness in your ass.  That tingling energy from the staff wells up from it, flowing into you directly now.  You can feel it collecting around the headpiece as a thickening gooey coating, stretching your back door open even further as it builds up as a growing layer of soft, squishy goo over the firm, golden core.  Your hips widen markedly to deal with your growing ass, swelling up and out to become huge and heavy.";
 		say "     The dragoness rocks her hips faster and motions her talons to have the staff keep pace with her rapid thrusting.  All you can do is moan and squirm in growing pleasure as you're abused from both ends.  This eventually culminates in the sorceress's roaring release as she blasts a torrent of draconic cum down your throat and into your bloating belly.  She lets herself drain into you before withdrawing from your abused holes.  Gooey cum leaks from your overflowing mouth and some of the sparkling goo trickles out of your stretched asshole before eventually getting absorbed into you.  Collecting yourself, you stagger off with a wet sloshing of your overful belly.";
 		now mdasslevel is 5;
@@ -63,7 +65,8 @@ to say losetomagicdrake:
 		say "     Eventually this builds to a peak when the dragoness roars and cums hard, spraying her load.  You can feel the heavy, gurgling throbs of her balls pumping their white payload to paint the area with her seed[if cocks of player > 0 or cunts of player > 0].  You end up cumming as well, driven to climax by the incessant squirming of her scaly appendage inside you[otherwise].  This is further aggravated by the incessant squirming of her scaly appendage inside you[end if].  Eventually, you are released, the dragoness removing her bulk from you slowly and easing that textured tail from your hypersensitive hole.  Helping you up, the sorceress gives your ass a pat and a fondling.  'Yes, that's just how I like it.  You're ready to be my cock-sleeve next time we meet, my cute familiar,' she says, fingering your loose hole.  You're then left to stumble away, walking funny from both your comically overgrown ass and delightfully aching, widely gaping asshole.";
 		now mdasslevel is 6;
 	otherwise if mdasslevel is 6:		[maxed ass, ready for fucking]
-		if a random chance of 1 in 2 succeeds:
+		increase mdmaxlossscene by 1;
+		if the remainder after dividing mdmaxlossscene by 3 is 1:
 			say "     'Now, this is just how I like [']em,' the dragoness rumbles as she gropes your ultra-plump ass.  'Mmm... you look good enough to fuck.'  And with that, she pushes you over, yanks your tail into the air and slaps that huge pillar of meat across your back.  At five feet in length and a foot across, you shudder at what that thing will do to you.  Your enchanted ass though wiggles back as your tailhole relaxes and readies itself of its own accord, as if sensing its mistress at the ready.";
 			say "     'That's a good familiar.  You're my fine, fat-assed slut.  It's time for you to serve me.  I know you want it,' she rumbles, teasing her drooling glans against your pucker, which quivers and kisses at it.  You can feel your rear want her inside you, feeling empty without your mistress.  This feeling grows and by the time she's done teasing you, you're panting heavily and on the edge of begging for it.";
 			say "     Holding your ass tightly in both taloned hands, she thrusts [if hp of player > 0]slowly into you, letting your back passage stretch gradually at first[otherwise]into you firmly, sending a sharp twinge through your back passage as it's forced open[end if].  Your body stretches and bulges, your insides distorting and shifting to accommodate the massive intruder ploughing into you[if scalevalue of player < 3].  Her cock is so big compared to your [body size of player] [bodytype of player] form that you end up stretched around her meat like a fleshy condom[otherwise if scalevalue of player < 5].  Her cock, nearly as big as a normal person on its own, stuffs you impossibly full and leaves clear impression of it against your bulging flesh[otherwise].  Her cock, nearly as big as a normal person, stuffs you incredibly full, so much so there's a definite bulge formed by it[end if].  And even with this, the experience is incredibly arousing, your whole body squeezing and tugging at the pulsating pillar pounding away at you, working steadily deeper[if scalevalue of player < 5] until finally there's a phallic protrusion of her glans stretching your torso[end if].";
@@ -75,18 +78,18 @@ to say losetomagicdrake:
 				decrease humanity of player by 1;
 				increase libido of player by 5;
 			otherwise if cocks of player > 0 and cock width of player < cock width entry and "Female Preferred" is not listed in feats of player and "Modest Organs" is not listed in feats of player:
-				say "     While cumming, the draconic sorceress reaches around to [if cockname of player is listed in infections of internallist]rub over your hidden balls[otherwise]grab your twitching balls and knead them[end if].  Chanting softly, words obscured by the gurgling blasts of all the cum filling you, she sends magical power through her hands that causes your testes to grow further.  When she's done both her climax and her spell, she [if scalevalue of player < 3]peels[otherwise]eases[end if] you off her softening penis and leaves you there, bloated with her semen and leaking a steady flow of it form your gaping back door.";
+				say "     While cumming, the draconic sorceress reaches around to [if cockname of player is listed in infections of internallist]rub over your hidden balls[otherwise]grab your twitching balls and knead them[end if].  Chanting softly, words obscured by the gurgling blasts of all the cum filling you, she sends magical power through her hands that causes your testes to grow further.  When she's done both her climax and her spell, she [if scalevalue of player < 3]peel[otherwise]ease[end if]s you off her softening penis and leaves you there, bloated with her semen and leaking a steady flow of it form your gaping back door.";
 				increase cock width of player by 1;
 				now cock width of player is ( ( cock width of player * 3 ) + cock width entry ) / 4;
 				decrease humanity of player by 1;
 				increase libido of player by 5;
 			otherwise if breast size of player < breast size entry and "Flat Chested" is not listed in feats of player:
-				say "     While cumming, the draconic sorceress reaches around to [if breasts of player is 0 or breast size of player is 0]your flat chest and rubs it[otherwise]your bouncing tits and kneads them[end if].  Chanting softly, words obscured by the gurgling blasts of all the cum filling you, she sends magical power through her hands that causes your breasts to grow further.  When she's done both her climax and her spell, she [if scalevalue of player < 3]peels[otherwise]eases[end if] you off her softening penis and leaves you there, bloated with her semen and leaking a steady flow of it form your gaping back door.";
+				say "     While cumming, the draconic sorceress reaches around to your [if breasts of player is 0 or breast size of player is 0]flat chest and rubs it[otherwise]bouncing tits and kneads them[end if].  Chanting softly, words obscured by the gurgling blasts of all the cum filling you, she sends magical power through her hands that causes your breasts to grow further.  When she's done both her climax and her spell, she [if scalevalue of player < 3]peel[otherwise]ease[end if]s you off her softening penis and leaves you there, bloated with her semen and leaking a steady flow of it form your gaping back door.";
 				follow the breast change rule;
 				decrease humanity of player by 1;
 				increase libido of player by 3;
 			otherwise:
-				say "     While cumming, the draconic sorceress grips your ass all the tighter and kneads at your jiggly bottom.  Chanting softly, words obscured by the gurgling blasts of all the cum filling you, she sends magical power through her hands that sends more pleasure through you.  With it comes a greater longing to be with the dragoness who's remade you to be so beautiful and brought you amazing carnal delights.  When she's done both her climax and her spell, she [if scalevalue of player < 3]peels[otherwise]eases[end if] you off her softening penis and leaves you there, bloated with her semen and leaking a steady flow of it form your gaping back door.";
+				say "     While cumming, the draconic sorceress grips your ass all the tighter and kneads at your jiggly bottom.  Chanting softly, words obscured by the gurgling blasts of all the cum filling you, she sends magical power through her hands that sends more pleasure through you.  With it comes a greater longing to be with the dragoness who's remade you to be so beautiful and brought you amazing carnal delights.  When she's done both her climax and her spell, she [if scalevalue of player < 3]peel[otherwise]ease[end if]s you off her softening penis and leaves you there, bloated with her semen and leaking a steady flow of it form your gaping back door.";
 				decrease humanity of player by a random number between 2 and 4;
 				increase libido of player by a random number from 2 to 4;
 			if "Strong Psyche" is listed in feats of player, increase humanity of player by 1;
@@ -95,7 +98,7 @@ to say losetomagicdrake:
 			if "Cold Fish" is listed in feats of player, decrease libido of player by 1;
 			if libido of player > 100, now libido of player is 100;
 			increase mdrakeanal by 1;
-		otherwise:
+		otherwise if the remainder after dividing mdmaxlossscene by 3 is 2:
 			say "     [if hp of player > 0]Choosing to submit rather than fight on, you allow the huge dragoness to push you to the ground.  Thinking you know what comes next, you move onto all fours, raising your inflated backside in the air with trepidation as well as a twinge of excitement[otherwise]Try as you might, you eventually fall before the mighty dragoness.  With the fight knocked out of you, she pushes you to the ground easily.  Fearing what will come next, you try to scramble away before she can pin you down on all fours[end if].  But the shemale creature surprises you, grabbing you just above the knees and raising your legs up into the air.  Now with your face and shoulders pressed to the ground, all you can do is prepare for the inevitable reaming.  The dragoness takes a little time to check out your massive backside, first lusting over it with her eyes before fingering your stretchy hole.  Yet despite your concerns for what's to come, your body - that draconic booty especially - grows excited and soon you're panting [if hp of player > 0]in growing anticipation[otherwise]regardless of your attempts to resist[end if].";
 			say "     'Such a cockslut you are.  I knew you'd be a fine familiar,' she rumbles, popping her fist free.  'You have that air of someone who longs for a good, full fucking.  Isn't that right?'  Before you can even attempt a response, your recently vacated anus is plugged full with the even larger intrusion of her cock, reducing your words to an incoherent moan[if scalevalue of player < 3].  Her cock is so big compared to your [body size of player] [bodydesc of player] form that you end up stretched around her meat like a fleshy condom[otherwise if scalevalue of player < 5].  Her cock, nearly as big as a normal person on its own, stuffs you impossibly full and leaves clear impression of it against your bulging flesh[otherwise].  Her cock, nearly as big as a normal person, stuffs you incredibly full, so much so there's a definite bulge formed by it[end if].  As she pounds deeper into you, your insides are stretched or pushed out of the way to make room for the massive, throbbing penis.";
 			say "     Now stuffed full of cock, your stretched-out chest is pressed to the ground by the weight of the meat filling you.  All you can do is moan weakly as she pumps into you over and over again by yanking on your legs.  And while this should be fatal, or at least quite painful, it instead becomes increasingly pleasurable for you.  Your hands stop trying to support yourself and instead move to rubbing over your [if scalevalue of player < 3]phallus-encasing[otherwise if scalevalue of player < 5]distorted[otherwise]bulged[end if] body, also better sandwiching your sensitive flesh between the ground and the throbbing glans inside you.";
@@ -103,6 +106,34 @@ to say losetomagicdrake:
 			say "     Lost in a haze of pleasure and the wet feeling of overfullness, it takes some time to realize that her climax has ended.  After taking a minute to enjoy the gooey feeling of your cum-stuffed insides around her softening member, she pulls out with a slurping pop.  She slaps her sticky shaft across your back, splattering you up and down with her seed before heading off.";
 			say "     'I'll leave you to enjoy that for now, my [if hp of player <= 0]reluctant [end if]familiar.  I look forward to savouring that beautiful butt of your again soon, my pet.'";
 			increase mdrakeanal by 1;
+		otherwise:
+			if hp of player > 0:	[submitted]
+				say "     The seemingly magical dragoness smiles as she runs her taloned hands gently over you, petting and caressing you even as she gropes your ultra-plump ass.  'That's better, my sexy familiar.  You'll see things are much nicer if you don't resist me.  Mistress knows best,' she rumbles, fingering your asshole.  Your pucker, wide and stretchy now from the repeated growth, welcomes the wriggling fingers and you moan softly.  Reaching around to your front, she [if cocks of player > 1]takes hold of one of your cocks and starts stroking it as well[otherwise if cocks of player > 0]takes hold of your cock and starts stroking it[otherwise if cunts of player > 0]teases across your puss[yfn], rubbing your wet folds and sensitive clit[sfn][otherwise]rubs your bare crotch with softly pleasurable motions[end if].";
+				say "     This excites you further and your expanded butthole relaxes further, almost tugging on her hand until she pushes her fist fully into it.  Getting fisted is somewhat more satisfying and fulfilling, but it also makes you all the more aware of how your ass can take - no, needs to take - more.  And that big, throbbing cock of hers pressed against your body further increases that longing.  The dragoness is clearly aware of your growing need as well and rumbles happily, working both hands faster.  'Does my fucktoy familiar need something?  You want me to fuck you, don't you?' she purrs softly in your ear.  You release another moan and your rectum squeezes firmly around her pumping fist, your [bodydesc of player] body rubbing back against her enormous rod.  After that, all it takes is a lick along the edge of your ear and a sensual tickle [if cocks of player > 0]to your prostate[otherwise]along your sensitive anal walls[end if] to have you moan out in need, almost begging the dragoness to fuck you.";
+				attempttowait;
+				say "     She rumbles happily as you assent, giving your ear another lick.  'That's my good, sexy familiar,' she purrs, easing her fist out slowly.  Spreading your cheeks wide, she moves to get her mighty cock lined up before thrusting her thickness into your stretched-out hole.  She enters you with a smooth, steady motion and you give one long moan of delight as she does.  Your butt, after all of that warming up and teasing, is more than ready to take her into it and the penetration and sense of growing fullness is wonderful.  Soon enough, she's buried the whole of her majestic penis into you[if scalevalue of player < 3].  Her cock is so big compared to your [body size of player] [bodytype of player] form that you end up stretched around her meat like a fleshy condom[otherwise if scalevalue of player < 5].  Her cock, nearly as big as a normal person on its own, stuffs you impossibly full and leaves clear impression of it against your bulging flesh[otherwise].  Her cock, nearly as big as a normal person, stuffs you incredibly full, so much so there's a definite bulge formed by it[end if].";
+				say "     Pressed to the ground by the weight of cock filling you, you squeeze and wriggle over the pulsing rod filling you.  You grip the ground and steady yourself as best you can as she eases back a couple of feet and thrusts back into you.  Soon she's buggering you steadily and your pleasure-addled body struggles to maintain a grip so your mistress can continue to screw you senseless.  The much-needed fucking is almost mind-numbingly good, almost literally fucking your brains out - eroding your will and humanity a little more.  And just as you start to notice this happening, the dragoness cums and cums hard.  Almost roaring she screams her lustful release so loud, you gasp as the air is pushed from your lungs as a torrent of semen floods your body, bloating your belly.  The sudden rush of ecstasy that comes with this also pushes your thoughts of resistance from your mind as you succumb momentarily to the carnal delights[if cocks of player > 0 or cunts of player > 0] and orgasm powerfully[end if].  Her grand output is more than enough to [if scalevalue of player < 3]fill you to overflowing, the excess gurgling out your mouth and spurting from your overstuffed rectum[otherwise if scalevalue of player < 5]fill you to the point of bloating your body with her seed[otherwise]fill your belly to a sloshing fullness that leaves it markedly plumper[end if].[mimpregchance][mimpregchance]";
+				attempttowait;
+				say "     After stuffing your insides with her gooey cum, she pulls out of you with a slurping pop.  Striding around to your front, she brings her sticky and still leaking shaft to your lips.  Like a good pet, you do your best to lick and suck at it[if scalevalue of player < 3] even if you're unable to swallow any more as her cum still drools from your mouth[otherwise if scalevalue of player < 5] even though there's no room left in your belly for the cum you try to swallow[otherwise], barely managing to swallow down a few more mouthfuls of cum into your already overstuffed belly[end if].  The dragoness seems quite pleased with herself and you can't help but be pleased by this.  'Mmm... I'll leave that all [']soak in['],' she says with a rumbling purr.  'If you keep being a good slut like that, you'll be properly ready to be my familiar very soon.  Won't that be lovely?'  She caresses your overstuffed, leaking butt and fingers your gooey hole, sendings shivers of delight through you, making you long a little more to be a good pet for her.";
+				increase mdrakeanal by 1;
+				decrease humanity of player by a random number between 5 and 10;
+				increase libido of player by a random number from 3 to 6;
+			otherwise:		[lost combat]
+				say "     The seemingly magical dragoness grumbles as she runs her taloned hands gently over you, groping you roughly even as she fondles your ultra-plump ass.  'Why must you resist me so, my sexy familiar?  You'd find things much more enjoyable if you didn't resist me.  You should obey your mistress,' she growls, fingering your asshole.  Your pucker, wide and stretchy now from the repeated growth and abuse, welcomes the wriggling fingers even as you groan and try to squirm free.  Reaching around to your front, she [if cocks of player > 1]grabs hold of one of your cocks and starts pumping it as well[otherwise if cocks of player > 0]grabs hold of your cock and starts pumping it[otherwise if cunts of player > 0]gropes at your puss[yfn], rubbing your wet folds and sensitive clit[sfn][otherwise]grabs your bare crotch[end if] to help curtail your flagging attempts to resist.";
+				say "     As you grow increasingly aroused despite yourself, your expanded butthole relaxes further, almost tugging on her hand until she pushes her fist fully into it.  You groan louder in shock, surprise and more than a little pleasure as she changes to fisting you.  But it also makes you all the more aware of how your ass can take - no, needs to take - more.  And that big, throbbing cock of hers pressed against your body further increases that dreadful longing.  The dragoness is clearly aware of your growing need as well and rumbles teasingly, working both hands faster.  'Do you need something, you cocksleeve slut?  You want me to fuck you, don't you?  Say it,' she purrs softly in your ear.  You release another moan and your rectum squeezes firmly around her pumping fist, your [bodydesc of player] body rubbing back against her enormous rod.  You shake your head and bite your lip, trying to hold back, so she keeps it up.  She licks along the edge of your ear and presses firmly [if cocks of player > 0]against your now-throbbing prostate[otherwise]against your sensitive anal walls[end if].  Eventually this wears you down and you moan out in need, almost begging the dragoness to fuck you at this point.";
+				attempttowait;
+				say "     She chuckles as you assent, giving your ear another lick.  'See.  Now was that so hard?' she purrs teasingly.  She pulls her fist out with a quick pop that leaves your asshole gaping.  Spreading your cheeks wide, she moves to get her mighty cock lined up and thrusting her thickness into that stretched-out hole.  She enters you with a swift, steady motion and you give one long moan of strain and delight as she does.  Your butt, after all of that warming up and teasing, is quite ready to take her into it and the penetration and sense of growing fullness is shockingly wonderful.  Soon enough, she's buried the whole of her majestic penis into you[if scalevalue of player < 3].  Her cock is so big compared to your [body size of player] [bodytype of player] form that you end up stretched around her meat like a fleshy condom[otherwise if scalevalue of player < 5].  Her cock, nearly as big as a normal person on its own, stuffs you impossibly full and leaves clear impression of it against your bulging flesh[otherwise].  Her cock, nearly as big as a normal person, stuffs you incredibly full, so much so there's a definite bulge formed by it[end if].";
+				say "     Pressed to the ground by the weight of cock filling you, you squeeze and wriggle over the pulsing rod filling you.  You struggle to grip the ground and steady yourself as best you can as she eases back a couple of feet and thrusts back into you hard.  Soon she's buggering you steadily and your pleasure-addled body gets pushed slowly across the ground each time.  That is until your head and shoulders are pressed against the base of a wall, allowing you to remain steady so your mistress can continue to screw you senseless.  The much-needed fucking is almost mind-numbingly good, almost literally fucking your brains out.  A part of you wonders why you would even resist this, only partly realizing your will and humanity are being eroded a little more.  And just as you start to notice this happening, the dragoness cums and cums hard.  Almost roaring she screams her lustful release so loud, you gasp as the air is pushed from your lungs as a torrent of semen floods your body, bloating your belly.  The sudden rush of ecstasy that comes with this also pushes your thoughts of resistance from your mind as you succumb momentarily to the carnal delights[if cocks of player > 0 or cunts of player > 0] and orgasm powerfully[end if].  Her grand output is more than enough to [if scalevalue of player < 3]fill you to overflowing, the excess gurgling out your mouth and spurting from your overstuffed rectum[otherwise if scalevalue of player < 5]fill you to the point of bloating your body with her seed[otherwise]fill your belly to a sloshing fullness that leaves it markedly plumper[end if].[mimpregchance][mimpregchance]";
+				attempttowait;
+				say "     After stuffing your insides with her gooey cum, she yanks out of you with a slurping pop that makes your ass quiver.  Hauling you back from the wall, she turns you around so she can press her sticky and still-leaking shaft to your face.  She smears her semen across your face and presses her gaping cumslit to your lips.  Knowing what the she wants, you do your best to lick and suck at it[if scalevalue of player < 3] even if you're unable to swallow any more as her cum still drools from your mouth[otherwise if scalevalue of player < 5] even though there's no room left in your belly for the cum you try to swallow[otherwise], barely managing to swallow down a few more mouthfuls of cum into your already overstuffed belly[end if].  The dragoness seems quite pleased with herself and you can't help but be pleased by this.  'Mmm... I'll leave this lesson to [']soak in['],' she says with a rumbling purr.  'Maybe that'll teach you to be a good slut next time.  But don't worry, we'll have you properly ready to be my familiar soon enough.  Won't that be lovely?'  She slaps your overstuffed, leaking butt and fingers your gooey hole.  This sends shivers of delight through you, making a part of you long a little more to be a good pet for her.";
+				increase mdrakeanal by 1;
+				decrease humanity of player by a random number between 4 and 7;
+				increase libido of player by a random number from 2 to 5;
+			if "Strong Psyche" is listed in feats of player, increase humanity of player by 2;
+			if "Weak Psyche" is listed in feats of player, decrease humanity of player by 2;
+			if "Horny Bastard" is listed in feats of player, increase libido of player by 1;
+			if "Cold Fish" is listed in feats of player, decrease libido of player by 1;
+			if libido of player > 100, now libido of player is 100;
 	say "[mdscaletweak]";
 	if mdrakeanal >= 3 and "Twisted Capacity" is not listed in feats of player:
 		say "     From the way your asshole and insides have been so thoroughly used, abused and stretched by the dragoness's cock, you have a feeling that you'll never quite be the same again.";
@@ -226,23 +257,72 @@ to say beatthemagicdrake:
 			now sextablerun is 0;
 			blank out the whole of table of fucking options;
 			if tailname of player is "Magic Drake":
-				say "     Before you depart, you look over the drake's strange staff.  The headpiece is still aglow with eldritch energy that's leaking from its phallic end.  You might be able to use to adjust the size of that [if mdasslevel is 2]bubble-butt[otherwise if mdasslevel is 3]plump[otherwise if mdasslevel is 4]large[otherwise if mdasslevel is 5]huge[otherwise]mega-booty[end if] ass she's given you.";
+				say "     Before you depart, you look over the drake's strange staff.  The headpiece is still aglow with eldritch energy that's leaking from its phallic end.  You might be able to use to adjust the size of that [if mdasslevel is 2]bubble-butt[otherwise if mdasslevel is 3]plump[otherwise if mdasslevel is 4]large[otherwise if mdasslevel is 5]huge[otherwise]mega-booty[end if] ass she's given you";
 				if mdasslevel < 6:
 					choose a blank row in table of fucking options;
 					now title entry is "Increase size";
 					now sortorder entry is 1;
 					now description entry is "try using the magic staff to round out your ass further";
+				otherwise if mdasslevel is 6:
+					choose a blank row in table of fucking options;
+					now title entry is "One step beyond";
+					now sortorder entry is 1;
+					now description entry is "see if you can get your ass even bigger still";
 				if mdasslevel > 2:
 					choose a blank row in table of fucking options;
 					now title entry is "Decrease size";
 					now sortorder entry is 2;
 					now description entry is "try using the magic staff to reduce your ass";
 			otherwise:
-				say "     Before you depart, you look over the drake's strange staff.  The headpiece is still aglow with eldritch energy that's leaking from its phallic end.  You feel an odd urge to use it to restore that [if mdasslevel is 2]bubble-butt[otherwise if mdasslevel is 3]plump[otherwise if mdasslevel is 4]large[otherwise if mdasslevel is 5]huge[otherwise]mega-booty[end if] ass she'd given you.";
+				say "     Before you depart, you look over the drake's strange staff.  The headpiece is still aglow with eldritch energy that's leaking from its phallic end.  You feel an odd urge to use it to restore that [if mdasslevel is 2]bubble-butt[otherwise if mdasslevel is 3]plump[otherwise if mdasslevel is 4]large[otherwise if mdasslevel is 5]huge[otherwise]mega-booty[end if] ass she'd given you";
 				choose a blank row in table of fucking options;
 				now title entry is "Restore it";
 				now sortorder entry is 3;
 				now description entry is "try using the magic staff to get your draconic butt back";
+			if cocks of player > 0:
+				say ".  Alternatively, you might also try using it to alter your manhood.";
+			otherwise:
+				say ".";
+[			say ".  Alternatively, you might also try using it to alter your groin or your breasts.";	[*** - once cunt/breasts added]	]
+			if cocks of player > 0:
+				choose a blank row in table of fucking options;
+				now title entry is "Cock growth";
+				now sortorder entry is 4;
+				now description entry is "attempt some magical male enhancement";
+				choose a blank row in table of fucking options;
+				now title entry is "Ball growth";
+				now sortorder entry is 6;
+				now description entry is "try plumping up those balls of yours";
+				if cock length of player > 1:
+					choose a blank row in table of fucking options;
+					now title entry is "Cock reduction";
+					now sortorder entry is 5;
+					now description entry is "attempt to shrink [if cocks of player > 1]those [cock size desc of player] cocks[otherwise]that [cock size desc of player] cock[end if] of yours down a little";
+				if cock width of player > 1:
+					choose a blank row in table of fucking options;
+					now title entry is "Ball reduction";
+					now sortorder entry is 7;
+					now description entry is "attempt to shrink your [ball size] down a bit";
+[			if cunts of player > 0:
+				choose a blank row in table of fucking options;
+				now title entry is "Cunt growth";
+				now sortorder entry is 8;
+				now description entry is "try making your cunt be able to take more";
+				if cunt length of player > 1 or cunt width of player > 1:
+					choose a blank row in table of fucking options;
+					now title entry is "Cunt reduction";
+					now sortorder entry is 9;
+					now description entry is "attempt to shrink your[if cocks of player > 1][cunt size desc of player] cunts[otherwise][cunt size desc of player] cunt[end if] down a little";
+			if breasts of player > 0:
+				choose a blank row in table of fucking options;
+				now title entry is "Breast expansion";
+				now sortorder entry is 10;
+				now description entry is "try to give yourself bigger melons";
+				if breast size of player > 0:
+					choose a blank row in table of fucking options;
+					now title entry is "Breast reduction";
+					now sortorder entry is 11;
+					now description entry is "attempt to shrink those [short breast size desc of player] tits of yours";	]
 			repeat with y running from 1 to number of filled rows in table of fucking options:
 				choose row y from the table of fucking options;
 				say "[link][y] - [title entry][as][y][end link][line break]";
@@ -264,8 +344,31 @@ to say beatthemagicdrake:
 							now mdstaffaction is 2;
 						otherwise if nam is "Restore it":
 							now mdstaffaction is 3;
-						say "     Taking the dragoness's staff in hand, you try to bend its charged power to your will.  Pointing it at your rear, you make several attempts to get it to work for you.  You try magical words and phrases, various gestures, stroking its cock-like headpiece and even banging it on the ground in a bout of frustration.  It eventually ends up firing off a sticky blast of sparkling energy without warning when you ";
+						otherwise if nam is "One step beyond":
+							now mdstaffaction is 4;
+						otherwise if nam is "Cock growth":
+							now mdstaffaction is 5;
+						otherwise if nam is "Cock reduction":
+							now mdstaffaction is 6;
+						otherwise if nam is "Ball growth":
+							now mdstaffaction is 7;
+						otherwise if nam is "Ball reduction":
+							now mdstaffaction is 8;
+						otherwise if nam is "Cunt growth":
+							now mdstaffaction is 9;
+						otherwise if nam is "Cunt reduction":
+							now mdstaffaction is 10;
+						otherwise if nam is "Breast expansion":
+							now mdstaffaction is 11;
+						otherwise if nam is "Breast reduction":
+							now mdstaffaction is 12;
+						if mdstaffaction < 4:
+							say "     Taking the dragoness's staff in hand, you try to bend its charged power to your will.  Pointing it at your rear, you make several attempts to get it to work for you.  You try magical words and phrases, various gestures, stroking its cock-like headpiece and even banging it on the ground in a bout of frustration.  It eventually ends up firing off a sticky blast of sparkling energy without warning when you ";
+						otherwise:
+							say "     Taking the dragoness's staff in hand, you try to bend its charged power to your will.  Pointing it at your [if mdstaffaction is 5 or mdstaffaction is 6]cock[otherwise if mdstaffaction is 7 or mdstaffaction is 8]balls[otherwise if mdstaffaction is 9 or mdstaffaction is 10]cunt[otherwise if mdstaffaction is 11 or mdstaffaction is 12]chest[end if], you make several attempts to get it to work for you.  You try magical words and phrases, various gestures, stroking its cock-like headpiece and even banging it on the ground in a bout of frustration.  It eventually ends up firing off a sticky blast of sparkling energy without warning when you ";
 						let x be a random number between 1 and 5;
+						if mdstaffaction is 9 or mdstaffaction is 10:
+							let x be a random number between 1 and 6;
 						if mdstaffface is true and x is 1:
 							now x is a random number between 2 and 5;
 						if x is 1:
@@ -289,22 +392,70 @@ to say beatthemagicdrake:
 								say "spank your bottom with it a few times";
 							otherwise if x is 4:
 								say "flail it around wildly, initially spewing magic into the air";
-							otherwise:
+							otherwise if x is 5:
 								say "stroke it vigorously";
-							if mdstaffaction is 1 or mdstaffaction is 3:
+							otherwise if x is 6:
+								say "shoving its phallic headpiece right into your hot cunny.  This blasts the thick, tingly magic right into your clenching tunnel in a rush of sexual pleasure that never quite fades";
+								increase libido of player by 10;
+							if mdstaffaction is odd:
 								say ".  The dragoness laughs at your confused attempt.  'And that is why you're meant to be a familiar and nothing more,' she teases.";
+							otherwise if mdstaffaction is 4:
+								say ".  The dragoness laughs at your confused attempt.  'Oh, you've done it now, my foolish familiar,' she chuckles, still fighting to right herself.";
 							otherwise:
 								say ".  The dragoness is quite upset by your actions.  'You're being a very -ngg- naughty familiar.  I'll definitely need to punish -grunt- punish you severely -oof- as soon as I can get up,' she growls in frustration as she fails to rise and stop you.";
-							say "     The magic does end up working though, seeping into you with a pleasant tingle that suffuses your rear";
-							if mdstaffaction is 1:
-								increase mdasslevel by 1;
-								say ".  This causes it to swell and inflate, rounding out further until it becomes [if mdasslevel is 3]sexily plump[otherwise if mdasslevel is 4]quite large[otherwise if mdasslevel is 5]rather huge[otherwise]titanically huge[end if].  Despite being upset with you for using her magic yourself, the sorceress certainly seems pleased with the outcome, at least.";
-							otherwise if mdstaffaction is 2:
-								decrease mdasslevel by 1;
-								say ".  This comes with a drop in pressure on your hips as your bottom shrinks down.  The angry dragoness growls impotently as it loses several inches in size, dropping down to a [if mdasslevel is 2]cute bubble-butt[otherwise if mdasslevel is 3]plump rear[otherwise if mdasslevel is 4]large ass[otherwise]huge bottom[end if] that feels a little more manageable for you to deal with.";
+							if mdstaffaction <= 4:		[ass adjustments]
+								say "     The magic does end up working though, seeping into you with a pleasant tingle that suffuses your rear";
+								if mdstaffaction is 1:
+									increase mdasslevel by 1;
+									say ".  This causes it to swell and inflate, rounding out further until it becomes [if mdasslevel is 3]sexily plump[otherwise if mdasslevel is 4]quite large[otherwise if mdasslevel is 5]rather huge[otherwise]titanically huge[end if].  Despite being upset with you for using her magic yourself, the sorceress certainly seems pleased with the outcome, at least.";
+								otherwise if mdstaffaction is 2:
+									decrease mdasslevel by 1;
+									say ".  This comes with a drop in pressure on your hips as your bottom shrinks down.  The angry dragoness growls impotently as it loses several inches in size, dropping down to a [if mdasslevel is 2]cute bubble-butt[otherwise if mdasslevel is 3]plump rear[otherwise if mdasslevel is 4]large ass[otherwise]huge bottom[end if] that feels a little more manageable for you to deal with.";
+								otherwise if mdstaffaction is 3:
+									say ".  This power makes your ass quiver and your spine throb.  Within a few minutes, the reptilian ass and tail you had before have returned, [if mdasslevel is 2]round[otherwise if mdasslevel is 3]plump[otherwise if mdasslevel is 4]large[otherwise if mdasslevel is 5]huge[otherwise]enormous[end if] and beautiful to the whistling dragoness.";
+								otherwise:
+									say "[mdstaff_overgrown]";
+							otherwise if mdstaffaction <= 10:		[sexual growth/reduction]
+								if cockname of player is not "Magic Drake":
+									say "     The magic doesn't quite end up working as expected though, spraying all across your groin.  It seeps into your crotch with a pleasant tingle that suffuses your c[if cocks of player > 0 and cunts of player > 0]ock[smn] and cunt[sfn][otherwise if cocks of player > 0]ock[smn][otherwise]unt[sfn][end if].  The magical energy clings to your sensitive loins and sinks right into them, causing them to shift and change.  The flesh of your loins changes and your [if cocks of player > 0 and cunts of player > 0]manhood and your pussy lips are[otherwise if cocks of player > 0]manhood is[otherwise]pussy lips are[end if] transformed, taking on a rich, green hue as you become infected, much to the dragoness's amused delight.";
+									choose row monster from the table of random critters;
+									now cockname of player is "Magic Drake";
+									now cock of player is cock entry;
+									increase libido of player by 5;
+								otherwise if mdstaffaction is 5:		[cock growth]
+									increase cock length of player by 2;
+									follow the cock descr rule;
+									increase libido of player by 5;
+									say "     The magic does end up working though, seeping into you with a pleasant tingle that suffuses your green cock.  This causes it to swell and grow a little larger, lengthening until it becomes a [cock size desc of player] [cock length of player]-incher.  You try to keep going, but the pleasure of this sends you over the edge, moaning loudly.  The remaining magical energy gets funnelled into your climax and you splatter a larger-than-normal mess of fresh seed onto the ground.  Despite being upset with you for using her magic yourself, the sorceress certainly seems pleased with the outcome, at least.";
+								otherwise if mdstaffaction is 6:		[cock reduction]
+									decrease cock length of player by 2;
+									if cock length of player < 1, now cock length of player is 1;
+									follow the cock descr rule;
+									decrease libido of player by 3;
+									say "     The magic does end up working though, seeping into you with a pleasant tingle that suffuses your green cock[smn].  This causes [if cocks of player > 1]them[otherwise]it[end if] to shrink down, losing [if cock length of player > 2]a couple of inches[otherwise]an inch[end if].  You try to keep going, but the pleasure of this sends you over the edge, moaning loudly.  The remaining magical energy gets funnelled into your climax and you splatter a larger-than-normal mess of fresh seed onto the ground[if cock length of player is 1].  As your tiny prick[smn] didn't go away completely, you doubt you'll be able to shrink yourself down any further this way[end if].  The angry dragoness growls impotently as your sexy penis[esmn] shrink[smv], leaving [if cocks of player > 1]them[otherwise]it[end if] feeling a little more manageable for you to deal with.";
+								otherwise if mdstaffaction is 7:		[ball growth]
+									increase cock width of player by 1;
+									follow the cock descr rule;
+									increase libido of player by 5;
+									if the remainder after dividing the cock width of player by 3 is 0, increase cock width of player by 1;
+									say "     The magic does end up working though, seeping into you with a pleasant tingle that suffuses your transformed testes.  They swell up a little larger, growing until they become a [short ball size] pair of draconic balls.  You try to keep going, but the pleasure of this sends you over the edge, moaning loudly.  The remaining magical energy gets funnelled into your climax and you splatter a considerably larger-than-normal mess of fresh seed onto the ground.  Despite being upset with you for using her magic yourself, the sorceress certainly seems pleased with the outcome, at least.";
+								otherwise if mdstaffaction is 8:		[ball reduction]
+									decrease cock width of player by 1;
+									if the remainder after dividing the cock width of player by 3 is 0, decrease cock width of player by 1;
+									if cock width of player < 1, now cock width of player is 1;
+									follow the cock descr rule;
+									decrease libido of player by 3;
+									say "     The magic does end up working though, seeping into you with a pleasant tingle that suffuses your transformed testes.  This causes them to shrink down in your scaled scrotum.  You try to keep going, but between the compression on the load already in them and the pleasure of the change itself, you're sent over the edge, moaning loudly.  The remaining magical energy gets funnelled into your climax and you splatter a much larger-than-normal mess of fresh seed onto the ground[if cock width of player is 1].  As your tiny balls didn't go away completely, you doubt you'll be able to shrink them down any further this way[end if].  The angry dragoness growls impotently as your juicy nuts shrinks, leaving you with a set that feels a little more manageable for you to deal with.";
+								otherwise if mdstaffaction is 9:		[cunt growth]
+									say "***";
+								otherwise if mdstaffaction is 10:		[cunt reduction]
+									say "***";
 							otherwise:
-								say ".  This power makes your ass quiver and your spine throb.  Within a few minutes, the reptilian ass and tail you had before have returned, [if mdasslevel is 2]round[otherwise if mdasslevel is 3]plump[otherwise if mdasslevel is 4]large[otherwise if mdasslevel is 5]huge[otherwise]enormous[end if] and beautiful to the whistling dragoness.";
-						say "     Now done, for better or for ill, you drop the spent staff and leave the grounded and bottom-heavy dragoness struggling to roll herself over so she can get up.";
+								say "***breast growth/reduction here.";
+						if libido of player < 0, now libido of player is 0;
+						if libido of player > 100, now libido of player is 100;
+						if mdstaffaction is not 4 and x is not 1:
+							say "     Now done, for better or for ill, you drop the spent staff and leave the grounded and bottom-heavy dragoness struggling to roll herself over so she can get up.";
 				otherwise if calcnumber is 0:
 					say "     Resisting the temptation to meddle with it, you leave the strange artifact alone.";
 					now sextablerun is 1;
@@ -348,13 +499,13 @@ to say mdrake_pvictory_04:
 	say "     Feeling your body's desire to have that mighty cock of hers in you, you decide to give into that urge - but wanting it on your own terms.  You stride over to the sorceress and take hold of her throbbing manhood, rubbing along its underside to push out a gooey gob of precum which you then spread over the pulsating flesh.  As you move yourself into position and line her glans with your [cunt size desc of player] pussy, she moans in needy anticipation even as she struggles to get up.";
 	say "     'Oh you naughty pet.  It's your ass your mistress wants,' she growls.  But her displeasure is soon cut off as you push yourself several inches down onto her green cock and she releases a rumble of pleasure.  You pause there, enjoying the feel of it stretching you open and also enjoying her increasingly needy moans for you to ride her.  She squirms and tries to rocks her hips beneath you, but can't really get the leverage to push those ultra-wide hips off the ground.  You delight in teasing her like this, [if breast size of player > 0]playing with your breasts and [end if][if cocks of player > 0]stroking your cock[smn] and [end if]fingering your clit[sfn] in a lewd display that riles her up all the more.";
 	say "     Only once your own arousal gets to be too much do you finally sink yourself down further onto her titanic pillar.  Getting as much of it as you can, you wriggle yourself over the belly-stuffing log before slowly rising up again.  You slide up and down it like this a few times, both letting you savour it and giving your body a chance to adjust in the hopes of getting even just a few more inches in[if scalevalue of player < 3].  Her cock is so big compared to your [body size of player] [bodydesc of player] form that you end up stretched around her meat like a fleshy condom every time you lower yourself down[otherwise if scalevalue of player < 5].  Her cock, nearly as big as a normal person on its own, stuffs you impossibly full and leaves clear impression of it against your bulging flesh[otherwise].  Her cock, nearly as big as a normal person, stuffs you incredibly full, so much so there's a definite bulge formed by it[end if].  Your pace does pick up though and soon you're riding up and down it as quickly as your legs can manage, weak and shaky with the physical pleasure you're feeling.  The dragoness isn't doing much better, panting and rumbling with unbridled lust as her meat pulses and throbs in you hot, steamy tunnel.";
-	say "     Eventually, it ends up being too much for the both of you and she ends up cumming moments before you.  The mighty blasts of her semen pumping into you and flooding your womb are enough to send you over the edge into multi-orgasmic bliss[if cocks of player > 0].  Your own cock[smn] blast[smv] messy streams of your seed across the dragoness's face and body[end if][if scalevalue of player < 3].  Her semen ends up filling you to the point of overflowing as your body sloshes beyond fullness[otherwise if scalevalue of player < 5].  Her semen ends up filling you to the point of rounding your body with her fills you to the point of rounding your body with fullness[otherwise].  Her semen ends up filling your belly to a sloshing fullness that leaves it visibly plumper[end if].  The sheer weight of the the load stuffed into you drags you down further onto her firing cannon and leaves you stuck there while you recover your senses and strength enough to slide off.  The draconess is left in a sticky, messy daze after her much-needed release.[fimpregchance][fimpregchance]";
+	say "     Eventually, it ends up being too much for the both of you and she ends up cumming moments before you.  The mighty blasts of her semen pumping into you and flooding your womb are enough to send you over the edge into multi-orgasmic bliss[if cocks of player > 0].  Your own cock[smn] blast[smv] messy streams of your seed across the dragoness's face and body[end if][if scalevalue of player < 3].  Her semen ends up filling you to the point of overflowing as your body sloshes beyond fullness[otherwise if scalevalue of player < 5].  Her semen ends up filling you to the point of rounding your body with her fills you to the point of rounding your body with fullness[otherwise].  Her semen ends up filling your belly to a sloshing fullness that leaves it visibly plumper[end if].  The sheer weight of the load stuffed into you drags you down further onto her firing cannon and leaves you stuck there while you recover your senses and strength enough to slide off.  The draconess is left in a sticky, messy daze after her much-needed release.[fimpregchance][fimpregchance]";
 
 to say mdrake_pvictory_05:
 	say "     Feeling your body's desire to have that mighty cock of hers in you, you decide to give into that urge - but wanting it on your own terms.  You stride over to the sorceress and take hold of her throbbing manhood, rubbing along its underside to push out several gooey gobs of precum.  You spread this over the pulsating flesh, getting it nice and lubed up.  As you move yourself into position and line her glans with your asshole, she stops struggling to get up and moans in needy anticipation.";
 	say "     'Now that's better, my pet.  But if you wanted it, I would have gladly given it to you,' she rumbles as you push yourself several inches down onto her green cock.  You pause there, enjoying the feel of it stretching you open and also enjoying her increasingly needy moans for you to ride her.  She squirms and tries to rocks her hips beneath you, but can't really get the leverage to push those ultra-wide hips off the ground.  You delight in teasing her like this, [if breast size of player > 0]playing with your breasts and [end if][if cocks of player > 0 and cunts of player > 0]stroking your cock[smn] and fingering your clit[sfn][otherwise if cocks of player > 0]stroking your cock[smn][otherwise if cunts of player > 0]fingering your clit[sfn][otherwise]running your hands over your [bodydesc of player] body[end if] in a lewd display that riles her up all the more.  Doing this also gives your [if the player is twistcapped]super-stretchy asshole[otherwise]overly-enhanced booty[end if] a chance to prepare itself for the titan that'll soon be filling it.";
 	say "     Only once your feel your back passage is sufficiently ready and your own arousal has gotten to be too much to keep teasingly waiting, you finally sink yourself down further onto her titanic pillar.  Getting as much of it as you can, you wriggle yourself over the belly-stuffing log before slowly rising up again.  You slide up and down it like this a few times, both letting you savour it and giving your body a final chance to adjust in the hopes of getting even just a few more inches in[if scalevalue of player < 3].  Her cock is so big compared to your [body size of player] [bodydesc of player] form that you end up stretched around her meat like a fleshy condom every time you lower yourself down[otherwise if scalevalue of player < 5].  Her cock, nearly as big as a normal person on its own, stuffs you impossibly full and leaves clear impression of it against your bulging flesh[otherwise].  Her cock, nearly as big as a normal person, stuffs you incredibly full, so much so there's a definite bulge formed by it[end if].  Your pace does pick up though and soon you're riding up and down it as quickly as your legs can manage, weak and shaky with the physical pleasure you're feeling.  The dragoness isn't doing much better, panting and rumbling with unbridled lust as her meat pulses and throbs in you hot, tight ass.";
-	say "     Eventually, it ends up being too much for the both of you and she ends up cumming moments before you.  The mighty blasts of her semen pumping into you and flooding your bowels are enough to send you over the edge into orgasmic bliss[if cocks of player > 0].  Your own cock[smn] blast[smv] messy streams of your seed across the dragoness's face and body[end if][if scalevalue of player < 3].  Her semen ends up filling you to the point of overflowing as your body sloshes beyond fullness[otherwise if scalevalue of player < 5].  Her semen ends up filling you to the point of rounding your body with her fills you to the point of rounding your body with fullness[otherwise].  Her semen ends up filling your belly to a sloshing fullness that leaves it visibly plumper[end if].  The sheer weight of the the load stuffed into you drags you down further onto her firing cannon and leaves you stuck there while you recover your senses and strength enough to slide off.  The draconess is left in a sticky, messy daze after her much-needed release.[mimpregchance][mimpregchance]";
+	say "     Eventually, it ends up being too much for the both of you and she ends up cumming moments before you.  The mighty blasts of her semen pumping into you and flooding your bowels are enough to send you over the edge into orgasmic bliss[if cocks of player > 0].  Your own cock[smn] blast[smv] messy streams of your seed across the dragoness's face and body[end if][if scalevalue of player < 3].  Her semen ends up filling you to the point of overflowing as your body sloshes beyond fullness[otherwise if scalevalue of player < 5].  Her semen ends up filling you to the point of rounding your body with her fills you to the point of rounding your body with fullness[otherwise].  Her semen ends up filling your belly to a sloshing fullness that leaves it visibly plumper[end if].  The sheer weight of the load stuffed into you drags you down further onto her firing cannon and leaves you stuck there while you recover your senses and strength enough to slide off.  The draconess is left in a sticky, messy daze after her much-needed release.[mimpregchance][mimpregchance]";
 	increase mdrakeanal by 1;
 	if mdrakeanal >= 3 and "Twisted Capacity" is not listed in feats of player:
 		say "     From the way your asshole and insides have been so thoroughly used, abused and stretched by the dragoness's cock, you have a feeling that you'll never quite be the same again.";
@@ -378,8 +529,81 @@ to say mdrake_pvictory_09:		[Taunt her]
 	say "     In the mood to tease the dragoness with what she can't have, you stand out of reach and wiggle your ass at her.  You sway your wide hips and raise your tail, giving her a tantalizing view of your tailhole, all while keeping it out of her reach.  She grunts and groans, struggling in vain to grab your sexy ass.  Laughing a little at her struggles, you go even further and reach back to play with your tailhole, first rubbing in a slow circle around the pulsing ring of flesh before plunging a pair of digits into it.  As you do this, you tease her about how much she must want this and just how deliciously hot and empty your hole is without a cock to fill it.  And speaking of, her pillar of meat bounces up and down, slapping against her massive breasts as it pulses with excitement.";
 	say "     Bending over further, you plunge your fingers in deeper and faster.  Growing aroused from playing with yourself, it adds to your fun and you continue on with the teasing show.  The dragoness, with her familiar's much-desired ass is put on wanton display, is reduced to panting and drooling at the sight of it.  Some more frantic fingering has you moaning in pleasure and this proves too be too much for the deprived dragoness, sending her to an orgasm that splatters great blasts of her semen into the air, across the ground and over herself.  Getting off on your effect on her, you [if cocks of player > 0 or cunts of player > 0]end up cumming as well[otherwise]groan in unfocused pleasure as your anus clenches down onto your probing digits until the waves of delight ebb[end if].  Having had your release, you realiz you'd carried things much farther than you'd originally planned and should probably get moving on.";
 
+to say mdstaff_overgrown:
+	increase mdrakeoversized by 1;
+	if mdrakeoversized >= 5 and inasituation is false:
+		say ".  As with the previous times, this power makes your already oversized ass quiver as you're filled with the pleasant rush of your backside inflating further.  As you fondle your expanding booty with both hands, you allow yourself to flop back onto the ground with a lustful moan as you grow increasingly back-heavy.  You can't suppress a happy squeal as you land on your super-padded bottom.";
+		attempttowait;
+		say "     As has happened before, you're now unable to get back up, though you're in no real hurry to do so.  At least not until the sorceress has had her chance to enjoy the turnabout of fortune again.  You'd resisted that the first few times, but you're almost looking forward to it by this point.  And indeed she's back up soon enough, approaching you with an eager grin, cock throbbing and tongue licking her lips.";
+		say "     'Why do you persist in trying this, my foolish familiar?' she rumbles with a smile in her voice as she takes hold of your flailing legs and spreads them wide.  Knowing you're unable to fight her like this, you instead relax and instead ready yourself for the vigorous fucking that you know is coming soon.  But she instead flops her massive prick down overtop of your [bodydesc of player] body, grinding it against you[if cocks of player > 0]r manhood[smn][end if] with the sheer weight of it.  'One would almost think you're enjoying this.  That you want me to claim you.  That must be it,' she rumbles teasingly, rocking her hips so her pulsing, leaking prick slides over you.  Her scent is added to the stimuli filling your pleasure-overloaded senses, further clouding your reason and you even start running your hands over that sexy green phallus.  'You want this magic cock of mine in you, my pet?  Promise to be my loyal familiar and I'll give you the fucking you so clearly need.'";
+		attempttowait;
+		say "     In your pleasure-addled state, you struggle to remember why you should resist.  There must have been some reason, but you can't really remember what that would be.  As you try to recall, the dragoness simply continues to purr softly about the pleasures she'll provide even as she rubs her increasingly slick shaft across your [bodytype of player] body.  Soon enough the enticement of that lovely cock wins over your unfocused resistance to what sounds like an enticing offer.  Moaning for your magic mistress to claim her familiar, you are filled with delight as she smiles down at you.";
+		say "     She gets herself lined up and pushes her massive cock into your extra-wide and accommodating backside.  Your pucker stretches itself open readily as she pushes into you and fills that aching need inside you.  You release a long, lustful cry through your mistress's first several thrusts before being reduced to a series of ongoing moans, pants and groans of delight.  'That's right, you're my sexy ass-slut now, aren't you?  My fat-assed, slutty pet?  My cock-sleeve familiar?  Come on, say it,' she rumbles firmly, pounding into you firmly with each slutty name she calls you.  You nod and moan, repeating back loudly and lustfully that you're each of these and many more wanton terms, giving yourself up to the sorceress.";
+		attempttowait;
+		say "     By the time she's done and cums in a torrent of belly-bulging seed, any last traces of your resistance has been eradicated by the thorough fucking and your complete submission to her magic[if cocks of player > 0 or cunts of player > 0].  You cry out in orgasm, spasms of delight running through you as your mega-booty tries to squeeze as much seed as it can from your mistress to seal the bond[otherwise].  You cry out in ecstasy as spasms of delight run through you and your mega-booty tries to squeeze as much seed as it can from your mistress to seal the bong[end if].  By the time she's done and pulled out, you're left [if scalevalue of player < 3]stuffed to overflowing with your body sloshing beyond fullness[otherwise if scalevalue of player < 5]stuffed to the point of rounding your body with fullness[otherwise]stuffed to a sloshing fullness that leaves your tummy visibly plumper[end if].  The warmth of her semen suffuses into you slowly as starts drawing runes on your big butt and belly with the excess cum gushing from your over-fucked hole.  Now that you've given into her fully, she's able to complete the ritual, bonding you to her as her familiar and sex slave - a fate you now fully embrace.  And by the time the ritual's done, your over-inflated ass has shrunk back down to its previous, beautifully super-wide state and you're able to get up and follow your sorceress mistress off as her loyal companion.";
+	otherwise if mdrakeoversized is odd:
+		say ".  This power makes your already oversized ass quiver and you're filled with the pleasant rush of your backside inflating further.  Casting aside the staff, you reach back to fondle your expanding booty with both hands.  You can't hold back a lustful moan as grow increasingly back-heavy, soon falling over onto your super-padded bottom with a happy squeal.";
+		attempttowait;
+		say "     But thus your plan has gone awry[if mdrakeoversized > 0] again[end if].  After recovering from the initial rush of ecstasy from your gluteal growth, you find yourself unable to get up.  Now like the defeated dragoness, you're having difficulty getting back up.  After some grunting and rocking by both parties, the green sorceress has recovered enough to finally rise.  And with the tables turned, she grins eagerly and approaches you, cock throbbing and tongue licking her lips.";
+		say "     'You foolish, foolish thing.  I think you need a proper lesson on who's the sorceress here and who's the lowly familiar,' she says, grabbing your flailing legs and spreading them wide[if weapon object of player is journal].  Unable to reach her and still a-tingle with the excess magic affecting your ass[otherwise].  Having dropped your weapon to use her now-discarded staff[end if], you're unable to fight back as she lines up her massive rod with your magic-filled booty and plunges it into your quivering tailhole.";
+		attempttowait;
+		say "     Overloaded on the excessive magic you've added to your enchanted booty, your anus spreads readily for the foot-thick pillar of dragonmeat.  You release a long, lustful cry despite yourself, the feel of that draconic cock feeling so good.  You hadn't noticed how empty your butthole was feeling until the filled it for you.  'You see - you're an ass-slut through and through.  You're meant to be my fat-assed, slutty, cock-sleeve familiar.  And you clearly need a good, hard lesson in why you should just accept that,' she says, her voice turning to a growl as she goes from firmly fucking you to pounding you hard and deep.  Your body stretches and your hyper-inflated ass jiggles delightfully each time she pushes deep inside you[if scalevalue of player < 3], stretching you like a living condom around it[otherwise if scalevalue of player < 5], visibly bulging your belly to fit it[otherwise], forming a bulge in your belly as it moves in and out of you[end if].  And while there's some discomfort from how roughly she's taking you, there's far more pleasure coming from your ensorcelled ass.";
+		say "     By the time she's done and cums in a torrent of belly-bulging seed, you're lost in a confused haze of lust[if cocks of player > 0 or cunts of player > 0].  You cry out in orgasm, spasms of delight running through you as your mega-booty tries to squeeze as much seed as it can from your mistress[otherwise].  You cry out in ecstasy as spasms of delight run through you and your mega-booty tries to squeeze as much seed as it can from your mistress[end if].  By the time she's done and pulled out, you're left [if scalevalue of player < 3]stuffed to overflowing with your body sloshing beyond fullness[otherwise if scalevalue of player < 5]stuffed to the point of rounding your body with fullness[otherwise]stuffed to a sloshing fullness that leaves your tummy visibly plumper[end if].  Retrieving her staff, she leaves you like that - sticky and gushing her excess cum from your over-fucked hole - with a remark that the excess magic should fade in short order.  Having enchanted your ass beyond its limits, the magic cannot maintain it in this state permanently and it gradually deflates down to its previous (but still super-sized) state.  Once it's gone down enough and you've sufficiently recovered your wits, you manage to roll yourself over and get back up so you can be on your way.[mimpregchance][mimpregchance]";
+	otherwise:
+		say ".  This power makes your already oversized ass quiver and you're filled with the pleasant rush of your backside inflating further.  Casting aside the staff, you reach back to fondle your expanding booty with both hands.  You can't hold back a lustful moan as grow increasingly back-heavy, soon falling over onto your super-padded bottom with a happy squeal.";
+		attempttowait;
+		say "     But once again, your attempt has gone awry.  After recovering from the initial rush of ecstasy from your gluteal growth, you find yourself unable to get up.  As before and like the nearby dragoness, you're having difficulty getting back up.  Having been struggling at it for a while, the green sorceress recovers enough to finally rise before you do.  And with the tables turned, she grins eagerly and approaches you, cock throbbing and tongue licking her lips.";
+		say "     'You foolish, foolish thing.  I think you need another lesson on who's the sorceress here and who's the lowly familiar,' she says, grabbing your flailing legs and spreading them wide.  Unable to defend yourself against the dragoness you'd earlier dispatched, she easily gets her massive rod lined up with your magically swollen booty.  She grinds its glans against your pucker, pushing it open a little and then easing back time and again, getting you increasingly riled up.  You bite your lip, trying to hold back your moans and whimpers, to no avail.  'You want this, don't you, pet?' she purrs teasingly as she taunts you by almost fucking you.  Your transformed ass feels so empty that your butthole's downright aching for it.  In the end you cry out for it, begging her to give it to you.";
+		attempttowait;
+		say "     Delaying no longer, the dominant dragoness drives her dick in deep.  Overloaded on the excessive magic you've added to your enchanted booty, your anus spreads readily for the foot-thick pillar of dragonmeat.  You release a long, lustful cry despite yourself, the feel of that draconic cock feeling so good.  'You see - you're an ass-slut through and through.  You're meant to be my fat-assed, slutty, cock-sleeve familiar.  And you clearly need another good, hard lesson in why you should just accept that,' she says, her voice turning to a growl as she goes from firmly fucking you to pounding you wild and hard.  Your body stretches and your hyper-inflated ass jiggles delightfully each time she pushes deep inside you[if scalevalue of player < 3], stretching you like a living condom around it[otherwise if scalevalue of player < 5], visibly bulging your belly to fit it[otherwise], forming a bulge in your belly as it moves in and out of you[end if].  And while there's some discomfort from how roughly she's taking you, there's far more pleasure coming from your ensorcelled ass.";
+		say "     By the time she's done and cums in a torrent of belly-bulging seed, you're lost in a confused haze of lust[if cocks of player > 0 or cunts of player > 0].  You cry out in orgasm, spasms of delight running through you as your mega-booty tries to squeeze as much seed as it can from your mistress[otherwise].  You cry out in ecstasy as spasms of delight run through you and your mega-booty tries to squeeze as much seed as it can from your mistress[end if].  By the time she's done and pulled out, you're left [if scalevalue of player < 3]stuffed to overflowing with your body sloshing beyond fullness[otherwise if scalevalue of player < 5]stuffed to the point of rounding your body with fullness[otherwise]stuffed to a sloshing fullness that leaves your tummy visibly plumper[end if].  Retrieving her staff, she leaves you like that - sticky and gushing her excess cum from your over-fucked hole - with a remark that the excess magic should fade in short order.  Having enchanted your ass beyond its limits, the magic cannot maintain it in this state permanently and it gradually deflates down to its previous (but still super-sized) state.  Once it's gone down enough and you've sufficiently recovered your wits, you manage to roll yourself over and get back up so you can be on your way.[mimpregchance][mimpregchance]";
+	now fightoutcome is 20;		[player now 'lost' the fight]
+	decrease mdrakebeaten by 1;		[removing this win from the tally...]
+	increase mdrakeloss by 1;		[...and counting it as a loss instead]
+	increase mdrakeanal by 1;
+	if mdrakeanal >= 3 and "Twisted Capacity" is not listed in feats of player:
+		say "     From the way your asshole and insides have been so thoroughly used, abused and stretched by the dragoness's cock, you have a feeling that you'll never quite be the same again.";
+		say "     [bracket]You have gained the 'Twisted Capacity' feat and are now stretchy enough to take some astonishingly huge things inside you.[close bracket][line break]";
+		add "Twisted Capacity" to feats of player;
+	if mdrakeoversized < 5 or inasituation is true:
+		infect "Magic Drake";
+	decrease humanity of player by a random number between 2 and 4;
+	increase libido of player by a random number from 2 to 4;
+	if "Strong Psyche" is listed in feats of player, increase humanity of player by 1;
+	if "Weak Psyche" is listed in feats of player, decrease humanity of player by 1;
+	if "Horny Bastard" is listed in feats of player, increase libido of player by 1;
+	if "Cold Fish" is listed in feats of player, decrease libido of player by 1;
+	if libido of player > 100, now libido of player is 100;
+	if mdrakeoversized >= 5 and inasituation is false:
+		now mdrakeoversized is 100;
+		choose row monster from the table of random critters;
+		now humanity of player is 0;
+		now tailname of player is "Magic Drake";
+		now facename of player is "Magic Drake";
+		now skinname of player is "Magic Drake";
+		now bodyname of player is "Magic Drake";
+		now cockname of player is "Magic Drake";
+		attributeinfect;
+		now tail of player is tail entry;
+		now face of player is face entry;
+		now skin of player is skin entry;
+		now body of player is body entry;
+		now cock of player is cock entry;
+		if hellHoundLevel is 0:
+			follow the sex change rule;
+			follow the sex change rule;
+		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+		if libido of player < 45, now libido of player is 45;
+		end the story saying "Having accepted your role as the dragoness's familiar, you go off with the sorceress.";
+		now battleground is "void";
+		wait for any key;
+		follow the turnpass rule;
+		stop the action;
+
 
 to say magicdrakedesc:
+	if debugactive is 1:
+		say "DEBUG -> mdasslevel: [mdasslevel], mdrakeloss: [mdrakeloss], mdrakebeaten: [mdrakebeaten], mdrakeoversized: [mdrakeoversized], mdrakeanal: [mdrakeanal], mdstaffface: [if mdstaffface is true]Y[otherwise]N[end if] <- DEBUG[line break]";
 	if mdasslevel is 0:
 		say "     'Ah yes!  You should do nicely!  With a little remodelling, you'll make for a fine familiar,' you hear an excited voice say.  It is coming from a shemale dragon-woman wearing a sheer blue dress over her green scales, wings flapping as she approaches you.  The dragoness's figure is very striking, even beyond being an imposing ten feet tall.  While most of her body is of an average build (for her size) with a few inches to pinch, her breasts, balls, cock and ass are all outlandishly over-sized.  Each jiggling ass cheek is larger around than her stomach.  Her breasts are similarly voluminous, bouncing buoyantly as she advances on you.  And it's quite clear she's becoming excited, her nipples hard and her titanic cock throbbing as it dribbles sticky patches of precum with every slap of her basketball-sized nuts against her scaly flesh.";
 		say "     So awestruck are you by her transformed figure that you only notice the details of her garments after that.  Her blue dress, aside from made being almost transparently thin silk, is decorated by stars that actually twinkle.  Atop her horned head, she wears a golden tiara that is molded right around her ridged brow and long horns.  Around her neck is a golden talisman adorned with a fiery stone.  Lastly, she holds an ebon staff with a rather phallic headpiece, also made of gold.  It shimmers and leaves a streak of golden sparkles in its wake as she brings it to bear on you.";
@@ -405,7 +629,7 @@ When Play begins:
 	now face entry is "pushed out with a draconic muzzle and a short set of backwards-pointing horns";
 	now body entry is "a little on the pudgy side with a little extra fat to round out your somewhat girlish, 5['] 6' figure.  Your hands and feet are changed as well, having been exchanged for reptilian talons.  Upon your back is a pair of dragon wings";
 	now skin entry is "[one of]scaley green[or]green-scaled[at random]";
-	now tail entry is "[mdtaildesc]";	[ Tail desc., written as a full sentence or left blank for none. ] 
+	now tail entry is "[mdtaildesc]";	[ Tail desc., written as a full sentence or left blank for none. ]
 	now cock entry is "green";						[ Cock desc., format as "You have a 'size' (your text) cock." ]
 	now face change entry is "it tingles with a strange energy.  This builds until there comes a loud snap.  More pops and snaps follow as your head shifts and reshapes itself.  A draconic muzzle pushes forth and a pair of small horns grow on the top of your head";
 	now body change entry is "an unusual sensation spreads through you.  Starting off as a tingle of strange energy, it builds until your body starts reshaping itself.  Your figure changes, becoming roughly five and a half feet tall, with a somewhat feminine figure and a few added pounds to round out your curves.  The energy surges at your back, forming draconic wings[mdscaletweak][run paragraph on]";
